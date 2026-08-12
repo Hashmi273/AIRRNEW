@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Page Title -->
+    <title>Careers & Opportunities | Immense Air Pvt Ltd</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Explore career opportunities at Immense Air Pvt Ltd Join our growing team in technical support, WhatsApp API, digital marketing, sales, and HR.">
+    <meta name="keywords" content="immense air careers, cpaas jobs, telecom jobs mumbai, whatsapp api jobs, enterprise sales manager jobs, hr jobs mumbai">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#060D1E">
+    
+    <!-- Google Fonts - Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom Upgraded CSS System -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <style>
+        .careers-hero {
+            background: radial-gradient(circle at 75% 35%, #0B254A 0%, #060D1E 70%);
+            padding: 155px 0 80px;
+            color: #FFFFFF;
+        }
+
+        .job-card-upgraded {
+            background: #FFFFFF;
+            border-radius: 20px;
+            padding: 2rem;
+            border: 1px solid var(--border-light);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+        }
+
+        .job-card-upgraded:hover {
+            transform: translateY(-6px);
+            border-color: var(--orange-brand);
+            box-shadow: 0 20px 40px rgba(255, 106, 0, 0.12);
+        }
+
+        .job-meta-tag {
+            display: inline-block;
+            background: rgba(255, 106, 0, 0.1);
+            color: var(--orange-brand);
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+        }
+
+        /* DRAG AND DROP FILE UPLOAD CONTAINER */
+        .dropzone-upload-box {
+            border: 2px dashed rgba(255, 106, 0, 0.4);
+            background: rgba(255, 106, 0, 0.03);
+            border-radius: 16px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .dropzone-upload-box:hover, .dropzone-upload-box.dragover {
+            border-color: var(--orange-brand);
+            background: rgba(255, 106, 0, 0.08);
+        }
+
+        .upload-file-input {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .file-selected-badge {
+            background: #25D366;
+            color: #FFFFFF;
+            font-weight: 700;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================
+         HEADER / NAVBAR
+         ============================================ -->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top navbar-custom" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand-custom" href="index.html">
+                    <img src="assets/images/logo/logo.jpg" alt="Immense Air Pvt Ltd Logo" class="navbar-brand-logo">
+                    <div>
+                        <div style="font-size: 1.35rem; font-weight: 800; line-height: 1; letter-spacing: -0.5px; color: #FFFFFF;">
+                            IMMENSE <span style="color: var(--orange-brand);">AIR</span>
+                        </div>
+                        <div style="font-size: 0.7rem; font-weight: 800; letter-spacing: 1.5px; color: rgba(255,255,255,0.75); text-transform: uppercase;">
+                            PVT LTD
+                        </div>
+                    </div>
+                </a>
+                
+                <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">About</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link nav-link-custom dropdown-toggle" href="#" id="productsDropdown" data-bs-toggle="dropdown">Products</a>
+                            <ul class="dropdown-menu dropdown-menu-custom">
+                                <li><a class="dropdown-item dropdown-item-custom" href="products/bulk-sms.html"><i class="fas fa-sms"></i> SMS Services</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="products/whatsapp-api.html"><i class="fab fa-whatsapp text-success"></i> WhatsApp API</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="products/rcs.html"><i class="fas fa-comment-dots text-info"></i> RCS Messaging</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="products/voice.html"><i class="fas fa-phone-alt text-warning"></i> Voice Solutions</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="products/ivr-obd.html"><i class="fas fa-headset text-primary"></i> IVR / OBD Solutions</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="products/smpp.html"><i class="fas fa-code text-primary"></i> SMPP & API</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="index.html#how-it-works">How It Works</a></li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="developers.html">Developers</a></li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="resources.html">Resources</a></li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom active" href="careers.html">Careers</a></li>
+                        <li class="nav-item ms-lg-3"><a class="btn-nav-cta" href="contact.html">Contact Us <i class="fas fa-arrow-right ms-1"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ============================================
+             HERO SECTION
+             ============================================ -->
+        <section class="careers-hero text-center">
+            <div class="container">
+                <span class="hero-subtitle-orange"><i class="fas fa-briefcase me-2"></i> WE ARE HIRING</span>
+                <h1 class="display-3 fw-extrabold text-white mb-3" style="letter-spacing: -0.5px;">
+                    Build The Future Of Enterprise Communication
+                </h1>
+                <p class="hero-para-mockup mx-auto max-w-600 mb-4" style="font-size: 1.25rem;">
+                    Join Immense Air Pvt Ltd Work across enterprise messaging, WhatsApp, RCS, Bulk SMS, Voice, IVR and communication technology infrastructure.
+                </p>
+                <div class="d-flex flex-wrap justify-content-center gap-3">
+                    <a href="#openings" class="btn-orange-filled">Explore Openings <i class="fas fa-arrow-down ms-1"></i></a>
+                    <a href="#submit-resume-form" class="btn-dark-outline">Submit CV Directly</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             CURRENT OPENINGS (5 JOB CARDS)
+             ============================================ -->
+        <section class="solutions-section" id="openings">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="section-label">CURRENT OPENINGS</span>
+                    <h2 class="section-title-dark">Explore Our Open Positions</h2>
+                    <p class="text-muted max-w-600 mx-auto" style="font-size: 1.15rem;">Find the right role for your skills and apply today.</p>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Position 1: Backend Support Executive -->
+                    <div class="col-lg-6">
+                        <div class="job-card-upgraded text-start">
+                            <div>
+                                <span class="job-meta-tag"><i class="fas fa-headset me-1"></i> Technical Support</span>
+                                <h3 class="fw-bold text-dark mb-2" style="font-size: 1.35rem;">Backend Support Executive</h3>
+                                <div class="text-muted small mb-3">
+                                    <i class="fas fa-map-marker-alt text-warning me-1"></i> Mumbai / Hybrid • <i class="fas fa-clock text-primary me-1"></i> Full-Time • <i class="fas fa-user-graduate text-success me-1"></i> 0–3 Years Exp
+                                </div>
+                                <p class="text-muted small mb-4">
+                                    Handle backend operations, customer requests, campaign coordination, panel management and day-to-day communication platform support.
+                                </p>
+                            </div>
+                            <div>
+                                <button class="btn btn-outline-warning text-dark fw-bold w-100 rounded-pill" onclick="applyForRole('Backend Support')">
+                                    Apply Now <i class="fas fa-arrow-right ms-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Position 2: Meta WhatsApp Support Executive -->
+                    <div class="col-lg-6">
+                        <div class="job-card-upgraded text-start">
+                            <div>
+                                <span class="job-meta-tag" style="background:rgba(37,211,102,0.15);color:#25D366;"><i class="fab fa-whatsapp me-1"></i> WhatsApp Business</span>
+                                <h3 class="fw-bold text-dark mb-2" style="font-size: 1.35rem;">Meta WhatsApp Support Executive</h3>
+                                <div class="text-muted small mb-3">
+                                    <i class="fas fa-map-marker-alt text-warning me-1"></i> Mumbai / Hybrid • <i class="fas fa-clock text-primary me-1"></i> Full-Time • <i class="fas fa-user-graduate text-success me-1"></i> 0–3 Years Exp
+                                </div>
+                                <p class="text-muted small mb-4">
+                                    Manage WhatsApp Business API onboarding, templates, campaign support, troubleshooting, quality issues and customer coordination.
+                                </p>
+                            </div>
+                            <div>
+                                <button class="btn btn-outline-success fw-bold w-100 rounded-pill" onclick="applyForRole('Meta WhatsApp Support')">
+                                    Apply Now <i class="fas fa-arrow-right ms-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Position 3: Digital Marketing Executive -->
+                    <div class="col-lg-6">
+                        <div class="job-card-upgraded text-start">
+                            <div>
+                                <span class="job-meta-tag" style="background:rgba(59,130,246,0.15);color:#3B82F6;"><i class="fas fa-bullhorn me-1"></i> Marketing</span>
+                                <h3 class="fw-bold text-dark mb-2" style="font-size: 1.35rem;">Digital Marketing Executive</h3>
+                                <div class="text-muted small mb-3">
+                                    <i class="fas fa-map-marker-alt text-warning me-1"></i> Mumbai / Hybrid • <i class="fas fa-clock text-primary me-1"></i> Full-Time • <i class="fas fa-user-graduate text-success me-1"></i> 1–3 Years Exp
+                                </div>
+                                <p class="text-muted small mb-4">
+                                    Plan and execute digital marketing campaigns, social media activities, lead generation, content marketing and performance marketing initiatives.
+                                </p>
+                            </div>
+                            <div>
+                                <button class="btn btn-outline-primary fw-bold w-100 rounded-pill" onclick="applyForRole('Digital Marketing')">
+                                    Apply Now <i class="fas fa-arrow-right ms-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Position 4: Sales Manager -->
+                    <div class="col-lg-6">
+                        <div class="job-card-upgraded text-start">
+                            <div>
+                                <span class="job-meta-tag"><i class="fas fa-chart-line me-1"></i> Sales & Business Development</span>
+                                <h3 class="fw-bold text-dark mb-2" style="font-size: 1.35rem;">Sales Manager</h3>
+                                <div class="text-muted small mb-3">
+                                    <i class="fas fa-map-marker-alt text-warning me-1"></i> Mumbai / Hybrid • <i class="fas fa-clock text-primary me-1"></i> Full-Time • <i class="fas fa-user-graduate text-success me-1"></i> 2–5 Years Exp
+                                </div>
+                                <p class="text-muted small mb-4">
+                                    Drive B2B sales for SMS, RCS, WhatsApp Business API, Voice, IVR and enterprise communication solutions. Build client relationships and achieve revenue targets.
+                                </p>
+                            </div>
+                            <div>
+                                <button class="btn btn-outline-warning text-dark fw-bold w-100 rounded-pill" onclick="applyForRole('Sales Manager')">
+                                    Apply Now <i class="fas fa-arrow-right ms-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Position 5: HR Executive -->
+                    <div class="col-lg-6">
+                        <div class="job-card-upgraded text-start">
+                            <div>
+                                <span class="job-meta-tag" style="background:rgba(139,92,246,0.15);color:#8B5CF6;"><i class="fas fa-users-cog me-1"></i> Human Resources</span>
+                                <h3 class="fw-bold text-dark mb-2" style="font-size: 1.35rem;">HR Executive</h3>
+                                <div class="text-muted small mb-3">
+                                    <i class="fas fa-map-marker-alt text-warning me-1"></i> Mumbai Office • <i class="fas fa-clock text-primary me-1"></i> Full-Time • <i class="fas fa-user-graduate text-success me-1"></i> 1–3 Years Exp
+                                </div>
+                                <p class="text-muted small mb-4">
+                                    Manage recruitment, candidate screening, interviews, onboarding, employee coordination and day-to-day HR operations.
+                                </p>
+                            </div>
+                            <div>
+                                <button class="btn btn-outline-secondary fw-bold w-100 rounded-pill" onclick="applyForRole('HR')">
+                                    Apply Now <i class="fas fa-arrow-right ms-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             JOIN OUR TEAM SECTION
+             ============================================ -->
+        <section class="py-5 bg-light">
+            <div class="container py-3">
+                <div class="p-5 rounded-4 bg-white border shadow-sm text-center">
+                    <span class="section-label">JOIN OUR TEAM</span>
+                    <h2 class="section-title-dark mb-3">Don't See The Right Role?</h2>
+                    <p class="text-muted lead fs-6 max-w-700 mx-auto mb-4">
+                        We are always looking for talented and motivated people who want to build the future of enterprise communication.
+                    </p>
+                    <p class="text-muted max-w-700 mx-auto mb-0" style="font-size: 1.05rem;">
+                        If you are interested in working with Immense Air but don't see a suitable opening above, you can still share your profile with us. Our team will review your resume and contact you when a relevant opportunity becomes available.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             CV UPLOAD SECTION (2-COLUMN DESKTOP LAYOUT)
+             ============================================ -->
+        <section class="sectors-section" id="submit-resume-form">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <!-- Left Column: Heading + Info -->
+                    <div class="col-lg-5 text-start">
+                        <span class="section-label">APPLY TODAY</span>
+                        <h2 class="section-title-dark mb-3">Submit Your Resume</h2>
+                        <p class="text-muted lead fs-6 mb-4">
+                            Upload your latest CV or resume and tell us what kind of opportunity you are looking for.
+                        </p>
+                        <div class="d-flex flex-column gap-3 mb-4">
+                            <div class="p-3 bg-white rounded-3 border shadow-sm d-flex align-items-center gap-3">
+                                <div class="solution-icon-box solution-icon-orange mb-0"><i class="fas fa-user-shield"></i></div>
+                                <div>
+                                    <h6 class="fw-bold text-dark mb-0">Strict Applicant Privacy</h6>
+                                    <span class="text-muted small">Your resume data is strictly confidential.</span>
+                                </div>
+                            </div>
+                            <div class="p-3 bg-white rounded-3 border shadow-sm d-flex align-items-center gap-3">
+                                <div class="solution-icon-box solution-icon-green mb-0"><i class="fas fa-check-circle"></i></div>
+                                <div>
+                                    <h6 class="fw-bold text-dark mb-0">Direct HR Review</h6>
+                                    <span class="text-muted small">Reviewed directly by our recruiting team.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Alternative Email Box -->
+                        <div class="p-3.5 rounded-3 bg-light border">
+                            <div class="fw-bold text-dark mb-1"><i class="fas fa-envelope text-warning me-1"></i> Prefer Email?</div>
+                            <p class="text-muted small mb-2">Send your resume directly to our inbox:</p>
+                            <a href="mailto:careers@immenseair.in" class="btn btn-outline-dark btn-sm fw-bold rounded-pill">
+                                Email Your Resume <i class="fas fa-paper-plane ms-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Form -->
+                    <div class="col-lg-7">
+                        <div class="p-4.5 rounded-4 bg-white border shadow-lg text-start">
+                            <!-- Success Notification Message Card -->
+                            <div id="applicantSuccessAlert" class="alert alert-success d-none rounded-4 p-4 mb-4" role="alert">
+                                <h4 class="alert-heading fw-bold"><i class="fas fa-check-circle me-2"></i> Application Submitted Successfully!</h4>
+                                <p id="applicantSuccessText" class="mb-0">
+                                    Application submitted successfully. Our HR team will review your profile and contact you if your profile matches an available opportunity.
+                                </p>
+                            </div>
+
+                            <!-- Error Notification Message Card -->
+                            <div id="applicantErrorAlert" class="alert alert-danger d-none rounded-4 p-4 mb-4" role="alert">
+                                <h4 class="alert-heading fw-bold"><i class="fas fa-exclamation-triangle me-2"></i> Submission Error</h4>
+                                <p id="applicantErrorText" class="mb-0">
+                                    Something went wrong while submitting your request. Please try again or contact us directly.
+                                </p>
+                            </div>
+
+                            <form id="resumeUploadForm" onsubmit="handleResumeSubmit(event)">
+                                <!-- Honeypot Bot Protection -->
+                                <input type="text" name="website" id="careersHoneypot" style="display:none;" tabindex="-1" autocomplete="off">
+
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label fw-bold text-dark small">Full Name *</label>
+                                        <input type="text" id="applicantFullName" class="form-control bg-light border-0 fw-semibold" placeholder="e.g. Rahul Sharma" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label fw-bold text-dark small">Email Address *</label>
+                                        <input type="email" id="applicantEmailAddr" class="form-control bg-light border-0 fw-semibold" placeholder="rahul@example.com" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label fw-bold text-dark small">Mobile Number *</label>
+                                        <input type="tel" id="applicantMobileNo" class="form-control bg-light border-0 fw-semibold" placeholder="+91 98765 43210" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label fw-bold text-dark small">Position Interested In *</label>
+                                        <select id="applicantPosition" class="form-select bg-light border-0 fw-semibold" required>
+                                            <option value="">Select Role...</option>
+                                            <option value="Backend Support">Backend Support</option>
+                                            <option value="Meta WhatsApp Support">Meta WhatsApp Support</option>
+                                            <option value="Digital Marketing">Digital Marketing</option>
+                                            <option value="Sales Manager">Sales Manager</option>
+                                            <option value="HR">HR</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label class="form-label fw-bold text-dark small">Experience *</label>
+                                        <select id="applicantExperience" class="form-select bg-light border-0 fw-semibold" required>
+                                            <option value="">Select Experience...</option>
+                                            <option value="Fresher">Fresher</option>
+                                            <option value="0–1 Years">0–1 Years</option>
+                                            <option value="1–3 Years">1–3 Years</option>
+                                            <option value="3–5 Years">3–5 Years</option>
+                                            <option value="5+ Years">5+ Years</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Drag-and-Drop Style Upload Area -->
+                                    <div class="col-12">
+                                        <label class="form-label fw-bold text-dark small">Resume / CV * (PDF, DOC, DOCX max 5MB)</label>
+                                        <div class="dropzone-upload-box" id="dropzoneBox">
+                                            <input type="file" id="applicantFile" class="upload-file-input" accept=".pdf,.doc,.docx" required onchange="handleFileSelected(this)">
+                                            <i class="fas fa-cloud-upload-alt fa-3x text-warning mb-2"></i>
+                                            <div class="fw-bold text-dark">Click or Drag & Drop Resume File Here</div>
+                                            <div class="text-muted small">Accepted Formats: PDF, DOC, DOCX (Max 5 MB)</div>
+                                            <div id="fileSelectedText" class="file-selected-badge d-none mt-2"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label class="form-label fw-bold text-dark small">Message / Cover Note (Optional)</label>
+                                        <textarea id="applicantCoverNote" class="form-control bg-light border-0 fw-semibold" rows="3" placeholder="Tell us briefly about your experience, skills or the role you are interested in..."></textarea>
+                                    </div>
+
+                                    <!-- Consent Checkbox -->
+                                    <div class="col-12">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="applicantConsent" required>
+                                            <label class="form-check-label text-muted small" for="applicantConsent">
+                                                I agree to share my personal information and resume with Immense Air Pvt Ltd for recruitment and employment-related purposes. I understand that my information may be reviewed by the recruitment team for current or future opportunities. Read our <a href="privacy-policy.html" class="text-warning text-decoration-underline">Privacy Policy</a> & <a href="terms.html" class="text-warning text-decoration-underline">Terms & Conditions</a>.
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 mt-4">
+                                        <button type="submit" id="btnSubmitCareer" class="btn-orange-filled w-100 text-center py-3 fs-6">
+                                            Submit Application <i class="fas fa-paper-plane ms-2"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             FINAL CTA
+             ============================================ -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="dark-cta-card text-center">
+                    <h2 class="display-5 fw-bold text-white mb-3">Build Your Future With Immense Air</h2>
+                    <p class="text-white-50 lead mx-auto max-w-600 mb-4" style="font-size: 1.1rem;">
+                        Join a growing team working across enterprise messaging, WhatsApp, RCS, SMS, voice and communication technology.
+                    </p>
+                    <div class="d-flex flex-wrap justify-content-center gap-3">
+                        <a href="#submit-resume-form" class="btn-orange-filled">
+                            Submit Your Resume <i class="fas fa-arrow-up ms-1"></i>
+                        </a>
+                        <a href="mailto:careers@immenseair.in" class="btn-dark-outline">
+                            <i class="fas fa-envelope me-1"></i> Email Resume Directly
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============================================
+         EXECUTIVE DARK FOOTER
+         ============================================ -->
+    <footer class="footer-dark-custom">
+        <div class="container">
+            <div class="row g-4 mb-4">
+                <div class="col-lg-4 col-md-6">
+                    <a class="navbar-brand-custom mb-3" href="index.html">
+                        <img src="assets/images/logo/logo.jpg" alt="Immense Air Pvt Ltd Logo" class="navbar-brand-logo">
+                        <div>
+                            <div style="font-size: 1.35rem; font-weight: 800; line-height: 1; letter-spacing: -0.5px; color: #FFFFFF;">
+                                IMMENSE <span style="color: var(--orange-brand);">AIR</span>
+                            </div>
+                            <div style="font-size: 0.7rem; font-weight: 800; letter-spacing: 1.5px; color: rgba(255,255,255,0.75); text-transform: uppercase;">
+                                PVT LTD
+                            </div>
+                        </div>
+                    </a>
+                    <p style="color:rgba(255,255,255,.75);font-size:1.0rem;line-height:1.65;max-width:360px;">
+                        Immense Air Pvt Ltd empowers businesses with intelligent communication solutions that drive engagement, automation & growth.
+                    </p>
+                    <div class="mt-3 d-flex gap-2">
+                        <a href="https://in.linkedin.com/company/immense-smart-solutions" target="_blank" class="social-circle-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.facebook.com/immensesmartsolutions/" target="_blank" class="social-circle-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.youtube.com/@immensesmartsolutions" target="_blank" class="social-circle-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/immense_smart_solutions/" target="_blank" class="social-circle-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6>PRODUCTS</h6>
+                    <ul class="footer-link-list">
+                        <li><a href="products/bulk-sms.html">SMS Services</a></li>
+                        <li><a href="products/whatsapp-api.html">WhatsApp API</a></li>
+                        <li><a href="products/rcs.html">RCS Messaging</a></li>
+                        <li><a href="products/voice.html">Voice Solutions</a></li>
+                        <li><a href="products/ivr-obd.html">IVR & OBD</a></li>
+                        <li><a href="products/smpp.html">SMPP & API</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6>SOLUTIONS</h6>
+                    <ul class="footer-link-list">
+                        <li><a href="about.html">Marketing</a></li>
+                        <li><a href="resources.html">Authentication</a></li>
+                        <li><a href="contact.html">Customer Support</a></li>
+                        <li><a href="products/bulk-sms.html">Notifications</a></li>
+                        <li><a href="products/whatsapp-api.html">Automation</a></li>
+                        <li><a href="about.html">Enterprise</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6>DEVELOPERS</h6>
+                    <ul class="footer-link-list">
+                        <li><a href="developers.html">API Documentation</a></li>
+                        <li><a href="products/smpp.html">SMPP Guide</a></li>
+                        <li><a href="developers.html">SDKs & Libraries</a></li>
+                        <li><a href="developers.html">Postman Collection</a></li>
+                        <li><a href="developers.html">Integration Guide</a></li>
+                        <li><a href="developers.html">Status Page</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6>COMPANY</h6>
+                    <ul class="footer-link-list">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="careers.html" class="text-warning fw-bold">Careers <span class="badge bg-warning text-dark style-badge" style="font-size:0.7rem;">Hiring</span></a></li>
+                        <li><a href="contact.html">Partners</a></li>
+                        <li><a href="resources.html">News & Updates</a></li>
+                        <li><a href="contact.html" class="text-warning fw-bold">Contact Us <i class="fas fa-arrow-right ms-1"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr style="border-color:rgba(255,255,255,.12);margin:2.5rem 0 1.5rem;">
+
+            <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 text-white-50" style="font-size:0.95rem;">
+                <div>&copy; 2026 Immense Air Pvt Ltd All Rights Reserved.</div>
+                <div>
+                    <a href="privacy-policy.html" class="text-white-50 me-3 text-decoration-none">Privacy Policy</a>
+                    <a href="terms.html" class="text-white-50 me-3 text-decoration-none">Terms & Conditions</a>
+                    <a href="terms.html" class="text-white-50 text-decoration-none">Refund Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919768566466" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Global Data Privacy Opt-In Consent Banner -->
+    <div id="optInGlobalBanner" class="optin-consent-banner hidden">
+        <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+            <div class="d-flex align-items-center gap-3">
+                <i class="fas fa-user-shield text-warning fa-2x"></i>
+                <div>
+                    <div class="d-flex align-items-center gap-2 mb-1">
+                        <span class="fw-bold text-white fs-6">Data Privacy & Communication Opt-In</span>
+                        <span class="optin-badge"><i class="fas fa-check-circle me-1"></i> DPDP Act Compliant</span>
+                    </div>
+                    <p class="text-white-50 small mb-0">
+                        We value your data privacy. By using Immense Air, you consent to data processing for enterprise service delivery, SMS/WhatsApp updates, and analytics as outlined in our <a href="privacy-policy.html" class="text-warning text-decoration-underline">Privacy Policy</a>.
+                    </p>
+                </div>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+                <button class="btn btn-warning btn-sm fw-bold px-3 rounded-pill text-white" onclick="acceptDataOptIn()">
+                    <i class="fas fa-check me-1"></i> Accept & Opt-In
+                </button>
+                <button class="btn btn-outline-light btn-sm px-3 rounded-pill" onclick="declineDataOptIn()">
+                    Necessary Only
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        function applyForRole(roleName) {
+            const selectEl = document.getElementById('applicantPosition');
+            if (selectEl) {
+                selectEl.value = roleName;
+            }
+            const formSection = document.getElementById('submit-resume-form');
+            if (formSection) {
+                formSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function handleFileSelected(input) {
+            const badge = document.getElementById('fileSelectedText');
+            if (input.files && input.files[0]) {
+                const file = input.files[0];
+                const fileSizeMB = file.size / (1024 * 1024);
+
+                if (fileSizeMB > 5) {
+                    alert('File size exceeds maximum limit of 5 MB. Please select a smaller PDF, DOC, or DOCX file.');
+                    input.value = '';
+                    badge.classList.add('d-none');
+                    return;
+                }
+
+                badge.innerText = `Selected File: ${file.name} (${fileSizeMB.toFixed(2)} MB)`;
+                badge.classList.remove('d-none');
+            } else {
+                badge.classList.add('d-none');
+            }
+        }
+
+        async function handleResumeSubmit(e) {
+            e.preventDefault();
+            const btn = document.getElementById('btnSubmitCareer');
+            const alertSuccess = document.getElementById('applicantSuccessAlert');
+            const alertError = document.getElementById('applicantErrorAlert');
+
+            alertSuccess.classList.add('d-none');
+            alertError.classList.add('d-none');
+
+            const fileInput = document.getElementById('applicantFile');
+            if (!fileInput.files || !fileInput.files[0]) {
+                alert('Please upload your Resume/CV file (PDF, DOC, or DOCX up to 5MB).');
+                return;
+            }
+
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i> Submitting Profile...';
+
+            const formData = new FormData();
+            formData.append('name', document.getElementById('applicantFullName').value.trim());
+            formData.append('email', document.getElementById('applicantEmailAddr').value.trim());
+            formData.append('phone', document.getElementById('applicantMobileNo').value.trim());
+            formData.append('position', document.getElementById('applicantPosition').value);
+            formData.append('experience', document.getElementById('applicantExperience').value);
+            formData.append('note', document.getElementById('applicantCoverNote').value.trim());
+            formData.append('optin', document.getElementById('applicantConsent').checked);
+            formData.append('website', document.getElementById('careersHoneypot').value);
+            formData.append('sourcePage', 'Careers Page');
+            formData.append('resume', fileInput.files[0]);
+
+            try {
+                const res = await fetch('/api/careers/apply', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const data = await res.json();
+                btn.disabled = false;
+                btn.innerHTML = 'Submit Application <i class="fas fa-paper-plane ms-2"></i>';
+
+                if (res.ok && data.success) {
+                    document.getElementById('applicantSuccessText').innerText = data.message;
+                    alertSuccess.classList.remove('d-none');
+                    document.getElementById('resumeUploadForm').reset();
+                    document.getElementById('fileSelectedText').classList.add('d-none');
+                    alertSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                } else {
+                    document.getElementById('applicantErrorText').innerText = data.error || 'Something went wrong while submitting your request. Please try again or contact us directly.';
+                    alertError.classList.remove('d-none');
+                }
+            } catch (err) {
+                btn.disabled = false;
+                btn.innerHTML = 'Submit Application <i class="fas fa-paper-plane ms-2"></i>';
+                document.getElementById('applicantErrorText').innerText = 'Something went wrong while submitting your request. Please try again or contact us directly.';
+                alertError.classList.remove('d-none');
+            }
+        }
+    </script>
+</body>
+</html>

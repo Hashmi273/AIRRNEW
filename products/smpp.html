@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Page Title -->
+    <title>Enterprise SMPP Gateway & Messaging API | Immense Air Pvt Ltd</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="High-throughput SMPP v3.4 protocol gateway and RESTful messaging APIs by Immense Air Pvt Ltd. Engineered for aggregators, telecom operators, and enterprise platforms.">
+    <meta name="keywords" content="smpp gateway, smpp v3.4 protocol, high tps sms gateway, messaging api, rest sms api, telecom aggregator connectivity, immense smart solutions">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#060D1E">
+    
+    <!-- Google Fonts - Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom Upgraded CSS System -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    
+    <style>
+        .product-hero {
+            background: radial-gradient(circle at 75% 35%, #0B2545 0%, #060D1E 70%);
+            padding: 150px 0 80px;
+            color: #FFFFFF;
+        }
+
+        .smpp-blue-accent {
+            color: #3B82F6;
+        }
+
+        /* HERO ANIMATED NETWORK / SERVER VISUAL */
+        .smpp-network-frame {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 24px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            max-width: 420px;
+            margin: 0 auto;
+        }
+
+        .packet-dot {
+            width: 10px;
+            height: 10px;
+            background: var(--orange-brand);
+            border-radius: 50%;
+            display: inline-block;
+            animation: packetFlow 1.8s ease-in-out infinite;
+        }
+
+        @keyframes packetFlow {
+            0% { transform: translateX(-30px); opacity: 0; }
+            50% { opacity: 1; }
+            100% { transform: translateX(30px); opacity: 0; }
+        }
+
+        /* WORKFLOW & DIAGRAM CARDS */
+        .smpp-workflow-box {
+            background: #060D1E;
+            border-radius: 24px;
+            padding: 3.5rem 2.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+        }
+
+        .smpp-step-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 1.5rem 1.2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+
+        .smpp-step-card:hover {
+            transform: translateY(-6px);
+            border-color: #3B82F6;
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .signal-arrow-flow {
+            font-size: 1.5rem;
+            color: #3B82F6;
+            animation: travelSignal 1.5s infinite alternate;
+        }
+
+        @keyframes travelSignal {
+            from { transform: translateX(0); opacity: 0.5; }
+            to { transform: translateX(6px); opacity: 1; }
+        }
+
+        .vs-card-smpp {
+            background: rgba(59, 130, 246, 0.06);
+            border: 1px solid rgba(59, 130, 246, 0.25);
+            border-radius: 20px;
+            padding: 2.2rem;
+            height: 100%;
+        }
+
+        .vs-card-api {
+            background: rgba(255, 106, 0, 0.06);
+            border: 1px solid rgba(255, 106, 0, 0.25);
+            border-radius: 20px;
+            padding: 2.2rem;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================
+         HEADER / NAVBAR
+         ============================================ -->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top navbar-custom" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand-custom" href="../index.html">
+                    <img src="../assets/images/logo/logo.jpg" alt="Immense Air Pvt Ltd Logo" class="navbar-brand-logo">
+                    <div>
+                        <div style="font-size: 1.35rem; font-weight: 800; line-height: 1; letter-spacing: -0.5px; color: #FFFFFF;">
+                            IMMENSE <span style="color: var(--orange-brand);">AIR</span>
+                        </div>
+                        <div style="font-size: 0.7rem; font-weight: 800; letter-spacing: 1.5px; color: rgba(255,255,255,0.75); text-transform: uppercase;">
+                            PVT LTD
+                        </div>
+                    </div>
+                </a>
+                
+                <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="../index.html">Home</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link nav-link-custom dropdown-toggle active" href="#" id="productsDropdown" data-bs-toggle="dropdown">Products</a>
+                            <ul class="dropdown-menu dropdown-menu-custom">
+                                <li><a class="dropdown-item dropdown-item-custom" href="bulk-sms.html"><i class="fas fa-sms"></i> SMS Services</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="whatsapp-api.html"><i class="fab fa-whatsapp text-success"></i> WhatsApp API</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="rcs.html"><i class="fas fa-comment-dots text-info"></i> RCS Messaging</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="voice.html"><i class="fas fa-phone-alt text-warning"></i> Voice Solutions</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="ivr-obd.html"><i class="fas fa-headset text-primary"></i> IVR / OBD Solutions</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom active" href="smpp.html"><i class="fas fa-code text-primary"></i> SMPP & API</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="../index.html#how-it-works">How It Works</a></li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="../developers.html">Developers</a></li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="../careers.html">Careers</a></li>
+                        <li class="nav-item ms-lg-3"><a class="btn-nav-cta" href="../contact.html">Contact Us <i class="fas fa-arrow-right ms-1"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ============================================
+             1. HERO SECTION
+             ============================================ -->
+        <section class="product-hero">
+            <div class="container">
+                <div class="row align-items-center g-4 text-center text-lg-start">
+                    <div class="col-lg-7">
+                        <span class="hero-subtitle-orange"><i class="fas fa-network-wired me-2"></i> ENTERPRISE MESSAGING CONNECTIVITY</span>
+                        <h1 class="display-3 fw-extrabold text-white mb-3" style="letter-spacing: -0.5px;">
+                            SMPP & API Integration
+                        </h1>
+                        <p class="hero-para-mockup mb-4" style="font-size: 1.2rem;">
+                            Reliable messaging connectivity for aggregators, telecom platforms and enterprises with high-throughput SMPP connections and powerful messaging APIs.
+                        </p>
+                        
+                        <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-3 mb-4">
+                            <span class="hero-check-pill"><i class="fas fa-bolt text-warning"></i> High TPS Connectivity</span>
+                            <span class="hero-check-pill"><i class="fas fa-link smpp-blue-accent"></i> SMPP v3.4 Support</span>
+                            <span class="hero-check-pill"><i class="fas fa-shield-alt text-success"></i> Secure Connections</span>
+                            <span class="hero-check-pill"><i class="fas fa-chart-line text-info"></i> Real-Time Delivery</span>
+                        </div>
+
+                        <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-3">
+                            <a href="../contact.html" class="btn-orange-filled">Get Started <i class="fas fa-arrow-right ms-1"></i></a>
+                            <a href="../contact.html" class="btn-dark-outline"><i class="fas fa-envelope me-1"></i> Request API Documentation</a>
+                        </div>
+                    </div>
+
+                    <!-- Right Side Animated Network / Server Visual -->
+                    <div class="col-lg-5 text-center">
+                        <div class="smpp-network-frame">
+                            <div class="d-flex align-items-center justify-content-between mb-4 border-bottom border-secondary pb-3">
+                                <div class="fw-bold text-white small"><i class="fas fa-server text-primary me-2"></i> SMPP v3.4 Telephony Node</div>
+                                <span class="badge bg-success px-2.5 py-1">Active Bind</span>
+                            </div>
+
+                            <div class="d-flex flex-column gap-3 text-start font-monospace small">
+                                <div class="p-2.5 bg-dark bg-opacity-50 rounded border border-secondary d-flex align-items-center justify-content-between">
+                                    <span>Enterprise System</span>
+                                    <span class="packet-dot"></span>
+                                </div>
+                                <div class="p-2.5 bg-primary bg-opacity-20 rounded border border-primary d-flex align-items-center justify-content-between text-white">
+                                    <span>SMPP / REST API Gateway</span>
+                                    <i class="fas fa-exchange-alt text-info"></i>
+                                </div>
+                                <div class="p-2.5 bg-dark bg-opacity-50 rounded border border-secondary d-flex align-items-center justify-content-between">
+                                    <span>Telecom Operators</span>
+                                    <span class="packet-dot" style="animation-delay: 0.9s;"></span>
+                                </div>
+                                <div class="p-2.5 bg-success bg-opacity-20 rounded border border-success d-flex align-items-center justify-content-between text-white">
+                                    <span>Delivered to Customers</span>
+                                    <i class="fas fa-check-double text-success"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             2. SMPP CONNECTIVITY
+             ============================================ -->
+        <section class="solutions-section">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="section-label">SMPP CONNECTIVITY</span>
+                    <h2 class="section-title-dark">Enterprise-Grade SMPP Gateway</h2>
+                    <p class="text-muted max-w-600 mx-auto" style="font-size: 1.15rem;">
+                        Connect your messaging infrastructure directly with our SMPP gateway for reliable, high-volume message delivery.
+                    </p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="p-4 bg-white rounded-4 border shadow-sm text-center h-100">
+                            <div class="solution-icon-box solution-icon-blue mx-auto mb-3"><i class="fas fa-link"></i></div>
+                            <h5 class="fw-bold text-dark mb-2">SMPP v3.4</h5>
+                            <p class="text-muted small mb-0">Standard SMPP protocol support for enterprise messaging connectivity.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="p-4 bg-white rounded-4 border shadow-sm text-center h-100">
+                            <div class="solution-icon-box solution-icon-orange mx-auto mb-3"><i class="fas fa-tachometer-alt"></i></div>
+                            <h5 class="fw-bold text-dark mb-2">High TPS</h5>
+                            <p class="text-muted small mb-0">Designed for high-volume messaging workloads and scalable traffic.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="p-4 bg-white rounded-4 border shadow-sm text-center h-100">
+                            <div class="solution-icon-box solution-icon-green mx-auto mb-3"><i class="fas fa-shield-alt"></i></div>
+                            <h5 class="fw-bold text-dark mb-2">Stable Connectivity</h5>
+                            <p class="text-muted small mb-0">Reliable connections for continuous enterprise messaging.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="p-4 bg-white rounded-4 border shadow-sm text-center h-100">
+                            <div class="solution-icon-box solution-icon-purple mx-auto mb-3"><i class="fas fa-file-invoice"></i></div>
+                            <h5 class="fw-bold text-dark mb-2">Delivery Reports</h5>
+                            <p class="text-muted small mb-0">Track real-time message status and delivery performance DLRs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             3. SMPP BIND TYPES
+             ============================================ -->
+        <section class="sectors-section">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="section-label">PROTOCOL FLEXIBILITY</span>
+                    <h2 class="section-title-dark">Flexible SMPP Bind Options</h2>
+                    <p class="text-muted max-w-600 mx-auto" style="font-size: 1.15rem;">Customized bind modes configured according to your architecture needs.</p>
+                </div>
+
+                <div class="row g-4 mb-5">
+                    <!-- Transceiver -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card-solution-mockup p-4 text-center h-100 border">
+                            <div class="solution-icon-box solution-icon-purple mx-auto mb-3"><i class="fas fa-exchange-alt"></i></div>
+                            <h4 class="fw-bold text-dark mb-2">Transceiver</h4>
+                            <p class="text-muted small mb-0">Send and receive messages seamlessly through a single persistent connection session.</p>
+                        </div>
+                    </div>
+
+                    <!-- Transmitter -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card-solution-mockup p-4 text-center h-100 border">
+                            <div class="solution-icon-box solution-icon-orange mx-auto mb-3"><i class="fas fa-paper-plane"></i></div>
+                            <h4 class="fw-bold text-dark mb-2">Transmitter</h4>
+                            <p class="text-muted small mb-0">Dedicated high-speed connection session for outbound messaging traffic dispatches.</p>
+                        </div>
+                    </div>
+
+                    <!-- Receiver -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card-solution-mockup p-4 text-center h-100 border">
+                            <div class="solution-icon-box solution-icon-blue mx-auto mb-3"><i class="fas fa-inbox"></i></div>
+                            <h4 class="fw-bold text-dark mb-2">Receiver</h4>
+                            <p class="text-muted small mb-0">Dedicated connection session for receiving incoming messaging traffic and delivery DLR reports.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Animated Connection Diagram -->
+                <div class="p-4 rounded-4 bg-dark text-white text-center border border-secondary shadow-lg">
+                    <h5 class="fw-bold text-warning mb-3"><i class="fas fa-network-wired me-2"></i> SMPP Connection Pipeline</h5>
+                    <div class="d-flex align-items-center justify-content-center gap-4 flex-wrap font-monospace small">
+                        <span class="badge bg-secondary p-2.5 fs-6">Enterprise System</span>
+                        <i class="fas fa-arrow-right text-warning signal-arrow-flow"></i>
+                        <span class="badge bg-primary p-2.5 fs-6">SMPP v3.4 Connection</span>
+                        <i class="fas fa-arrow-right text-warning signal-arrow-flow"></i>
+                        <span class="badge bg-success p-2.5 fs-6">Immense Messaging Gateway ✓</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             4. HIGH-THROUGHPUT MESSAGING
+             ============================================ -->
+        <section class="py-5" style="background: #060D1E; color: #FFFFFF;">
+            <div class="container py-3 text-center">
+                <div class="mb-5">
+                    <span class="hero-subtitle-orange"><i class="fas fa-tachometer-alt me-1"></i> MASS TELECOM SCALE</span>
+                    <h2 class="display-6 fw-extrabold text-white mb-2">Built for High-Volume Messaging</h2>
+                    <p class="text-white-50 max-w-600 mx-auto" style="font-size: 1.1rem;">
+                        High-capacity messaging engine designed for low-latency delivery.
+                    </p>
+                </div>
+
+                <div class="row g-4 mb-5">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="p-4 bg-white bg-opacity-10 rounded-4 border border-secondary">
+                            <h3 class="fw-bold text-warning mb-1">High TPS</h3>
+                            <span class="text-white-50 small">Scalable Throughput</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="p-4 bg-white bg-opacity-10 rounded-4 border border-secondary">
+                            <h3 class="fw-bold text-info mb-1">Low Latency</h3>
+                            <span class="text-white-50 small">Sub-Second Delivery</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="p-4 bg-white bg-opacity-10 rounded-4 border border-secondary">
+                            <h3 class="fw-bold text-success mb-1">99.9%+</h3>
+                            <span class="text-white-50 small">Platform Reliability</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="p-4 bg-white bg-opacity-10 rounded-4 border border-secondary">
+                            <h3 class="fw-bold text-white mb-1">Scalable</h3>
+                            <span class="text-white-50 small">Elastic Infrastructure</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Animated Data Packet Visual -->
+                <div class="smpp-workflow-box">
+                    <h5 class="fw-bold text-white mb-4"><i class="fas fa-exchange-alt me-2 text-warning"></i> Real-Time Message Flow</h5>
+                    <div class="d-flex align-items-center justify-content-center gap-3 flex-wrap font-monospace small">
+                        <span class="badge bg-secondary p-2.5">Message Packet</span>
+                        <i class="fas fa-arrow-right text-info signal-arrow-flow"></i>
+                        <span class="badge bg-primary p-2.5">Immense Gateway</span>
+                        <i class="fas fa-arrow-right text-info signal-arrow-flow"></i>
+                        <span class="badge bg-warning text-dark p-2.5">Telecom Operator</span>
+                        <i class="fas fa-arrow-right text-info signal-arrow-flow"></i>
+                        <span class="badge bg-success p-2.5">Handset Delivered ✓</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             5. SECURITY
+             ============================================ -->
+        <section class="how-it-works-section">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="section-label">ENTERPRISE PROTECTION</span>
+                    <h2 class="section-title-dark">Secure Messaging Connectivity</h2>
+                    <p class="text-muted max-w-600 mx-auto" style="font-size: 1.15rem;">
+                        Multi-layer security architecture safeguarding enterprise communications.
+                    </p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="p-4 bg-white rounded-4 border shadow-sm text-center h-100">
+                            <div class="solution-icon-box solution-icon-orange mx-auto mb-3"><i class="fas fa-shield-alt"></i></div>
+                            <h5 class="fw-bold text-dark mb-2">IP Whitelisting</h5>
+                            <p class="text-muted small mb-0">Restrict connection attempts exclusively to approved enterprise IP addresses.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="p-4 bg-white rounded-4 border shadow-sm text-center h-100">
+                            <div class="solution-icon-box solution-icon-blue mx-auto mb-3"><i class="fas fa-lock"></i></div>
+                            <h5 class="fw-bold text-dark mb-2">TLS / SSL Security</h5>
+                            <p class="text-muted small mb-0">Protect communication with end-to-end TLS encryption between connected systems.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="p-4 bg-white rounded-4 border shadow-sm text-center h-100">
+                            <div class="solution-icon-box solution-icon-green mx-auto mb-3"><i class="fas fa-key"></i></div>
+                            <h5 class="fw-bold text-dark mb-2">Authentication</h5>
+                            <p class="text-muted small mb-0">Secure bind credential authentication with encrypted handshake protocols.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="p-4 bg-white rounded-4 border shadow-sm text-center h-100">
+                            <div class="solution-icon-box solution-icon-purple mx-auto mb-3"><i class="fas fa-sliders-h"></i></div>
+                            <h5 class="fw-bold text-dark mb-2">Traffic Control</h5>
+                            <p class="text-muted small mb-0">Manage and throttle enterprise messaging traffic to prevent overload spikes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             6. API INTEGRATION
+             ============================================ -->
+        <section class="sectors-section">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="section-label">APPLICATION INTEGRATION</span>
+                    <h2 class="section-title-dark">Connect Your Applications With Messaging APIs</h2>
+                    <p class="text-muted max-w-600 mx-auto" style="font-size: 1.15rem;">
+                        Integrate SMS and messaging capabilities into your CRM, ERP, website or business application using secure REST API connectivity.
+                    </p>
+                </div>
+
+                <!-- Visual Flow -->
+                <div class="p-4 rounded-4 bg-dark text-white text-center border border-secondary mb-5 shadow-lg">
+                    <h5 class="fw-bold text-warning mb-3"><i class="fas fa-code me-2"></i> RESTful Messaging API Architecture</h5>
+                    <div class="d-flex align-items-center justify-content-center gap-3 flex-wrap font-monospace small">
+                        <span class="badge bg-secondary p-2.5">CRM / ERP / Application</span>
+                        <i class="fas fa-arrow-right text-white-50"></i>
+                        <span class="badge bg-primary p-2.5">REST API</span>
+                        <i class="fas fa-arrow-right text-white-50"></i>
+                        <span class="badge bg-info text-white p-2.5">Messaging Platform</span>
+                        <i class="fas fa-arrow-right text-white-50"></i>
+                        <span class="badge bg-warning text-dark p-2.5">Gateway</span>
+                        <i class="fas fa-arrow-right text-white-50"></i>
+                        <span class="badge bg-success p-2.5">Customer ✓</span>
+                    </div>
+                </div>
+
+                <!-- API Features -->
+                <div class="row g-3 mb-5">
+                    <div class="col-md-4 col-6"><div class="p-3.5 bg-white rounded-3 border shadow-sm fw-bold text-dark text-start"><i class="fas fa-check-circle text-success me-2"></i> REST API</div></div>
+                    <div class="col-md-4 col-6"><div class="p-3.5 bg-white rounded-3 border shadow-sm fw-bold text-dark text-start"><i class="fas fa-check-circle text-success me-2"></i> Webhook Integration</div></div>
+                    <div class="col-md-4 col-6"><div class="p-3.5 bg-white rounded-3 border shadow-sm fw-bold text-dark text-start"><i class="fas fa-check-circle text-success me-2"></i> Delivery Reports</div></div>
+                    <div class="col-md-4 col-6"><div class="p-3.5 bg-white rounded-3 border shadow-sm fw-bold text-dark text-start"><i class="fas fa-check-circle text-success me-2"></i> Message Status</div></div>
+                    <div class="col-md-4 col-6"><div class="p-3.5 bg-white rounded-3 border shadow-sm fw-bold text-dark text-start"><i class="fas fa-check-circle text-success me-2"></i> Application Integration</div></div>
+                    <div class="col-md-4 col-6"><div class="p-3.5 bg-white rounded-3 border shadow-sm fw-bold text-dark text-start"><i class="fas fa-check-circle text-success me-2"></i> Scalable Architecture</div></div>
+                </div>
+
+                <div class="text-center">
+                    <a href="../contact.html" class="btn-orange-filled">
+                        Request API Documentation <i class="fas fa-arrow-right ms-1"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             7. SMPP vs API COMPARISON
+             ============================================ -->
+        <section class="py-5" style="background: #060D1E; color: #FFFFFF;">
+            <div class="container py-3">
+                <div class="text-center mb-5">
+                    <span class="hero-subtitle-orange"><i class="fas fa-balance-scale me-1"></i> ARCHITECTURE COMPARISON</span>
+                    <h2 class="display-6 fw-extrabold text-white mb-2">SMPP or API — Choose the Right Connection</h2>
+                    <p class="text-white-50 max-w-600 mx-auto" style="font-size: 1.15rem;">
+                        Select the connectivity option that fits your technical requirements.
+                    </p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="vs-card-smpp">
+                            <div class="d-flex align-items-center gap-3 mb-3">
+                                <div class="solution-icon-box solution-icon-blue mb-0"><i class="fas fa-network-wired"></i></div>
+                                <h3 class="fw-bold text-white mb-0">SMPP Protocol</h3>
+                            </div>
+                            <ul class="list-unstyled text-white-50 d-flex flex-column gap-2 mb-0" style="font-size: 1.05rem;">
+                                <li><i class="fas fa-check-circle text-info me-2"></i> High-volume messaging workloads</li>
+                                <li><i class="fas fa-check-circle text-info me-2"></i> Persistent TCP connection session</li>
+                                <li><i class="fas fa-check-circle text-info me-2"></i> Enterprise telecom infrastructure</li>
+                                <li><i class="fas fa-check-circle text-info me-2"></i> Ultra-high throughput capacity</li>
+                                <li><i class="fas fa-check-circle text-info me-2"></i> Telecom / aggregator integration</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="vs-card-api">
+                            <div class="d-flex align-items-center gap-3 mb-3">
+                                <div class="solution-icon-box solution-icon-orange mb-0"><i class="fas fa-code"></i></div>
+                                <h3 class="fw-bold text-white mb-0">REST Messaging API</h3>
+                            </div>
+                            <ul class="list-unstyled text-white-50 d-flex flex-column gap-2 mb-0" style="font-size: 1.05rem;">
+                                <li><i class="fas fa-check-circle text-warning me-2"></i> Easy application & website integration</li>
+                                <li><i class="fas fa-check-circle text-warning me-2"></i> REST-based HTTP connectivity</li>
+                                <li><i class="fas fa-check-circle text-warning me-2"></i> Seamless CRM / ERP software integration</li>
+                                <li><i class="fas fa-check-circle text-warning me-2"></i> Flexible developer implementation</li>
+                                <li><i class="fas fa-check-circle text-warning me-2"></i> Fast, lightweight deployment</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             8. USE CASES
+             ============================================ -->
+        <section class="sectors-section">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="section-label">USE CASES</span>
+                    <h2 class="section-title-dark">Built for Enterprise Messaging</h2>
+                    <p class="text-muted max-w-600 mx-auto" style="font-size: 1.15rem;">Engineered for high-volume enterprise workloads.</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="p-4 bg-white rounded-4 border shadow-sm text-start h-100">
+                            <div class="solution-icon-box solution-icon-orange mb-3"><i class="fas fa-broadcast-tower"></i></div>
+                            <h5 class="fw-bold text-dark mb-2">Telecom Aggregators</h5>
+                            <p class="text-muted small mb-0">High-volume messaging connectivity with direct operator binds.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="p-4 bg-white rounded-4 border shadow-sm text-start h-100">
+                            <div class="solution-icon-box solution-icon-purple mb-3"><i class="fas fa-laptop-code"></i></div>
+                            <h5 class="fw-bold text-dark mb-2">Enterprise Applications</h5>
+                            <p class="text-muted small mb-0">Integrate messaging directly into corporate business software.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="p-4 bg-white rounded-4 border shadow-sm text-start h-100">
+                            <div class="solution-icon-box solution-icon-green mb-3"><i class="fas fa-database"></i></div>
+                            <h5 class="fw-bold text-dark mb-2">CRM & ERP Platforms</h5>
+                            <p class="text-muted small mb-0">Automate customer notifications and order tracking messages.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="p-4 bg-white rounded-4 border shadow-sm text-start h-100">
+                            <div class="solution-icon-box solution-icon-blue mb-3"><i class="fas fa-university"></i></div>
+                            <h5 class="fw-bold text-dark mb-2">Fintech & Banking</h5>
+                            <p class="text-muted small mb-0">OTP, 2FA login, and transactional messaging dispatches.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="p-4 bg-white rounded-4 border shadow-sm text-start h-100">
+                            <div class="solution-icon-box solution-icon-orange mb-3"><i class="fas fa-shopping-cart"></i></div>
+                            <h5 class="fw-bold text-dark mb-2">E-Commerce</h5>
+                            <p class="text-muted small mb-0">Order status, delivery alerts, and customer notifications.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="p-4 bg-white rounded-4 border shadow-sm text-start h-100">
+                            <div class="solution-icon-box solution-icon-purple mb-3"><i class="fas fa-cloud"></i></div>
+                            <h5 class="fw-bold text-dark mb-2">Communication Platforms</h5>
+                            <p class="text-muted small mb-0">Large-scale cloud messaging infrastructure interconnects.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             9. HOW IT WORKS
+             ============================================ -->
+        <section class="how-it-works-section">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="section-label">DEPLOYMENT PIPELINE</span>
+                    <h2 class="section-title-dark">Connect Your Infrastructure in 4 Steps</h2>
+                    <p class="text-muted max-w-550 mx-auto">Get connected to Immense Air Messaging Gateway today.</p>
+                </div>
+
+                <div class="steps-wrapper">
+                    <div class="steps-connector-line"></div>
+                    <div class="row g-4">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="step-card">
+                                <div class="step-badge">01</div>
+                                <h5>Choose SMPP or API</h5>
+                                <p>Select persistent SMPP v3.4 bind or RESTful API integration.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="step-card">
+                                <div class="step-badge">02</div>
+                                <h5>Complete Setup</h5>
+                                <p>Configure IP whitelisting, session limits, and security credentials.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="step-card">
+                                <div class="step-badge">03</div>
+                                <h5>Configure Flow</h5>
+                                <p>Set up DLR delivery callbacks, throughput limits, and routes.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="step-card">
+                                <div class="step-badge">04</div>
+                                <h5>Start Sending & Track</h5>
+                                <p>Dispatch messages and monitor real-time delivery performance.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             10. KEY FEATURES BANNER
+             ============================================ -->
+        <div class="container my-4">
+            <div class="dark-feature-banner text-center text-md-start">
+                <div class="text-center mb-4">
+                    <span class="hero-subtitle-orange"><i class="fas fa-star me-1"></i> PLATFORM HIGHLIGHTS</span>
+                    <h3 class="fw-bold text-white mb-0">Everything You Need for Reliable Connectivity</h3>
+                </div>
+
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-3 col-md-6 d-flex align-items-center gap-3">
+                        <i class="fas fa-bolt fa-2x text-warning"></i>
+                        <div>
+                            <h6 class="fw-bold text-white mb-0">⚡ High Throughput</h6>
+                            <span class="text-white-50 small">Designed for mass traffic</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 d-flex align-items-center gap-3">
+                        <i class="fas fa-link fa-2x text-primary"></i>
+                        <div>
+                            <h6 class="fw-bold text-white mb-0">🔗 SMPP v3.4</h6>
+                            <span class="text-white-50 small">Standard protocol support</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 d-flex align-items-center gap-3">
+                        <i class="fas fa-shield-alt fa-2x text-success"></i>
+                        <div>
+                            <h6 class="fw-bold text-white mb-0">🔐 Secure Connectivity</h6>
+                            <span class="text-white-50 small">Encrypted handshake</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 d-flex align-items-center gap-3">
+                        <i class="fas fa-globe fa-2x text-info"></i>
+                        <div>
+                            <h6 class="fw-bold text-white mb-0">🌐 IP Whitelisting</h6>
+                            <span class="text-white-50 small">Restricted IP access</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 d-flex align-items-center gap-3">
+                        <i class="fas fa-file-invoice fa-2x text-warning"></i>
+                        <div>
+                            <h6 class="fw-bold text-white mb-0">📊 Delivery Reports</h6>
+                            <span class="text-white-50 small">Real-time DLR callbacks</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 d-flex align-items-center gap-3">
+                        <i class="fas fa-expand-arrows-alt fa-2x text-primary"></i>
+                        <div>
+                            <h6 class="fw-bold text-white mb-0">🔄 Scalable Architecture</h6>
+                            <span class="text-white-50 small">Elastic cloud infrastructure</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 d-flex align-items-center gap-3">
+                        <i class="fas fa-puzzle-piece fa-2x text-success"></i>
+                        <div>
+                            <h6 class="fw-bold text-white mb-0">🧩 API Integration</h6>
+                            <span class="text-white-50 small">RESTful JSON endpoints</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 d-flex align-items-center gap-3">
+                        <i class="fas fa-headset fa-2x text-info"></i>
+                        <div>
+                            <h6 class="fw-bold text-white mb-0">🎧 Technical Support</h6>
+                            <span class="text-white-50 small">24x7 enterprise engineering</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================
+             11. DEVELOPER CTA
+             ============================================ -->
+        <section class="py-5 bg-light text-center">
+            <div class="container py-3">
+                <h2 class="section-title-dark mb-2">Need Messaging Integration?</h2>
+                <p class="text-muted max-w-600 mx-auto mb-4" style="font-size: 1.15rem;">
+                    Talk to our technical team about SMPP connectivity, API integration and enterprise messaging requirements.
+                </p>
+                <div class="d-flex flex-wrap justify-content-center gap-3">
+                    <a href="../contact.html" class="btn-orange-filled">
+                        Request API Documentation <i class="fas fa-arrow-right ms-1"></i>
+                    </a>
+                    <a href="../contact.html" class="btn btn-outline-dark fw-bold px-4 py-3 rounded-pill" style="font-size:1.05rem;">
+                        <i class="fas fa-headset me-1"></i> Talk to Technical Team
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             12. FINAL CTA
+             ============================================ -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="dark-cta-card text-center">
+                    <h2 class="display-5 fw-bold text-white mb-3">Build Your Messaging Infrastructure With Confidence</h2>
+                    <p class="text-white-50 lead mx-auto max-w-600 mb-4" style="font-size: 1.1rem;">
+                        Connect your applications and messaging systems with reliable enterprise-grade connectivity.
+                    </p>
+                    <div class="d-flex flex-wrap justify-content-center gap-3">
+                        <a href="../contact.html" class="btn-orange-filled">
+                            Get Started <i class="fas fa-arrow-right ms-1"></i>
+                        </a>
+                        <a href="../contact.html" class="btn-dark-outline">
+                            <i class="fas fa-envelope me-1"></i> Contact Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============================================
+         EXECUTIVE DARK FOOTER
+         ============================================ -->
+    <footer class="footer-dark-custom">
+        <div class="container">
+            <div class="row g-4 mb-4">
+                <div class="col-lg-4 col-md-6">
+                    <a class="navbar-brand-custom mb-3" href="../index.html">
+                        <img src="../assets/images/logo/logo.jpg" alt="Immense Air Pvt Ltd Logo" class="navbar-brand-logo">
+                        <div>
+                            <div style="font-size: 1.35rem; font-weight: 800; line-height: 1; letter-spacing: -0.5px; color: #FFFFFF;">
+                                IMMENSE <span style="color: var(--orange-brand);">AIR</span>
+                            </div>
+                            <div style="font-size: 0.7rem; font-weight: 800; letter-spacing: 1.5px; color: rgba(255,255,255,0.75); text-transform: uppercase;">
+                                PVT LTD
+                            </div>
+                        </div>
+                    </a>
+                    <p style="color:rgba(255,255,255,.75);font-size:1.0rem;line-height:1.65;max-width:360px;">
+                        Immense Air Pvt Ltd empowers businesses with intelligent communication solutions that drive engagement, automation & growth.
+                    </p>
+                    <div class="mt-3 d-flex gap-2">
+                        <a href="https://in.linkedin.com/company/immense-smart-solutions" target="_blank" class="social-circle-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.facebook.com/immensesmartsolutions/" target="_blank" class="social-circle-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.youtube.com/@immensesmartsolutions" target="_blank" class="social-circle-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/immense_smart_solutions/" target="_blank" class="social-circle-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6>PRODUCTS</h6>
+                    <ul class="footer-link-list">
+                        <li><a href="bulk-sms.html">SMS Services</a></li>
+                        <li><a href="whatsapp-api.html">WhatsApp API</a></li>
+                        <li><a href="rcs.html">RCS Messaging</a></li>
+                        <li><a href="voice.html">Voice Solutions</a></li>
+                        <li><a href="ivr-obd.html">IVR & OBD</a></li>
+                        <li><a href="smpp.html" class="text-warning fw-bold">SMPP & API</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6>SOLUTIONS</h6>
+                    <ul class="footer-link-list">
+                        <li><a href="../about.html">Marketing</a></li>
+                        <li><a href="../resources.html">Authentication</a></li>
+                        <li><a href="../contact.html">Customer Support</a></li>
+                        <li><a href="bulk-sms.html">Notifications</a></li>
+                        <li><a href="whatsapp-api.html">Automation</a></li>
+                        <li><a href="../about.html">Enterprise</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6>DEVELOPERS</h6>
+                    <ul class="footer-link-list">
+                        <li><a href="../developers.html">API Documentation</a></li>
+                        <li><a href="smpp.html">SMPP Guide</a></li>
+                        <li><a href="../developers.html">SDKs & Libraries</a></li>
+                        <li><a href="../developers.html">Postman Collection</a></li>
+                        <li><a href="../developers.html">Integration Guide</a></li>
+                        <li><a href="../developers.html">Status Page</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6>COMPANY</h6>
+                    <ul class="footer-link-list">
+                        <li><a href="../about.html">About Us</a></li>
+                        <li><a href="../careers.html">Careers <span class="badge bg-warning text-dark style-badge" style="font-size:0.7rem;">Hiring</span></a></li>
+                        <li><a href="../contact.html">Partners</a></li>
+                        <li><a href="../resources.html">News & Updates</a></li>
+                        <li><a href="../contact.html" class="text-warning fw-bold">Contact Us <i class="fas fa-arrow-right ms-1"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr style="border-color:rgba(255,255,255,.12);margin:2.5rem 0 1.5rem;">
+
+            <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 text-white-50" style="font-size:0.95rem;">
+                <div>&copy; 2026 Immense Air Pvt Ltd All Rights Reserved.</div>
+                <div>
+                    <a href="../privacy-policy.html" class="text-white-50 me-3 text-decoration-none">Privacy Policy</a>
+                    <a href="../terms.html" class="text-white-50 me-3 text-decoration-none">Terms & Conditions</a>
+                    <a href="../terms.html" class="text-white-50 text-decoration-none">Refund Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919768566466" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Global Data Privacy Opt-In Consent Banner -->
+    <div id="optInGlobalBanner" class="optin-consent-banner hidden">
+        <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+            <div class="d-flex align-items-center gap-3">
+                <i class="fas fa-user-shield text-warning fa-2x"></i>
+                <div>
+                    <div class="d-flex align-items-center gap-2 mb-1">
+                        <span class="fw-bold text-white fs-6">Data Privacy & Communication Opt-In</span>
+                        <span class="optin-badge"><i class="fas fa-check-circle me-1"></i> DPDP Act Compliant</span>
+                    </div>
+                    <p class="text-white-50 small mb-0">
+                        We value your data privacy. By using Immense Air, you consent to data processing for enterprise service delivery, SMS/WhatsApp updates, and analytics as outlined in our <a href="../privacy-policy.html" class="text-warning text-decoration-underline">Privacy Policy</a>.
+                    </p>
+                </div>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+                <button class="btn btn-warning btn-sm fw-bold px-3 rounded-pill text-white" onclick="acceptDataOptIn()">
+                    <i class="fas fa-check me-1"></i> Accept & Opt-In
+                </button>
+                <button class="btn btn-outline-light btn-sm px-3 rounded-pill" onclick="declineDataOptIn()">
+                    Necessary Only
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

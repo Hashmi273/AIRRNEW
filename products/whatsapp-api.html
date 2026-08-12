@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Page Title -->
+    <title>Official WhatsApp Business API Platform | Immense Air Pvt Ltd</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Official WhatsApp Business API Platform by Immense Air Pvt Ltd. Green tick verification, automated chatbots, interactive quick reply buttons, media templates, and REST API integration.">
+    <meta name="keywords" content="whatsapp business api, official meta partner, whatsapp green tick, whatsapp chatbot, whatsapp marketing api, whatsapp bulk broadcast, immense smart solutions">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#060D1E">
+    
+    <!-- Google Fonts - Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom Upgraded CSS System -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    
+    <style>
+        .product-hero {
+            background: radial-gradient(circle at 75% 35%, #0B2B1D 0%, #060D1E 70%);
+            padding: 150px 0 80px;
+            color: #FFFFFF;
+        }
+
+        .wtp-green-accent {
+            color: #25D366;
+        }
+
+        .bg-wtp-gradient {
+            background: linear-gradient(135deg, rgba(37, 211, 102, 0.12) 0%, rgba(18, 140, 126, 0.12) 100%);
+            border: 1px solid rgba(37, 211, 102, 0.3);
+        }
+
+        /* WHATSAPP SANDBOX CARD */
+        .wtp-sandbox-card {
+            background: #FFFFFF;
+            border-radius: 24px;
+            padding: 3rem 2.5rem;
+            border: 1px solid var(--border-light);
+            box-shadow: 0 20px 50px rgba(11, 23, 50, 0.12);
+        }
+
+        /* SMARTPHONE MOCKUP FOR WHATSAPP */
+        .phone-mockup-frame {
+            width: 330px;
+            height: 610px;
+            background: #000000;
+            border-radius: 42px;
+            padding: 12px;
+            margin: 0 auto;
+            border: 4px solid #1F2937;
+            box-shadow: 0 25px 65px rgba(0, 0, 0, 0.45);
+            position: relative;
+        }
+
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            background: #E5DDD5;
+            border-radius: 34px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .phone-notch {
+            width: 130px;
+            height: 20px;
+            background: #000000;
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+            margin: 0 auto;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+        }
+
+        .phone-header-bar {
+            background: #075E54;
+            color: #FFFFFF;
+            padding: 28px 16px 10px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .wtp-chat-header {
+            background: #075E54;
+            color: #FFFFFF;
+            padding: 10px 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .phone-chat-body {
+            padding: 14px;
+            flex-grow: 1;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            gap: 12px;
+            background-image: radial-gradient(rgba(7, 94, 84, 0.08) 1px, transparent 0);
+            background-size: 16px 16px;
+        }
+
+        /* WHATSAPP BUBBLE */
+        .wtp-bubble-card {
+            background: #DCF8C6;
+            border-radius: 14px 14px 2px 14px;
+            padding: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            align-self: flex-end;
+            max-width: 92%;
+            text-align: left;
+            animation: popInWtp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @keyframes popInWtp {
+            from { transform: scale(0.88) translateY(20px); opacity: 0; }
+            to { transform: scale(1) translateY(0); opacity: 1; }
+        }
+
+        .wtp-bubble-media {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 8px;
+        }
+
+        .wtp-btn-reply {
+            display: block;
+            width: 100%;
+            padding: 7px 0;
+            margin-top: 5px;
+            background: #FFFFFF;
+            color: #075E54;
+            border-radius: 8px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-align: center;
+            text-decoration: none;
+            border: 1px solid rgba(7, 94, 84, 0.2);
+        }
+
+        .wtp-btn-reply:hover {
+            background: #075E54;
+            color: #FFFFFF;
+        }
+
+        /* CATEGORY CARDS */
+        .card-cat-wtp {
+            background: #FFFFFF;
+            border-radius: 20px;
+            padding: 2.2rem 1.8rem;
+            border: 1px solid var(--border-light);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+
+        .card-cat-wtp:hover {
+            transform: translateY(-8px);
+            border-color: #25D366;
+            box-shadow: 0 20px 40px rgba(37, 211, 102, 0.15);
+        }
+
+        .cat-icon-badge {
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            margin-bottom: 1.4rem;
+        }
+
+        .cat-marketing { background: rgba(37, 211, 102, 0.15); color: #25D366; }
+        .cat-utility { background: rgba(59, 130, 246, 0.15); color: #3B82F6; }
+        .cat-auth { background: rgba(255, 106, 0, 0.15); color: var(--orange-brand); }
+
+        /* AUTOMATION JOURNEY BOX */
+        .journey-step-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 1.8rem 1.4rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+
+        .journey-step-card:hover {
+            transform: translateY(-6px);
+            border-color: #25D366;
+            background: rgba(255, 255, 255, 0.08);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================
+         HEADER / NAVBAR
+         ============================================ -->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top navbar-custom" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand-custom" href="../index.html">
+                    <img src="../assets/images/logo/logo.jpg" alt="Immense Air Pvt Ltd Logo" class="navbar-brand-logo">
+                    <div>
+                        <div style="font-size: 1.35rem; font-weight: 800; line-height: 1; letter-spacing: -0.5px; color: #FFFFFF;">
+                            IMMENSE <span style="color: var(--orange-brand);">AIR</span>
+                        </div>
+                        <div style="font-size: 0.7rem; font-weight: 800; letter-spacing: 1.5px; color: rgba(255,255,255,0.75); text-transform: uppercase;">
+                            PVT LTD
+                        </div>
+                    </div>
+                </a>
+                
+                <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="../index.html">Home</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link nav-link-custom dropdown-toggle active" href="#" id="productsDropdown" data-bs-toggle="dropdown">Products</a>
+                            <ul class="dropdown-menu dropdown-menu-custom">
+                                <li><a class="dropdown-item dropdown-item-custom" href="bulk-sms.html"><i class="fas fa-sms"></i> SMS Services</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom active" href="whatsapp-api.html"><i class="fab fa-whatsapp text-success"></i> WhatsApp API</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="rcs.html"><i class="fas fa-comment-dots text-info"></i> RCS Messaging</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="voice.html"><i class="fas fa-phone-alt text-warning"></i> Voice Solutions</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="ivr-obd.html"><i class="fas fa-headset"></i> IVR / OBD Solutions</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="smpp.html"><i class="fas fa-code text-primary"></i> SMPP & API</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="../index.html#how-it-works">How It Works</a></li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="../developers.html">Developers</a></li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="../careers.html">Careers</a></li>
+                        <li class="nav-item ms-lg-3"><a class="btn-nav-cta" href="../contact.html">Contact Us <i class="fas fa-arrow-right ms-1"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ============================================
+             1. HERO SECTION
+             ============================================ -->
+        <section class="product-hero text-center">
+            <div class="container">
+                <span class="hero-subtitle-orange"><i class="fab fa-whatsapp me-2 text-success"></i> OFFICIAL META WHATSAPP BUSINESS API</span>
+                <h1 class="display-3 fw-extrabold text-white mb-3" style="letter-spacing: -0.5px;">
+                    Official WhatsApp Business API
+                </h1>
+                <p class="hero-para-mockup mx-auto max-w-600 mb-4" style="font-size: 1.25rem;">
+                    Engage over 2 Billion active users with Green Tick brand verification, automated catalog broadcasts, interactive quick reply buttons, and real-time read analytics.
+                </p>
+                <div class="d-flex flex-wrap justify-content-center gap-4">
+                    <span class="hero-check-pill"><i class="fas fa-check-circle text-success"></i> Official Meta Partner</span>
+                    <span class="hero-check-pill"><i class="fas fa-shield-alt text-warning"></i> Green Tick Assistance</span>
+                    <span class="hero-check-pill"><i class="fas fa-bolt text-primary"></i> Sub-Second Delivery SLA</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             2. REAL LIVE WHATSAPP API TESTING (CONSOLE & MOCKUP)
+             ============================================ -->
+        <section class="py-5 bg-light" id="live-wtp-api-test">
+            <div class="container py-3">
+                <div class="text-center mb-5">
+                    <span class="section-label">REAL-TIME WHATSAPP API GATEWAY</span>
+                    <h2 class="section-title-dark">Live WhatsApp API Testing Console</h2>
+                    <p class="text-muted max-w-600 mx-auto" style="font-size: 1.15rem;">
+                        Test real-time WhatsApp Business API template dispatch directly on your mobile handset.
+                    </p>
+                </div>
+
+                <div class="wtp-sandbox-card">
+                    <div class="row g-4 align-items-center">
+                        <!-- Left Form Controls -->
+                        <div class="col-lg-6">
+                            <div class="p-4 rounded-4 bg-light border text-start">
+                                <div class="d-flex align-items-center justify-content-between mb-4">
+                                    <span class="badge bg-success text-white px-3 py-2 rounded-pill fw-bold" style="font-size: 0.9rem;">
+                                        <i class="fab fa-whatsapp me-1"></i> WhatsApp API Gateway
+                                    </span>
+                                    <span class="badge bg-primary px-3 py-2 rounded-pill fw-bold" style="font-size: 0.85rem;">
+                                        <i class="fas fa-circle me-1" style="font-size:0.55rem;"></i> Meta Active Node
+                                    </span>
+                                </div>
+
+                                <form id="realWtpForm" onsubmit="handleRealWtpDispatch(event)">
+                                    <div class="mb-4">
+                                        <label class="form-label fw-bold text-dark fs-5 mb-2">Recipient Mobile Number (+91) *</label>
+                                        <div class="input-group input-group-lg rounded-3 overflow-hidden shadow-sm" style="border: 2px solid #25D366;">
+                                            <span class="input-group-text bg-light text-dark fw-bold fs-4 border-0" style="border-right: 2px solid #25D366 !important;">+91</span>
+                                            <input type="tel" id="wtpPhoneInput" class="form-control bg-white border-0 fw-bold fs-4 text-dark" value="8858674641" placeholder="Enter 10-digit mobile number" maxlength="10" required>
+                                        </div>
+                                        <p class="text-muted small mt-2.5 mb-0" style="font-size: 0.92rem;">
+                                            <i class="fas fa-info-circle text-success me-1"></i> WhatsApp test message direct <strong>Immense Air Pvt Ltd</strong> Verified Partner account se deliver hoga.
+                                        </p>
+                                    </div>
+
+                                    <button type="submit" id="btnDispatchWtp" class="btn btn-success btn-lg w-100 fw-bold text-white shadow py-3 fs-5" style="background-color: #25D366; border: none;">
+                                        Send Test WhatsApp Message <i class="fab fa-whatsapp ms-2"></i>
+                                    </button>
+                                </form>
+
+                                <!-- Visual Delivery Pipeline -->
+                                <div class="mt-4 p-3 rounded-4 bg-white border" id="wtpPipelineBox">
+                                    <div class="d-flex align-items-center justify-content-between mb-2">
+                                        <span class="fw-bold text-dark small"><i class="fas fa-route text-success me-1"></i> Visual Delivery Flow:</span>
+                                        <span id="wtpPipelineBadge" class="badge bg-secondary">Ready to Send</span>
+                                    </div>
+                                    <div class="row text-center g-2" style="font-size: 0.8rem;">
+                                        <div class="col">
+                                            <div id="wtpStep1" class="p-2 rounded bg-light text-muted fw-bold border">1. Initiated</div>
+                                        </div>
+                                        <div class="col">
+                                            <div id="wtpStep2" class="p-2 rounded bg-light text-muted fw-bold border">2. Gateway</div>
+                                        </div>
+                                        <div class="col">
+                                            <div id="wtpStep3" class="p-2 rounded bg-light text-muted fw-bold border">3. Meta Cloud</div>
+                                        </div>
+                                        <div class="col">
+                                            <div id="wtpStep4" class="p-2 rounded bg-light text-muted fw-bold border">4. Delivered ✓✓</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Realistic WhatsApp Smartphone Mockup Preview -->
+                        <div class="col-lg-6 text-center d-flex flex-column justify-content-center">
+                            <div class="phone-mockup-frame">
+                                <div class="phone-notch"></div>
+                                <div class="phone-screen">
+                                    <!-- Status Bar -->
+                                    <div class="phone-header-bar">
+                                        <span><i class="fas fa-signal me-1"></i> Airtel 5G</span>
+                                        <span id="phoneClockTime">12:30 PM</span>
+                                        <span>99% <i class="fas fa-battery-full ms-1"></i></span>
+                                    </div>
+
+                                    <!-- WhatsApp Header -->
+                                    <div class="wtp-chat-header">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <img src="../assets/images/logo/logo.jpg" style="width:34px;height:34px;border-radius:50%;object-fit:cover;" alt="Immense Air Pvt Ltd">
+                                            <div class="text-start">
+                                                <div class="fw-bold text-white fs-6 d-flex align-items-center gap-1" style="font-size:0.88rem;">
+                                                    Immense Air Pvt Ltd <i class="fas fa-check-circle text-white" style="font-size:0.85rem;" title="Official Green Tick"></i>
+                                                </div>
+                                                <div class="text-white-50" style="font-size:0.68rem;">Official Business Account</div>
+                                            </div>
+                                        </div>
+                                        <i class="fas fa-ellipsis-v text-white"></i>
+                                    </div>
+
+                                    <!-- WhatsApp Chat Body -->
+                                    <div class="phone-chat-body" id="wtpChatBody">
+                                        <div class="text-center my-1">
+                                            <span class="badge bg-white text-muted shadow-sm px-2 py-1" style="font-size:0.65rem;">🔒 End-to-end encrypted</span>
+                                        </div>
+
+                                        <!-- WhatsApp Media Template Bubble -->
+                                        <div class="wtp-bubble-card shadow-sm" id="wtpBubble">
+                                            <img src="https://d23oslvtgtcoll.cloudfront.net/6a2259a20997286666b81889-6291063691.jpeg" class="wtp-bubble-media" alt="WhatsApp Media Header">
+                                            <div class="text-dark small mb-2" id="wtpBodyText" style="font-size:0.75rem;line-height:1.45;text-align:left;">
+                                                🚀 <strong>No Website? No Problem!</strong><br><br>
+                                                Start your RCS Campaign with own Name without website.<br><br>
+                                                ✅ <strong>RCS Setup & Approval Support</strong><br>
+                                                ⚡ <strong>Fast Activation</strong><br>
+                                                🛠️ <strong>24×7 Support</strong><br>
+                                                🧑‍💻 <strong>Dedicated Account manager</strong><br><br>
+                                                🤝 <strong>100% Refund if you're not satisfied with our service quality.</strong>
+                                            </div>
+                                            
+                                            <a href="tel:9768566466" class="wtp-btn-reply">
+                                                <i class="fas fa-phone-alt me-1 text-success"></i> Call Now
+                                            </a>
+                                            <a href="https://wa.me/919768566466" target="_blank" class="wtp-btn-reply">
+                                                <i class="fas fa-comment-dots me-1 text-primary"></i> Chat Now
+                                            </a>
+
+                                            <div class="text-end text-muted mt-1" style="font-size:0.68rem;" id="wtpReadStatus">
+                                                12:30 PM <i class="fas fa-check-double text-primary ms-1"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Clean Real API Status Report Box -->
+                    <div id="wtpReportContainer" class="mt-5 d-none">
+                        <div class="p-4 rounded-4 bg-dark text-white border border-secondary shadow-lg">
+                            <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3 pb-3 border-bottom border-secondary">
+                                <div class="d-flex align-items-center gap-3">
+                                    <span class="badge bg-success px-3 py-2 rounded-pill fs-6 fw-bold">
+                                        <i class="fas fa-check-circle me-1"></i> WHATSAPP MESSAGE DISPATCHED
+                                    </span>
+                                    <h4 class="fw-bold text-white mb-0">WhatsApp API Transaction Report</h4>
+                                </div>
+                                <span class="text-white-50 font-monospace" id="wtpTimestamp">Timestamp: --</span>
+                            </div>
+
+                            <div class="row g-3 text-start">
+                                <div class="col-md-4">
+                                    <div class="p-3 rounded-3 bg-secondary bg-opacity-25 border border-secondary">
+                                        <div class="text-white-50 small mb-1">Transaction ID</div>
+                                        <div class="font-monospace fw-bold text-warning fs-6 text-truncate" id="wtpTxnId">178636712021261036...</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="p-3 rounded-3 bg-secondary bg-opacity-25 border border-secondary">
+                                        <div class="text-white-50 small mb-1">Template ID</div>
+                                        <div class="font-monospace fw-bold text-info fs-6" id="wtpTemplateVal">rcstemp_qx87btsseg42qe6j</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="p-3 rounded-3 bg-secondary bg-opacity-25 border border-secondary">
+                                        <div class="text-white-50 small mb-1">Recipient Mobile</div>
+                                        <div class="font-monospace fw-bold text-white fs-6" id="wtpRecipientVal">+91 8858674641</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             3. WHATSAPP CATEGORIES (3 VISUALLY STRONG CARDS)
+             ============================================ -->
+        <section class="solutions-section">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="section-label">MESSAGE CATEGORIES</span>
+                    <h2 class="section-title-dark">WhatsApp Business API Use Cases</h2>
+                    <p class="text-muted max-w-600 mx-auto" style="font-size: 1.15rem;">Categorized communication streams compliant with Meta Business Policies.</p>
+                </div>
+
+                <div class="row g-4">
+                    <!-- 1. MARKETING -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card-cat-wtp">
+                            <div class="cat-icon-badge cat-marketing"><i class="fas fa-bullhorn"></i></div>
+                            <h3 class="fw-bold text-dark mb-2" style="font-size: 1.4rem;">MARKETING</h3>
+                            <p class="text-muted mb-4" style="font-size: 1.0rem;">
+                                Broadcast promotional offers, new product launches, discount vouchers, and re-engagement campaigns to opted-in customers.
+                            </p>
+                            <ul class="list-unstyled text-start small d-flex flex-column gap-2 mb-4">
+                                <li><i class="fas fa-check-circle text-success me-2"></i> Promotional Catalogs & Offers</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i> Abandoned Cart Recovery</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i> Seasonal Broadcast Campaigns</li>
+                            </ul>
+                            <a href="../contact.html" class="btn btn-outline-success fw-bold w-100 rounded-pill">Launch Marketing <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- 2. UTILITY -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card-cat-wtp">
+                            <div class="cat-icon-badge cat-utility"><i class="fas fa-file-invoice"></i></div>
+                            <h3 class="fw-bold text-dark mb-2" style="font-size: 1.4rem;">UTILITY</h3>
+                            <p class="text-muted mb-4" style="font-size: 1.0rem;">
+                                Automated transactional notifications, order confirmations, payment links, shipping tracking, and appointment updates.
+                            </p>
+                            <ul class="list-unstyled text-start small d-flex flex-column gap-2 mb-4">
+                                <li><i class="fas fa-check-circle text-primary me-2"></i> Order & Delivery Updates</li>
+                                <li><i class="fas fa-check-circle text-primary me-2"></i> Instant Payment Receipts</li>
+                                <li><i class="fas fa-check-circle text-primary me-2"></i> Booking Reminders</li>
+                            </ul>
+                            <a href="../contact.html" class="btn btn-outline-primary fw-bold w-100 rounded-pill">Explore Utility <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- 3. AUTHENTICATION -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card-cat-wtp">
+                            <div class="cat-icon-badge cat-auth"><i class="fas fa-user-shield"></i></div>
+                            <h3 class="fw-bold text-dark mb-2" style="font-size: 1.4rem;">AUTHENTICATION</h3>
+                            <p class="text-muted mb-4" style="font-size: 1.0rem;">
+                                Deliver high-security 2FA login OTPs, account verification codes, password resets, and suspicious login alerts.
+                            </p>
+                            <ul class="list-unstyled text-start small d-flex flex-column gap-2 mb-4">
+                                <li><i class="fas fa-check-circle text-warning me-2"></i> One-Tap Login OTPs</li>
+                                <li><i class="fas fa-check-circle text-warning me-2"></i> Multi-Factor Authentication</li>
+                                <li><i class="fas fa-check-circle text-warning me-2"></i> Security Fraud Alerts</li>
+                            </ul>
+                            <a href="../contact.html" class="btn btn-outline-warning text-dark fw-bold w-100 rounded-pill">Test Security OTP <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             4. RICH MEDIA MESSAGING
+             ============================================ -->
+        <section class="sectors-section">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="section-label">RICH MEDIA CAPABILITIES</span>
+                    <h2 class="section-title-dark">Interactive & Media Messaging</h2>
+                    <p class="text-muted max-w-600 mx-auto" style="font-size: 1.15rem;">Engage customers with rich visual components directly inside WhatsApp.</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card-solution-mockup">
+                            <div class="solution-icon-box solution-icon-green"><i class="fas fa-image"></i></div>
+                            <h4>Images & Product Banners</h4>
+                            <p>Send high-resolution product photos, promotional posters, and banner media with custom body text.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card-solution-mockup">
+                            <div class="solution-icon-box solution-icon-blue"><i class="fas fa-video"></i></div>
+                            <h4>HD Videos & Motion Clips</h4>
+                            <p>Engage audiences with product explainer videos, unboxing reels, and event promo clips.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card-solution-mockup">
+                            <div class="solution-icon-box solution-icon-orange"><i class="fas fa-file-pdf"></i></div>
+                            <h4>PDF Documents & Invoices</h4>
+                            <p>Automatically attach tax invoices, PDF catalogs, bank statements, and ticket passes.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card-solution-mockup">
+                            <div class="solution-icon-box solution-icon-purple"><i class="fas fa-hand-pointer"></i></div>
+                            <h4>Interactive Action Buttons</h4>
+                            <p>One-tap Quick Replies, Call Phone Number, Visit URL, and Copy Discount Code buttons.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card-solution-mockup">
+                            <div class="solution-icon-box solution-icon-green"><i class="fas fa-store"></i></div>
+                            <h4>Multi-Product Catalog Showcase</h4>
+                            <p>Display interactive product catalogs allowing customers to add items to cart and check out in-app.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card-solution-mockup">
+                            <div class="solution-icon-box solution-icon-orange"><i class="fas fa-tasks"></i></div>
+                            <h4>Pre-Approved Message Templates</h4>
+                            <p>Manage and submit Meta-approved message templates with dynamic variable placeholders (`{{1}}`, `{{2}}`).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             5. TEMPLATE MANAGEMENT
+             ============================================ -->
+        <section class="py-5" style="background: #060D1E; color: #FFFFFF;">
+            <div class="container py-3">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <span class="hero-subtitle-orange"><i class="fas fa-sliders-h me-1"></i> META TEMPLATE SCRUBBING</span>
+                        <h2 class="display-6 fw-extrabold text-white mb-3">Seamless Meta Template Management</h2>
+                        <p class="text-white-50 mb-4" style="font-size: 1.1rem;">
+                            Our platform simplifies WhatsApp Business template approval and variable management. Create, test, and manage pre-approved Meta templates with instant approval status tracking.
+                        </p>
+                        <div class="d-flex flex-column gap-3">
+                            <div class="d-flex align-items-start gap-3">
+                                <i class="fas fa-check-circle text-success fa-1x mt-1"></i>
+                                <div>
+                                    <h5 class="fw-bold text-white mb-1">Instant Meta Approval</h5>
+                                    <p class="text-white-50 small mb-0">Pre-scrubbed templates approved within minutes by Meta AI engine.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-start gap-3">
+                                <i class="fas fa-check-circle text-success fa-1x mt-1"></i>
+                                <div>
+                                    <h5 class="fw-bold text-white mb-1">Dynamic Body Variables</h5>
+                                    <p class="text-white-50 small mb-0">Inject dynamic customer names, order IDs, tracking links, and promo codes.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="p-4 rounded-4" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);">
+                            <div class="d-flex align-items-center justify-content-between mb-3 border-bottom pb-2 border-secondary">
+                                <span class="badge bg-success px-3 py-1">Template Status: APPROVED ✓</span>
+                                <span class="font-monospace small text-white-50">rcstemp_qx87btsseg42qe6j</span>
+                            </div>
+                            <pre class="code-json-box mb-0"><code>{
+  "template_name": "enterprise_welcome_media",
+  "category": "MARKETING",
+  "language": "en",
+  "components": [
+    { "type": "HEADER", "format": "MEDIA_IMAGE" },
+    { "type": "BODY", "text": "Hi {{1}}! Welcome to Immense Smart..." },
+    { "type": "BUTTONS", "actions": ["QUICK_REPLY", "URL_CALL"] }
+  ]
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             6. API & DEVELOPER INTEGRATION
+             ============================================ -->
+        <section class="how-it-works-section">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="section-label">DEVELOPER INTEGRATION</span>
+                    <h2 class="section-title-dark">Plug & Play REST API & Webhooks</h2>
+                    <p class="text-muted max-w-600 mx-auto" style="font-size: 1.15rem;">Connect your CRM, ERP, eCommerce store, or mobile app directly to the Meta WhatsApp Cloud.</p>
+                </div>
+
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-6">
+                        <div class="p-4 rounded-4 bg-dark text-white border border-secondary shadow-lg">
+                            <div class="d-flex align-items-center justify-content-between mb-3 border-bottom pb-2 border-secondary">
+                                <span class="badge bg-success px-3 py-1 fs-6">WhatsApp API Snippet</span>
+                                <span class="text-white-50 small font-monospace">POST /api/v1/whatsapp/single</span>
+                            </div>
+                            <pre class="code-json-box mb-0"><code>curl -X POST "https://wtpapi.sms4power.com/api/v1/whatsapp/single?api_key=YOUR_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "message_type": "media",
+    "sender": "+918828669961",
+    "to": "+918858674641",
+    "template_id": "rcstemp_qx87btsseg42qe6j",
+    "sample": {
+      "media": "https://d23oslvtgtcoll...",
+      "bodyvar": ["John"]
+    }
+  }'</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="d-flex flex-column gap-3 text-start">
+                            <div class="p-3 bg-white rounded-3 border shadow-sm d-flex align-items-center gap-3">
+                                <div class="solution-icon-box solution-icon-green mb-0"><i class="fas fa-code"></i></div>
+                                <div>
+                                    <h4 class="fw-bold text-dark mb-1" style="font-size: 1.2rem;">RESTful Messaging API</h4>
+                                    <p class="text-muted small mb-0" style="font-size: 0.95rem;">High-throughput JSON REST endpoints supporting single and broadcast dispatches.</p>
+                                </div>
+                            </div>
+                            <div class="p-3 bg-white rounded-3 border shadow-sm d-flex align-items-center gap-3">
+                                <div class="solution-icon-box solution-icon-blue mb-0"><i class="fas fa-bell"></i></div>
+                                <div>
+                                    <h4 class="fw-bold text-dark mb-1" style="font-size: 1.2rem;">Real-Time Status Webhooks</h4>
+                                    <p class="text-muted small mb-0" style="font-size: 0.95rem;">Instant HTTP POST notifications for Sent, Delivered, Read, and Button Click events.</p>
+                                </div>
+                            </div>
+                            <div class="p-3 bg-white rounded-3 border shadow-sm d-flex align-items-center gap-3">
+                                <div class="solution-icon-box solution-icon-orange mb-0"><i class="fas fa-plug"></i></div>
+                                <div>
+                                    <h4 class="fw-bold text-dark mb-1" style="font-size: 1.2rem;">CRM & ERP Integration</h4>
+                                    <p class="text-muted small mb-0" style="font-size: 0.95rem;">Pre-built connectors for Salesforce, HubSpot, Shopify, Zoho, and WooCommerce.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             7. AUTOMATION & CUSTOMER JOURNEY
+             ============================================ -->
+        <section class="py-5" style="background: #060D1E; color: #FFFFFF;">
+            <div class="container py-3">
+                <div class="text-center mb-5">
+                    <span class="hero-subtitle-orange"><i class="fas fa-robot me-1"></i> AUTOMATED JOURNEY</span>
+                    <h2 class="display-6 fw-extrabold text-white mb-3">Automated WhatsApp Customer Flow</h2>
+                    <p class="text-white-50 max-w-600 mx-auto" style="font-size: 1.15rem;">
+                        Trigger personalized automated conversations based on user behavior and interactions.
+                    </p>
+                </div>
+
+                <div class="row g-4 text-center">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="journey-step-card">
+                            <div class="solution-icon-box solution-icon-green mx-auto mb-3"><i class="fas fa-mouse-pointer"></i></div>
+                            <h5 class="fw-bold text-white mb-2">1. Customer Action</h5>
+                            <p class="text-white-50 small mb-0">Customer submits website form, places order, or clicks WhatsApp ad.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="journey-step-card">
+                            <div class="solution-icon-box solution-icon-orange mx-auto mb-3"><i class="fas fa-bolt"></i></div>
+                            <h5 class="fw-bold text-white mb-2">2. API Trigger</h5>
+                            <p class="text-white-50 small mb-0">System triggers automated API request with personalized template data.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="journey-step-card">
+                            <div class="solution-icon-box solution-icon-blue mx-auto mb-3"><i class="fab fa-whatsapp"></i></div>
+                            <h5 class="fw-bold text-white mb-2">3. WhatsApp Message</h5>
+                            <p class="text-white-50 small mb-0">Customer receives media message with interactive quick-reply buttons.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="journey-step-card">
+                            <div class="solution-icon-box solution-icon-purple mx-auto mb-3"><i class="fas fa-headset"></i></div>
+                            <h5 class="fw-bold text-white mb-2">4. Bot / Agent Routing</h5>
+                            <p class="text-white-50 small mb-0">AI Chatbot handles query or routes ticket to live support agent inbox.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             8. DELIVERY & ANALYTICS
+             ============================================ -->
+        <section class="omnichannel-section">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <span class="badge px-3 py-1.5 rounded-pill mb-2" style="background: rgba(37,211,102,0.2); color: #25D366; font-size: 0.88rem;">
+                        REAL-TIME ANALYTICS
+                    </span>
+                    <h2 class="display-6 fw-bold text-white mb-2">Live WhatsApp Campaign Analytics</h2>
+                    <p class="text-white-50 max-w-600 mx-auto small">Monitor broadcast metrics, open rates, and button click conversion in real time.</p>
+                </div>
+
+                <div class="row g-4 mt-2">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="p-4 rounded-4 text-center bg-dark text-white border border-secondary">
+                            <span class="stat-val wtp-green-accent mb-1">98.6%</span>
+                            <span class="stat-lbl text-white-50">Average Open Rate</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="p-4 rounded-4 text-center bg-dark text-white border border-secondary">
+                            <span class="stat-val text-warning mb-1">45.2%</span>
+                            <span class="stat-lbl text-white-50">Button Click Rate (CTR)</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="p-4 rounded-4 text-center bg-dark text-white border border-secondary">
+                            <span class="stat-val text-info mb-1">3.8x</span>
+                            <span class="stat-lbl text-white-50">Conversion Lift</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="p-4 rounded-4 text-center bg-dark text-white border border-secondary">
+                            <span class="stat-val text-white mb-1">&lt;2s</span>
+                            <span class="stat-lbl text-white-50">Avg Handset Latency</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             9. INDUSTRIES WE SERVE
+             ============================================ -->
+        <section class="sectors-section">
+            <div class="container">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-4">
+                        <span class="section-label">INDUSTRIES</span>
+                        <h2 class="section-title-dark mb-3">Enterprise WhatsApp Solutions</h2>
+                        <p class="text-muted mb-0">Powering communication for India's leading eCommerce brands, banks, logistics, and healthcare providers.</p>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="row g-3">
+                            <div class="col-five">
+                                <div class="industry-pill">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <p>E-Commerce</p>
+                                </div>
+                            </div>
+                            <div class="col-five">
+                                <div class="industry-pill">
+                                    <i class="fas fa-university"></i>
+                                    <p>Fintech & Banking</p>
+                                </div>
+                            </div>
+                            <div class="col-five">
+                                <div class="industry-pill">
+                                    <i class="fas fa-hospital"></i>
+                                    <p>Healthcare</p>
+                                </div>
+                            </div>
+                            <div class="col-five">
+                                <div class="industry-pill">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <p>Education</p>
+                                </div>
+                            </div>
+                            <div class="col-five">
+                                <div class="industry-pill">
+                                    <i class="fas fa-truck"></i>
+                                    <p>Logistics</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             10. WHY CHOOSE US
+             ============================================ -->
+        <div class="container my-4">
+            <div class="dark-feature-banner">
+                <div class="row g-4 align-items-center text-center text-md-start">
+                    <div class="col-lg-3 col-md-6 d-flex align-items-center gap-3">
+                        <i class="fab fa-whatsapp fa-2x wtp-green-accent"></i>
+                        <div>
+                            <h5>Official Meta Partner</h5>
+                            <p class="text-white-50 small mb-0">Direct Meta Business API cloud infrastructure.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 d-flex align-items-center gap-3">
+                        <i class="fas fa-shield-alt fa-2x text-success"></i>
+                        <div>
+                            <h5>Green Tick Verified</h5>
+                            <p class="text-white-50 small mb-0">End-to-end guidance for official green checkmark.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 d-flex align-items-center gap-3">
+                        <i class="fas fa-users-cog fa-2x text-primary"></i>
+                        <div>
+                            <h5>Multi-Agent Inbox</h5>
+                            <p class="text-white-50 small mb-0">Assign tickets across customer support agents.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 d-flex align-items-center gap-3">
+                        <i class="fas fa-headset fa-2x text-warning"></i>
+                        <div>
+                            <h5>24x7 Enterprise SLA</h5>
+                            <p class="text-white-50 small mb-0">Dedicated technical onboarding & 24x7 support.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================
+             11. FINAL CTA
+             ============================================ -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="dark-cta-card text-center">
+                    <h2 class="display-5 fw-bold text-white mb-3">Ready to Scale Your WhatsApp Business API?</h2>
+                    <p class="text-white-50 lead mx-auto max-w-600 mb-4" style="font-size: 1.1rem;">
+                        Get instant API access credentials, Green Tick verification support, and testing credits today.
+                    </p>
+                    <div class="d-flex flex-wrap justify-content-center gap-3">
+                        <a href="../contact.html" class="btn-orange-filled">
+                            Get Free Test API Account <i class="fas fa-arrow-right ms-1"></i>
+                        </a>
+                        <a href="https://wa.me/919768566466" target="_blank" class="btn-dark-outline">
+                            <i class="fab fa-whatsapp me-1"></i> Talk to WhatsApp Specialist
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============================================
+         12. EXECUTIVE DARK FOOTER
+         ============================================ -->
+    <footer class="footer-dark-custom">
+        <div class="container">
+            <div class="row g-4 mb-4">
+                <div class="col-lg-4 col-md-6">
+                    <a class="navbar-brand-custom mb-3" href="../index.html">
+                        <img src="../assets/images/logo/logo.jpg" alt="Immense Air Pvt Ltd Logo" class="navbar-brand-logo">
+                        <div>
+                            <div style="font-size: 1.35rem; font-weight: 800; line-height: 1; letter-spacing: -0.5px; color: #FFFFFF;">
+                                IMMENSE <span style="color: var(--orange-brand);">AIR</span>
+                            </div>
+                            <div style="font-size: 0.7rem; font-weight: 800; letter-spacing: 1.5px; color: rgba(255,255,255,0.75); text-transform: uppercase;">
+                                PVT LTD
+                            </div>
+                        </div>
+                    </a>
+                    <p style="color:rgba(255,255,255,.75);font-size:1.0rem;line-height:1.65;max-width:360px;">
+                        Immense Air Pvt Ltd empowers businesses with intelligent communication solutions that drive engagement, automation & growth.
+                    </p>
+                    <div class="mt-3 d-flex gap-2">
+                        <a href="https://in.linkedin.com/company/immense-smart-solutions" target="_blank" class="social-circle-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.facebook.com/immensesmartsolutions/" target="_blank" class="social-circle-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.youtube.com/@immensesmartsolutions" target="_blank" class="social-circle-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/immense_smart_solutions/" target="_blank" class="social-circle-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6>PRODUCTS</h6>
+                    <ul class="footer-link-list">
+                        <li><a href="bulk-sms.html">SMS Services</a></li>
+                        <li><a href="whatsapp-api.html" class="text-warning fw-bold">WhatsApp API</a></li>
+                        <li><a href="rcs.html">RCS Messaging</a></li>
+                        <li><a href="voice.html">Voice Solutions</a></li>
+                        <li><a href="ivr-obd.html">IVR & OBD</a></li>
+                        <li><a href="smpp.html">SMPP & API</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6>SOLUTIONS</h6>
+                    <ul class="footer-link-list">
+                        <li><a href="../about.html">Marketing</a></li>
+                        <li><a href="../resources.html">Authentication</a></li>
+                        <li><a href="../contact.html">Customer Support</a></li>
+                        <li><a href="bulk-sms.html">Notifications</a></li>
+                        <li><a href="whatsapp-api.html">Automation</a></li>
+                        <li><a href="../about.html">Enterprise</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6>DEVELOPERS</h6>
+                    <ul class="footer-link-list">
+                        <li><a href="../developers.html">API Documentation</a></li>
+                        <li><a href="smpp.html">SMPP Guide</a></li>
+                        <li><a href="../developers.html">SDKs & Libraries</a></li>
+                        <li><a href="../developers.html">Postman Collection</a></li>
+                        <li><a href="../developers.html">Integration Guide</a></li>
+                        <li><a href="../developers.html">Status Page</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6>COMPANY</h6>
+                    <ul class="footer-link-list">
+                        <li><a href="../about.html">About Us</a></li>
+                        <li><a href="../careers.html">Careers <span class="badge bg-warning text-dark style-badge" style="font-size:0.7rem;">Hiring</span></a></li>
+                        <li><a href="../contact.html">Partners</a></li>
+                        <li><a href="../resources.html">News & Updates</a></li>
+                        <li><a href="../contact.html" class="text-warning fw-bold">Contact Us <i class="fas fa-arrow-right ms-1"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr style="border-color:rgba(255,255,255,.12);margin:2.5rem 0 1.5rem;">
+
+            <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 text-white-50" style="font-size:0.95rem;">
+                <div>&copy; 2026 Immense Air Pvt Ltd All Rights Reserved.</div>
+                <div>
+                    <a href="../privacy-policy.html" class="text-white-50 me-3 text-decoration-none">Privacy Policy</a>
+                    <a href="../terms.html" class="text-white-50 me-3 text-decoration-none">Terms & Conditions</a>
+                    <a href="../terms.html" class="text-white-50 text-decoration-none">Refund Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919768566466" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Global Data Privacy Opt-In Consent Banner -->
+    <div id="optInGlobalBanner" class="optin-consent-banner hidden">
+        <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+            <div class="d-flex align-items-center gap-3">
+                <i class="fas fa-user-shield text-warning fa-2x"></i>
+                <div>
+                    <div class="d-flex align-items-center gap-2 mb-1">
+                        <span class="fw-bold text-white fs-6">Data Privacy & Communication Opt-In</span>
+                        <span class="optin-badge"><i class="fas fa-check-circle me-1"></i> DPDP Act Compliant</span>
+                    </div>
+                    <p class="text-white-50 small mb-0">
+                        We value your data privacy. By using Immense Air, you consent to data processing for enterprise service delivery, SMS/WhatsApp updates, and analytics as outlined in our <a href="../privacy-policy.html" class="text-warning text-decoration-underline">Privacy Policy</a>.
+                    </p>
+                </div>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+                <button class="btn btn-warning btn-sm fw-bold px-3 rounded-pill text-white" onclick="acceptDataOptIn()">
+                    <i class="fas fa-check me-1"></i> Accept & Opt-In
+                </button>
+                <button class="btn btn-outline-light btn-sm px-3 rounded-pill" onclick="declineDataOptIn()">
+                    Necessary Only
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+    
+    <!-- REAL WHATSAPP API TESTING CONTROLLER SCRIPT -->
+    <script>
+        function updatePhoneClock() {
+            const clockEl = document.getElementById('phoneClockTime');
+            if (clockEl) {
+                const now = new Date();
+                clockEl.innerText = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+            }
+        }
+        setInterval(updatePhoneClock, 1000);
+        updatePhoneClock();
+
+        async function handleRealWtpDispatch(e) {
+            e.preventDefault();
+            const btn = document.getElementById('btnDispatchWtp');
+            const phoneInput = document.getElementById('wtpPhoneInput').value.trim();
+            const customerName = 'John';
+
+            let cleanPhone = phoneInput.replace(/[^0-9]/g, '');
+            if (cleanPhone.length === 10) cleanPhone = '91' + cleanPhone;
+
+            if (!cleanPhone.match(/^91[0-9]{10}$/) && !cleanPhone.match(/^[0-9]{10,12}$/)) {
+                alert('Please enter a valid 10-digit Indian mobile number.');
+                return;
+            }
+
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i> Dispatched to Meta Cloud...';
+
+            // Pipeline Elements
+            const pBadge = document.getElementById('wtpPipelineBadge');
+            const s1 = document.getElementById('wtpStep1');
+            const s2 = document.getElementById('wtpStep2');
+            const s3 = document.getElementById('wtpStep3');
+            const s4 = document.getElementById('wtpStep4');
+
+            [s1, s2, s3, s4].forEach(el => el.className = 'p-2 rounded bg-light text-muted fw-bold border');
+            pBadge.className = 'badge bg-warning text-dark';
+            pBadge.innerText = '1. Request Initiated';
+            s1.className = 'p-2 rounded bg-warning text-white fw-bold shadow-sm';
+
+            // Report Elements
+            const wtpReportContainer = document.getElementById('wtpReportContainer');
+            const wtpTxnId = document.getElementById('wtpTxnId');
+            const wtpTemplateVal = document.getElementById('wtpTemplateVal');
+            const wtpRecipientVal = document.getElementById('wtpRecipientVal');
+            const wtpTimestamp = document.getElementById('wtpTimestamp');
+
+            wtpReportContainer.classList.add('d-none');
+
+            try {
+                // Call REAL WhatsApp API backend endpoint (POST /api/v1/whatsapp/send)
+                const payload = {
+                    to: '+' + cleanPhone,
+                    customer_name: customerName,
+                    sender_number: '+918828669961',
+                    template_id: 'rcstemp_qx87btsseg42qe6j',
+                    media_url: 'https://d23oslvtgtcoll.cloudfront.net/6a2259a20997286666b81889-6291063691.jpeg'
+                };
+
+                const response = await fetch('/api/v1/whatsapp/send', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const data = await response.json();
+
+                if (!response.ok || !data.success) {
+                    alert(data.error || 'WhatsApp API Dispatch failed.');
+                    btn.disabled = false;
+                    btn.innerHTML = 'Send Test WhatsApp Message <i class="fab fa-whatsapp ms-2"></i>';
+                    return;
+                }
+
+                // Step 2: Gateway Processing
+                setTimeout(() => {
+                    s1.className = 'p-2 rounded bg-success text-white fw-bold';
+                    s2.className = 'p-2 rounded bg-warning text-white fw-bold shadow-sm';
+                    pBadge.innerText = '2. Gateway Processing';
+                }, 400);
+
+                // Step 3: Meta Cloud Interconnect
+                setTimeout(() => {
+                    s2.className = 'p-2 rounded bg-success text-white fw-bold';
+                    s3.className = 'p-2 rounded bg-warning text-white fw-bold shadow-sm';
+                    pBadge.innerText = '3. Meta Cloud Interconnect';
+                }, 900);
+
+                // Step 4: Handset Delivered
+                setTimeout(() => {
+                    s3.className = 'p-2 rounded bg-success text-white fw-bold';
+                    s4.className = 'p-2 rounded bg-success text-white fw-bold shadow-sm';
+                    pBadge.className = 'badge bg-success';
+                    pBadge.innerText = '4. Handset Delivered ✓✓';
+
+                    // Update DLR Report Card
+                    wtpTxnId.innerText = data.transaction_id || '1786367120212610...';
+                    wtpTemplateVal.innerText = data.template_id || 'rcstemp_qx87btsseg42qe6j';
+                    wtpRecipientVal.innerText = '+' + cleanPhone;
+                    wtpTimestamp.innerText = `Timestamp: ${new Date().toLocaleTimeString()}`;
+
+                    wtpReportContainer.classList.remove('d-none');
+
+                    // Update Read Receipt Time in Phone Mockup
+                    const readStatus = document.getElementById('wtpReadStatus');
+                    const nowTime = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+                    readStatus.innerHTML = `${nowTime} <i class="fas fa-check-double text-primary ms-1"></i>`;
+
+                    // Mandatory 60-Second Cooldown Timer
+                    let cd = 60;
+                    const cdTimer = setInterval(() => {
+                        cd--;
+                        btn.innerHTML = `Wait ${cd}s <i class="fas fa-clock ms-1"></i>`;
+                        if (cd <= 0) {
+                            clearInterval(cdTimer);
+                            btn.disabled = false;
+                            btn.innerHTML = 'Send Test WhatsApp Message <i class="fab fa-whatsapp ms-2"></i>';
+                        }
+                    }, 1000);
+
+                }, 1400);
+
+            } catch (err) {
+                console.error('WhatsApp API Error:', err);
+                alert('Connection error while contacting WhatsApp API Gateway.');
+                btn.disabled = false;
+                btn.innerHTML = 'Send Test WhatsApp Message <i class="fab fa-whatsapp ms-2"></i>';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Page Title -->
+    <title>IVR & OBD Solutions | Immense Air Pvt Ltd</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Smart IVR menu routing and high-capacity outbound voice broadcasting (OBD) for customer engagement, notifications, missed call services and business communication.">
+    <meta name="keywords" content="ivr solutions, obd voice broadcasting, cloud ivr tree, missed call lead generation, ai voice assistant, immense smart solutions">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#060D1E">
+    
+    <!-- Google Fonts - Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom Upgraded CSS System -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    
+    <style>
+        .product-hero {
+            background: radial-gradient(circle at 75% 35%, #111E38 0%, #060D1E 70%);
+            padding: 150px 0 80px;
+            color: #FFFFFF;
+        }
+
+        .voice-purple-accent {
+            color: #8B5CF6;
+        }
+
+        /* HERO PULSING SOUND WAVES ANIMATION */
+        .pulse-phone-box {
+            position: relative;
+            width: 220px;
+            height: 220px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .phone-pulse-icon {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--orange-brand), #FF9E00);
+            color: #FFFFFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            z-index: 5;
+            box-shadow: 0 10px 30px rgba(255, 106, 0, 0.4);
+            animation: phoneRinging 1.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes phoneRinging {
+            0% { transform: scale(1) rotate(0deg); }
+            20% { transform: scale(1.05) rotate(-8deg); }
+            40% { transform: scale(1.05) rotate(8deg); }
+            60% { transform: scale(1.05) rotate(-5deg); }
+            80% { transform: scale(1) rotate(0deg); }
+        }
+
+        .pulse-wave-ring {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 2px solid rgba(255, 106, 0, 0.4);
+            animation: waveExpand 2.4s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+        }
+
+        .pulse-wave-ring:nth-child(2) { animation-delay: 0.8s; }
+        .pulse-wave-ring:nth-child(3) { animation-delay: 1.6s; }
+
+        @keyframes waveExpand {
+            0% { transform: scale(0.4); opacity: 0.8; }
+            100% { transform: scale(1.6); opacity: 0; }
+        }
+
+        /* SOUND WAVEFORM ANIMATION */
+        .sound-wave-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            height: 36px;
+        }
+
+        .wave-bar {
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, #8B5CF6 0%, #3B82F6 100%);
+            border-radius: 4px;
+            animation: wavePulse 1.2s ease-in-out infinite alternate;
+        }
+
+        .wave-bar:nth-child(1) { animation-delay: 0.1s; height: 30%; }
+        .wave-bar:nth-child(2) { animation-delay: 0.3s; height: 75%; }
+        .wave-bar:nth-child(3) { animation-delay: 0.2s; height: 100%; }
+        .wave-bar:nth-child(4) { animation-delay: 0.5s; height: 50%; }
+        .wave-bar:nth-child(5) { animation-delay: 0.4s; height: 85%; }
+        .wave-bar:nth-child(6) { animation-delay: 0.6s; height: 40%; }
+
+        @keyframes wavePulse {
+            0% { transform: scaleY(0.3); opacity: 0.5; }
+            100% { transform: scaleY(1); opacity: 1; }
+        }
+
+        /* WORKFLOW CARDS & CONNECTIONS */
+        .obd-workflow-box {
+            background: #060D1E;
+            border-radius: 24px;
+            padding: 3.5rem 2.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+        }
+
+        .obd-step-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 1.5rem 1.2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+
+        .obd-step-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--orange-brand);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .signal-arrow-flow {
+            font-size: 1.5rem;
+            color: var(--orange-brand);
+            animation: travelSignal 1.5s infinite alternate;
+        }
+
+        @keyframes travelSignal {
+            from { transform: translateX(0); opacity: 0.5; }
+            to { transform: translateX(6px); opacity: 1; }
+        }
+
+        /* AI VOICE CHAT DEMO FRAME */
+        .ai-voice-frame {
+            background: #0F172A;
+            border-radius: 24px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+        }
+
+        .chat-dialog-ai {
+            background: rgba(139, 92, 246, 0.15);
+            border: 1px solid rgba(139, 92, 246, 0.4);
+            border-radius: 16px 16px 16px 2px;
+            padding: 1rem 1.2rem;
+            color: #FFFFFF;
+            max-width: 85%;
+            text-align: left;
+            margin-bottom: 1rem;
+        }
+
+        .chat-dialog-user {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 16px 16px 2px 16px;
+            padding: 1rem 1.2rem;
+            color: #FFFFFF;
+            max-width: 85%;
+            text-align: right;
+            margin-left: auto;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================
+         HEADER / NAVBAR
+         ============================================ -->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top navbar-custom" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand-custom" href="../index.html">
+                    <img src="../assets/images/logo/logo.jpg" alt="Immense Air Pvt Ltd Logo" class="navbar-brand-logo">
+                    <div>
+                        <div style="font-size: 1.35rem; font-weight: 800; line-height: 1; letter-spacing: -0.5px; color: #FFFFFF;">
+                            IMMENSE <span style="color: var(--orange-brand);">AIR</span>
+                        </div>
+                        <div style="font-size: 0.7rem; font-weight: 800; letter-spacing: 1.5px; color: rgba(255,255,255,0.75); text-transform: uppercase;">
+                            PVT LTD
+                        </div>
+                    </div>
+                </a>
+                
+                <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="../index.html">Home</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link nav-link-custom dropdown-toggle active" href="#" id="productsDropdown" data-bs-toggle="dropdown">Products</a>
+                            <ul class="dropdown-menu dropdown-menu-custom">
+                                <li><a class="dropdown-item dropdown-item-custom" href="bulk-sms.html"><i class="fas fa-sms"></i> SMS Services</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="whatsapp-api.html"><i class="fab fa-whatsapp text-success"></i> WhatsApp API</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="rcs.html"><i class="fas fa-comment-dots text-info"></i> RCS Messaging</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="voice.html"><i class="fas fa-phone-alt text-warning"></i> Voice Solutions</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom active" href="ivr-obd.html"><i class="fas fa-headset text-primary"></i> IVR / OBD Solutions</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="smpp.html"><i class="fas fa-code text-primary"></i> SMPP & API</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="../index.html#how-it-works">How It Works</a></li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="../developers.html">Developers</a></li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="../careers.html">Careers</a></li>
+                        <li class="nav-item ms-lg-3"><a class="btn-nav-cta" href="../contact.html">Contact Us <i class="fas fa-arrow-right ms-1"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ============================================
+             1. HERO SECTION (WITH PULSING SOUND WAVE ANIMATION)
+             ============================================ -->
+        <section class="product-hero">
+            <div class="container">
+                <div class="row align-items-center g-4 text-center text-lg-start">
+                    <div class="col-lg-7">
+                        <span class="hero-subtitle-orange"><i class="fas fa-microphone-alt me-2"></i> AUTOMATED VOICE COMMUNICATION</span>
+                        <h1 class="display-3 fw-extrabold text-white mb-3" style="letter-spacing: -0.5px;">
+                            IVR & OBD Solutions
+                        </h1>
+                        <p class="hero-para-mockup mb-4" style="font-size: 1.2rem;">
+                            Smart IVR menu routing and high-capacity outbound voice broadcasting for customer engagement, notifications and business communication.
+                        </p>
+                        <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-3">
+                            <span class="hero-check-pill"><i class="fas fa-bolt text-warning"></i> High-Volume Calling</span>
+                            <span class="hero-check-pill"><i class="fas fa-phone-alt text-success"></i> Automated Voice</span>
+                            <span class="hero-check-pill"><i class="fas fa-headphones voice-purple-accent"></i> HD Voice Quality</span>
+                            <span class="hero-check-pill"><i class="fas fa-chart-bar text-primary"></i> Campaign Reports</span>
+                        </div>
+                    </div>
+
+                    <!-- Right Side Pulsing Phone Graphic -->
+                    <div class="col-lg-5 text-center">
+                        <div class="pulse-phone-box">
+                            <div class="pulse-wave-ring"></div>
+                            <div class="pulse-wave-ring"></div>
+                            <div class="pulse-wave-ring"></div>
+                            <div class="phone-pulse-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                        </div>
+                        <div class="mt-3 text-white-50 small font-monospace">
+                            <i class="fas fa-wifi text-warning me-1"></i> HD Voice Telephony Interconnect Active
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             2. VOICE & OBD SOLUTIONS (4 EQUAL CARDS)
+             ============================================ -->
+        <section class="solutions-section">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="section-label">OUR VOICE SOLUTIONS</span>
+                    <h2 class="section-title-dark">Powerful Voice Solutions for Every Business Need</h2>
+                    <p class="text-muted max-w-600 mx-auto" style="font-size: 1.15rem;">High-capacity telephony infrastructure engineered for enterprise reliability.</p>
+                </div>
+
+                <div class="row g-4">
+                    <!-- CARD 1: Outbound Voice OBD -->
+                    <div class="col-lg-6 col-md-6">
+                        <div class="card-solution-mockup p-4">
+                            <div class="d-flex align-items-center gap-3 mb-3">
+                                <div class="solution-icon-box solution-icon-purple mb-0"><i class="fas fa-broadcast-tower"></i></div>
+                                <h3 class="fw-bold text-dark mb-0" style="font-size: 1.35rem;">Outbound Voice OBD</h3>
+                            </div>
+                            <p class="text-muted mb-3" style="font-size: 1.05rem;">
+                                Automated outbound calling for large-scale customer communication, promotional campaigns, and critical business reminders.
+                            </p>
+                            <div class="p-3 bg-light rounded-3 text-start">
+                                <ul class="list-unstyled mb-0 row g-2 small text-dark fw-semibold">
+                                    <div class="col-6"><i class="fas fa-check-circle text-success me-1.5"></i> Voice Broadcasting</div>
+                                    <div class="col-6"><i class="fas fa-check-circle text-success me-1.5"></i> Customer Alerts</div>
+                                    <div class="col-6"><i class="fas fa-check-circle text-success me-1.5"></i> Payment Reminders</div>
+                                    <div class="col-6"><i class="fas fa-check-circle text-success me-1.5"></i> Promotional Campaigns</div>
+                                    <div class="col-12"><i class="fas fa-check-circle text-success me-1.5"></i> Campaign Scheduling</div>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 2: Cloud IVR -->
+                    <div class="col-lg-6 col-md-6">
+                        <div class="card-solution-mockup p-4">
+                            <div class="d-flex align-items-center gap-3 mb-3">
+                                <div class="solution-icon-box solution-icon-orange mb-0"><i class="fas fa-sitemap"></i></div>
+                                <h3 class="fw-bold text-dark mb-0" style="font-size: 1.35rem;">Cloud IVR</h3>
+                            </div>
+                            <p class="text-muted mb-3" style="font-size: 1.05rem;">
+                                Create intelligent interactive voice menus for customer self-service, DTMF navigation, and automated agent call routing.
+                            </p>
+                            <div class="p-3 bg-light rounded-3 text-start">
+                                <ul class="list-unstyled mb-0 row g-2 small text-dark fw-semibold">
+                                    <div class="col-6"><i class="fas fa-check-circle text-primary me-1.5"></i> Multi-Level IVR</div>
+                                    <div class="col-6"><i class="fas fa-check-circle text-primary me-1.5"></i> DTMF Navigation</div>
+                                    <div class="col-6"><i class="fas fa-check-circle text-primary me-1.5"></i> Call Routing</div>
+                                    <div class="col-6"><i class="fas fa-check-circle text-primary me-1.5"></i> Business-Hour Routing</div>
+                                    <div class="col-12"><i class="fas fa-check-circle text-primary me-1.5"></i> CRM Integration</div>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 3: Missed Call Services -->
+                    <div class="col-lg-6 col-md-6">
+                        <div class="card-solution-mockup p-4">
+                            <div class="d-flex align-items-center gap-3 mb-3">
+                                <div class="solution-icon-box solution-icon-green mb-0"><i class="fas fa-phone-slash"></i></div>
+                                <h3 class="fw-bold text-dark mb-0" style="font-size: 1.35rem;">Missed Call Services</h3>
+                            </div>
+                            <p class="text-muted mb-3" style="font-size: 1.05rem;">
+                                Turn a simple missed call into a instant customer interaction without requiring customers to spend on call charges.
+                            </p>
+                            <div class="p-3 bg-light rounded-3 text-start">
+                                <ul class="list-unstyled mb-0 row g-2 small text-dark fw-semibold">
+                                    <div class="col-6"><i class="fas fa-check-circle text-success me-1.5"></i> Lead Generation</div>
+                                    <div class="col-6"><i class="fas fa-check-circle text-success me-1.5"></i> Customer Verification</div>
+                                    <div class="col-6"><i class="fas fa-check-circle text-success me-1.5"></i> Feedback Polls</div>
+                                    <div class="col-6"><i class="fas fa-check-circle text-success me-1.5"></i> Callback Requests</div>
+                                    <div class="col-12"><i class="fas fa-check-circle text-success me-1.5"></i> Customer Engagement</div>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 4: AI Voice Solutions -->
+                    <div class="col-lg-6 col-md-6">
+                        <div class="card-solution-mockup p-4">
+                            <div class="d-flex align-items-center gap-3 mb-3">
+                                <div class="solution-icon-box solution-icon-blue mb-0"><i class="fas fa-robot"></i></div>
+                                <h3 class="fw-bold text-dark mb-0" style="font-size: 1.35rem;">AI Voice Solutions</h3>
+                            </div>
+                            <p class="text-muted mb-3" style="font-size: 1.05rem;">
+                                Automate routine customer conversations with intelligent voice assistants capable of natural language understanding.
+                            </p>
+                            <div class="p-3 bg-light rounded-3 text-start">
+                                <ul class="list-unstyled mb-0 row g-2 small text-dark fw-semibold">
+                                    <div class="col-6"><i class="fas fa-check-circle text-info me-1.5"></i> Automated Conversations</div>
+                                    <div class="col-6"><i class="fas fa-check-circle text-info me-1.5"></i> Lead Qualification</div>
+                                    <div class="col-6"><i class="fas fa-check-circle text-info me-1.5"></i> Customer Support</div>
+                                    <div class="col-6"><i class="fas fa-check-circle text-info me-1.5"></i> Appointment Assistance</div>
+                                    <div class="col-12"><i class="fas fa-check-circle text-info me-1.5"></i> Intelligent Call Flows</div>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             3. OBD CAMPAIGN WORKFLOW
+             ============================================ -->
+        <section class="py-5" style="background: #060D1E; color: #FFFFFF;">
+            <div class="container py-3 text-center">
+                <div class="mb-5">
+                    <span class="hero-subtitle-orange"><i class="fas fa-tasks me-1"></i> HIGH-SPEED PIPELINE</span>
+                    <h2 class="display-6 fw-extrabold text-white mb-2">How OBD Campaigns Work</h2>
+                    <p class="text-white-50 max-w-600 mx-auto" style="font-size: 1.1rem;">
+                        Launch large-scale outbound voice campaigns with a simple workflow.
+                    </p>
+                </div>
+
+                <div class="obd-workflow-box">
+                    <div class="row g-3 align-items-center">
+                        <div class="col">
+                            <div class="obd-step-card">
+                                <div class="solution-icon-box solution-icon-orange mx-auto mb-2"><i class="fas fa-address-book"></i></div>
+                                <h6 class="fw-bold text-white mb-1">CONTACT LIST</h6>
+                                <span class="text-white-50 small">Upload Contacts</span>
+                            </div>
+                        </div>
+                        <div class="col-auto d-none d-lg-block"><i class="fas fa-chevron-right signal-arrow-flow"></i></div>
+
+                        <div class="col">
+                            <div class="obd-step-card">
+                                <div class="solution-icon-box solution-icon-purple mx-auto mb-2"><i class="fas fa-microphone-alt"></i></div>
+                                <h6 class="fw-bold text-white mb-1">VOICE CAMPAIGN</h6>
+                                <span class="text-white-50 small">Audio Message</span>
+                            </div>
+                        </div>
+                        <div class="col-auto d-none d-lg-block"><i class="fas fa-chevron-right signal-arrow-flow"></i></div>
+
+                        <div class="col">
+                            <div class="obd-step-card">
+                                <div class="solution-icon-box solution-icon-blue mx-auto mb-2"><i class="fas fa-clock"></i></div>
+                                <h6 class="fw-bold text-white mb-1">SCHEDULE</h6>
+                                <span class="text-white-50 small">Set Time Windows</span>
+                            </div>
+                        </div>
+                        <div class="col-auto d-none d-lg-block"><i class="fas fa-chevron-right signal-arrow-flow"></i></div>
+
+                        <div class="col">
+                            <div class="obd-step-card">
+                                <div class="solution-icon-box solution-icon-green mx-auto mb-2"><i class="fas fa-phone-volume"></i></div>
+                                <h6 class="fw-bold text-white mb-1">AUTOMATED DIALING</h6>
+                                <span class="text-white-50 small">High-Capacity Engine</span>
+                            </div>
+                        </div>
+                        <div class="col-auto d-none d-lg-block"><i class="fas fa-chevron-right signal-arrow-flow"></i></div>
+
+                        <div class="col">
+                            <div class="obd-step-card">
+                                <div class="solution-icon-box solution-icon-purple mx-auto mb-2"><i class="fas fa-phone-slash"></i></div>
+                                <h6 class="fw-bold text-white mb-1">CUSTOMER ANSWERS</h6>
+                                <span class="text-white-50 small">HD Voice Audio</span>
+                            </div>
+                        </div>
+                        <div class="col-auto d-none d-lg-block"><i class="fas fa-chevron-right signal-arrow-flow"></i></div>
+
+                        <div class="col">
+                            <div class="obd-step-card">
+                                <div class="solution-icon-box solution-icon-orange mx-auto mb-2"><i class="fas fa-chart-line"></i></div>
+                                <h6 class="fw-bold text-white mb-1">REPORTS</h6>
+                                <span class="text-white-50 small">Live Analytics</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Call Status Badges -->
+                    <div class="mt-4 p-3 rounded-4 bg-white bg-opacity-10 border border-secondary d-flex align-items-center justify-content-center gap-4 flex-wrap">
+                        <span class="badge bg-warning text-dark px-3 py-2 rounded-pill fw-bold"><i class="fas fa-spinner fa-spin me-1"></i> Calling</span>
+                        <span class="badge bg-info text-white px-3 py-2 rounded-pill fw-bold"><i class="fas fa-headphones me-1"></i> Connected 🎧</span>
+                        <span class="badge bg-success text-white px-3 py-2 rounded-pill fw-bold"><i class="fas fa-check-circle me-1"></i> Completed ✓</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             4. CLOUD IVR
+             ============================================ -->
+        <section class="sectors-section">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="section-label">CLOUD IVR ENGINE</span>
+                    <h2 class="section-title-dark">Build Smarter Customer Call Journeys</h2>
+                    <p class="text-muted max-w-600 mx-auto" style="font-size: 1.15rem;">
+                        Give customers a simple way to navigate your business using automated voice menus.
+                    </p>
+                </div>
+
+                <!-- IVR Flow Diagram -->
+                <div class="p-4 rounded-4 bg-dark text-white text-center border border-secondary mb-5 shadow-lg">
+                    <h5 class="fw-bold text-warning mb-3"><i class="fas fa-sitemap me-2"></i> Cloud IVR Journey Flow</h5>
+                    <div class="d-flex align-items-center justify-content-center gap-3 flex-wrap font-monospace small">
+                        <span class="badge bg-secondary p-2.5">Incoming Call</span>
+                        <i class="fas fa-arrow-right text-white-50"></i>
+                        <span class="badge bg-primary p-2.5">Welcome Message</span>
+                        <i class="fas fa-arrow-right text-white-50"></i>
+                        <span class="badge bg-warning text-dark p-2.5">Press 1 — Sales | Press 2 — Support | Press 3 — Accounts</span>
+                        <i class="fas fa-arrow-right text-white-50"></i>
+                        <span class="badge bg-info text-white p-2.5">Call Routing</span>
+                        <i class="fas fa-arrow-right text-white-50"></i>
+                        <span class="badge bg-success p-2.5">Agent / Automated Response ✓</span>
+                    </div>
+                </div>
+
+                <!-- 6 Feature Cards for IVR -->
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="p-4 bg-white rounded-4 border shadow-sm text-center h-100">
+                            <div class="solution-icon-box solution-icon-orange mx-auto mb-3"><i class="fas fa-th"></i></div>
+                            <h5 class="fw-bold text-dark mb-2">Interactive Voice Menu</h5>
+                            <p class="text-muted small mb-0">Customizable greeting prompts and multi-level IVR menu trees.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="p-4 bg-white rounded-4 border shadow-sm text-center h-100">
+                            <div class="solution-icon-box solution-icon-blue mx-auto mb-3"><i class="fas fa-key"></i></div>
+                            <h5 class="fw-bold text-dark mb-2">DTMF Navigation</h5>
+                            <p class="text-muted small mb-0">Instant touchtone keypress input detection for self-service options.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card-solution-mockup p-4 text-center h-100 border">
+                            <div class="solution-icon-box solution-icon-purple mx-auto mb-3"><i class="fas fa-random"></i></div>
+                            <h5 class="fw-bold text-dark mb-2">Call Routing</h5>
+                            <p class="text-muted small mb-0">Intelligent agent distribution based on skill, language, and availability.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="p-4 bg-white rounded-4 border shadow-sm text-center h-100">
+                            <div class="solution-icon-box solution-icon-green mx-auto mb-3"><i class="fas fa-record-vinyl"></i></div>
+                            <h5 class="fw-bold text-dark mb-2">Call Recording</h5>
+                            <p class="text-muted small mb-0">HD audio recording of conversations for quality and compliance auditing.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="p-4 bg-white rounded-4 border shadow-sm text-center h-100">
+                            <div class="solution-icon-box solution-icon-orange mx-auto mb-3"><i class="fas fa-database"></i></div>
+                            <h5 class="fw-bold text-dark mb-2">CRM Integration</h5>
+                            <p class="text-muted small mb-0">Sync call logs, recordings, and caller information with your CRM software.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="p-4 bg-white rounded-4 border shadow-sm text-center h-100">
+                            <div class="solution-icon-box solution-icon-blue mx-auto mb-3"><i class="fas fa-chart-pie"></i></div>
+                            <h5 class="fw-bold text-dark mb-2">Call Analytics</h5>
+                            <p class="text-muted small mb-0">Monitor call volumes, peak hours, drop rates, and agent metrics in real time.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             5. MISSED CALL SERVICES
+             ============================================ -->
+        <section class="how-it-works-section">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="section-label">ZERO COST FOR CUSTOMERS</span>
+                    <h2 class="section-title-dark">Turn Missed Calls Into Customer Connections</h2>
+                    <p class="text-muted max-w-600 mx-auto" style="font-size: 1.15rem;">
+                        Let customers interact with your business using a simple missed call without requiring a long conversation.
+                    </p>
+                </div>
+
+                <!-- Animated Flow -->
+                <div class="p-4 rounded-4 bg-dark text-white border border-secondary text-center mb-5 shadow-lg">
+                    <h5 class="fw-bold text-info mb-4"><i class="fas fa-sync-alt me-2"></i> Missed Call Workflow</h5>
+                    <div class="d-flex align-items-center justify-content-center gap-3 flex-wrap font-monospace small">
+                        <span class="badge bg-secondary p-2.5">CUSTOMER</span>
+                        <i class="fas fa-arrow-right text-white-50"></i>
+                        <span class="badge bg-warning text-dark p-2.5">MISSED CALL</span>
+                        <i class="fas fa-arrow-right text-white-50"></i>
+                        <span class="badge bg-info text-white p-2.5">NUMBER DETECTED</span>
+                        <i class="fas fa-arrow-right text-white-50"></i>
+                        <span class="badge bg-primary p-2.5">AUTOMATED ACTION</span>
+                        <i class="fas fa-arrow-right text-white-50"></i>
+                        <span class="badge bg-success p-2.5">LEAD / RESPONSE ✓</span>
+                    </div>
+                </div>
+
+                <!-- Use Cases Grid -->
+                <div class="row g-3">
+                    <div class="col-md-4 col-6"><div class="p-3.5 bg-white rounded-3 border shadow-sm fw-bold text-dark text-start"><i class="fas fa-check-circle text-success me-2"></i> Lead Generation</div></div>
+                    <div class="col-md-4 col-6"><div class="p-3.5 bg-white rounded-3 border shadow-sm fw-bold text-dark text-start"><i class="fas fa-check-circle text-success me-2"></i> Customer Verification</div></div>
+                    <div class="col-md-4 col-6"><div class="p-3.5 bg-white rounded-3 border shadow-sm fw-bold text-dark text-start"><i class="fas fa-check-circle text-success me-2"></i> Feedback Campaigns</div></div>
+                    <div class="col-md-4 col-6"><div class="p-3.5 bg-white rounded-3 border shadow-sm fw-bold text-dark text-start"><i class="fas fa-check-circle text-success me-2"></i> Callback Requests</div></div>
+                    <div class="col-md-4 col-6"><div class="p-3.5 bg-white rounded-3 border shadow-sm fw-bold text-dark text-start"><i class="fas fa-check-circle text-success me-2"></i> Contest & Polls</div></div>
+                    <div class="col-md-4 col-6"><div class="p-3.5 bg-white rounded-3 border shadow-sm fw-bold text-dark text-start"><i class="fas fa-check-circle text-success me-2"></i> Service Requests</div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             6. CONVERSATIONAL AI VOICE
+             ============================================ -->
+        <section class="py-5" style="background: #060D1E; color: #FFFFFF;">
+            <div class="container py-3">
+                <div class="text-center mb-5">
+                    <span class="hero-subtitle-orange"><i class="fas fa-robot me-1"></i> AI VOICE ASSISTANT</span>
+                    <h2 class="display-6 fw-extrabold text-white mb-2">Conversational AI Voice</h2>
+                    <p class="text-white-50 max-w-600 mx-auto" style="font-size: 1.15rem;">
+                        Automate customer conversations with intelligent voice assistants.
+                    </p>
+                </div>
+
+                <div class="row g-4 align-items-center mb-5">
+                    <div class="col-lg-7 mx-auto">
+                        <div class="ai-voice-frame">
+                            <div class="d-flex align-items-center justify-content-between mb-4 border-bottom border-secondary pb-3">
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="solution-icon-box solution-icon-purple mb-0"><i class="fas fa-microphone-alt"></i></div>
+                                    <div class="text-start">
+                                        <h5 class="fw-bold text-white mb-0">AI Voice Assistant</h5>
+                                        <span class="text-success small"><i class="fas fa-circle me-1" style="font-size:0.55rem;"></i> Active Listener</span>
+                                    </div>
+                                </div>
+                                <div class="sound-wave-container">
+                                    <div class="wave-bar"></div>
+                                    <div class="wave-bar"></div>
+                                    <div class="wave-bar"></div>
+                                    <div class="wave-bar"></div>
+                                    <div class="wave-bar"></div>
+                                    <div class="wave-bar"></div>
+                                </div>
+                            </div>
+
+                            <div class="chat-dialog-ai">
+                                <div class="small text-warning fw-bold mb-1"><i class="fas fa-robot me-1"></i> AI VOICE</div>
+                                "Hello! How can I help you today?"
+                            </div>
+
+                            <div class="chat-dialog-user">
+                                <div class="small text-info fw-bold mb-1"><i class="fas fa-user me-1"></i> CUSTOMER</div>
+                                "I want to know more about your service."
+                            </div>
+
+                            <div class="chat-dialog-ai">
+                                <div class="small text-warning fw-bold mb-1"><i class="fas fa-robot me-1"></i> AI VOICE</div>
+                                "Sure. I can help you with that."
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4 Feature Cards -->
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="p-3.5 bg-white bg-opacity-10 rounded-4 border border-secondary text-center">
+                            <i class="fas fa-comments fa-2x text-warning mb-2"></i>
+                            <h6 class="fw-bold text-white mb-1">Natural Conversations</h6>
+                            <span class="text-white-50 small">Human-like speech understanding</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="p-3.5 bg-white bg-opacity-10 rounded-4 border border-secondary text-center">
+                            <i class="fas fa-bolt fa-2x text-success mb-2"></i>
+                            <h6 class="fw-bold text-white mb-1">Automated Responses</h6>
+                            <span class="text-white-50 small">Instant 24x7 query resolution</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="p-3.5 bg-white bg-opacity-10 rounded-4 border border-secondary text-center">
+                            <i class="fas fa-user-check fa-2x text-info mb-2"></i>
+                            <h6 class="fw-bold text-white mb-1">Lead Qualification</h6>
+                            <span class="text-white-50 small">Filters high-intent sales leads</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="p-3.5 bg-white bg-opacity-10 rounded-4 border border-secondary text-center">
+                            <i class="fas fa-calendar-check fa-2x voice-purple-accent mb-2"></i>
+                            <h6 class="fw-bold text-white mb-1">Appointment Scheduling</h6>
+                            <span class="text-white-50 small">Automated calendar booking</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             7. USE CASES ACROSS INDUSTRIES
+             ============================================ -->
+        <section class="sectors-section">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="section-label">INDUSTRIES</span>
+                    <h2 class="section-title-dark">Voice Communication Across Industries</h2>
+                    <p class="text-muted max-w-600 mx-auto" style="font-size: 1.15rem;">Custom voice workflows tailored for every business sector.</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="p-4 bg-white rounded-4 border shadow-sm text-start h-100">
+                            <div class="solution-icon-box solution-icon-orange mb-3"><i class="fas fa-building"></i></div>
+                            <h5 class="fw-bold text-dark mb-2">REAL ESTATE</h5>
+                            <ul class="list-unstyled text-muted small mb-0">
+                                <li><i class="fas fa-check text-success me-1.5"></i> Lead Follow-ups</li>
+                                <li><i class="fas fa-check text-success me-1.5"></i> Site Visit Reminders</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="p-4 bg-white rounded-4 border shadow-sm text-start h-100">
+                            <div class="solution-icon-box solution-icon-purple mb-3"><i class="fas fa-landmark"></i></div>
+                            <h5 class="fw-bold text-dark mb-2">BANKING & FINTECH</h5>
+                            <ul class="list-unstyled text-muted small mb-0">
+                                <li><i class="fas fa-check text-success me-1.5"></i> Payment Reminders</li>
+                                <li><i class="fas fa-check text-success me-1.5"></i> Customer Alerts</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="p-4 bg-white rounded-4 border shadow-sm text-start h-100">
+                            <div class="solution-icon-box solution-icon-green mb-3"><i class="fas fa-heartbeat"></i></div>
+                            <h5 class="fw-bold text-dark mb-2">HEALTHCARE</h5>
+                            <ul class="list-unstyled text-muted small mb-0">
+                                <li><i class="fas fa-check text-success me-1.5"></i> Appointment Reminders</li>
+                                <li><i class="fas fa-check text-success me-1.5"></i> Patient Notifications</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="p-4 bg-white rounded-4 border shadow-sm text-start h-100">
+                            <div class="solution-icon-box solution-icon-blue mb-3"><i class="fas fa-graduation-cap"></i></div>
+                            <h5 class="fw-bold text-dark mb-2">EDUCATION</h5>
+                            <ul class="list-unstyled text-muted small mb-0">
+                                <li><i class="fas fa-check text-success me-1.5"></i> Admission Follow-ups</li>
+                                <li><i class="fas fa-check text-success me-1.5"></i> Important Updates</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="p-4 bg-white rounded-4 border shadow-sm text-start h-100">
+                            <div class="solution-icon-box solution-icon-orange mb-3"><i class="fas fa-shopping-bag"></i></div>
+                            <h5 class="fw-bold text-dark mb-2">RETAIL</h5>
+                            <ul class="list-unstyled text-muted small mb-0">
+                                <li><i class="fas fa-check text-success me-1.5"></i> Promotional Campaigns</li>
+                                <li><i class="fas fa-check text-success me-1.5"></i> Customer Engagement</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="p-4 bg-white rounded-4 border shadow-sm text-start h-100">
+                            <div class="solution-icon-box solution-icon-purple mb-3"><i class="fas fa-truck"></i></div>
+                            <h5 class="fw-bold text-dark mb-2">LOGISTICS</h5>
+                            <ul class="list-unstyled text-muted small mb-0">
+                                <li><i class="fas fa-check text-success me-1.5"></i> Delivery Notifications</li>
+                                <li><i class="fas fa-check text-success me-1.5"></i> Customer Updates</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             8. KEY FEATURES BANNER
+             ============================================ -->
+        <div class="container my-4">
+            <div class="dark-feature-banner text-center text-md-start">
+                <div class="text-center mb-4">
+                    <span class="hero-subtitle-orange"><i class="fas fa-star me-1"></i> PLATFORM HIGHLIGHTS</span>
+                    <h3 class="fw-bold text-white mb-0">Built for Reliable Voice Communication</h3>
+                </div>
+
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-3 col-md-6 d-flex align-items-center gap-3">
+                        <i class="fas fa-bolt fa-2x text-warning"></i>
+                        <div>
+                            <h6 class="fw-bold text-white mb-0">⚡ High-Volume Calling</h6>
+                            <span class="text-white-50 small">Millions of calls per hour</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 d-flex align-items-center gap-3">
+                        <i class="fas fa-phone-alt fa-2x text-success"></i>
+                        <div>
+                            <h6 class="fw-bold text-white mb-0">📞 Automated Dialing</h6>
+                            <span class="text-white-50 small">Smart retry management</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 d-flex align-items-center gap-3">
+                        <i class="fas fa-headphones fa-2x voice-purple-accent"></i>
+                        <div>
+                            <h6 class="fw-bold text-white mb-0">🎧 HD Voice Quality</h6>
+                            <span class="text-white-50 small">Crystal clear audio clarity</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 d-flex align-items-center gap-3">
+                        <i class="fas fa-chart-line fa-2x text-info"></i>
+                        <div>
+                            <h6 class="fw-bold text-white mb-0">📊 Campaign Reports</h6>
+                            <span class="text-white-50 small">Live DTMF analytics</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 d-flex align-items-center gap-3">
+                        <i class="fas fa-clock fa-2x text-warning"></i>
+                        <div>
+                            <h6 class="fw-bold text-white mb-0">🕐 Campaign Scheduling</h6>
+                            <span class="text-white-50 small">Set automated call windows</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 d-flex align-items-center gap-3">
+                        <i class="fas fa-redo fa-2x text-primary"></i>
+                        <div>
+                            <h6 class="fw-bold text-white mb-0">🔄 Call Retry Management</h6>
+                            <span class="text-white-50 small">Smart busy retry rules</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 d-flex align-items-center gap-3">
+                        <i class="fas fa-users-cog fa-2x text-success"></i>
+                        <div>
+                            <h6 class="fw-bold text-white mb-0">🎯 Customer Segmentation</h6>
+                            <span class="text-white-50 small">Targeted audience lists</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 d-flex align-items-center gap-3">
+                        <i class="fas fa-shield-alt fa-2x text-warning"></i>
+                        <div>
+                            <h6 class="fw-bold text-white mb-0">🔐 Secure Infrastructure</h6>
+                            <span class="text-white-50 small">Enterprise encryption</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================
+             9. HOW IT WORKS
+             ============================================ -->
+        <section class="how-it-works-section">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="section-label">SIMPLE DEPLOYMENT</span>
+                    <h2 class="section-title-dark">Launch Your Voice Campaign in 4 Simple Steps</h2>
+                    <p class="text-muted max-w-550 mx-auto">Get started with Immense Air IVR & OBD Solutions today.</p>
+                </div>
+
+                <div class="steps-wrapper">
+                    <div class="steps-connector-line"></div>
+                    <div class="row g-4">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="step-card">
+                                <div class="step-badge">01</div>
+                                <h5>Upload Contacts</h5>
+                                <p>Import your recipient phone list or connect via API.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="step-card">
+                                <div class="step-badge">02</div>
+                                <h5>Create Voice Campaign</h5>
+                                <p>Upload pre-recorded HD audio clip or configure your cloud IVR tree.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="step-card">
+                                <div class="step-badge">03</div>
+                                <h5>Schedule & Launch</h5>
+                                <p>Set calling time windows and trigger high-speed automated dialing.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="step-card">
+                                <div class="step-badge">04</div>
+                                <h5>Track Results</h5>
+                                <p>Monitor answered calls, DTMF keypresses, and campaign analytics live.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             10. FINAL CTA
+             ============================================ -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="dark-cta-card text-center">
+                    <h2 class="display-5 fw-bold text-white mb-3">Ready to Scale Your Voice Communication?</h2>
+                    <p class="text-white-50 lead mx-auto max-w-600 mb-4" style="font-size: 1.1rem;">
+                        Connect with our team to build the right IVR, OBD, Missed Call or Voice solution for your business.
+                    </p>
+                    <div class="d-flex flex-wrap justify-content-center gap-3">
+                        <a href="../contact.html" class="btn-orange-filled">
+                            Get Started <i class="fas fa-arrow-right ms-1"></i>
+                        </a>
+                        <a href="https://wa.me/919768566466" target="_blank" class="btn-dark-outline">
+                            <i class="fab fa-whatsapp me-1"></i> Talk to an Expert
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============================================
+         11. EXECUTIVE DARK FOOTER
+         ============================================ -->
+    <footer class="footer-dark-custom">
+        <div class="container">
+            <div class="row g-4 mb-4">
+                <div class="col-lg-4 col-md-6">
+                    <a class="navbar-brand-custom mb-3" href="../index.html">
+                        <img src="../assets/images/logo/logo.jpg" alt="Immense Air Pvt Ltd Logo" class="navbar-brand-logo">
+                        <div>
+                            <div style="font-size: 1.35rem; font-weight: 800; line-height: 1; letter-spacing: -0.5px; color: #FFFFFF;">
+                                IMMENSE <span style="color: var(--orange-brand);">AIR</span>
+                            </div>
+                            <div style="font-size: 0.7rem; font-weight: 800; letter-spacing: 1.5px; color: rgba(255,255,255,0.75); text-transform: uppercase;">
+                                PVT LTD
+                            </div>
+                        </div>
+                    </a>
+                    <p style="color:rgba(255,255,255,.75);font-size:1.0rem;line-height:1.65;max-width:360px;">
+                        Immense Air Pvt Ltd empowers businesses with intelligent communication solutions that drive engagement, automation & growth.
+                    </p>
+                    <div class="mt-3 d-flex gap-2">
+                        <a href="https://in.linkedin.com/company/immense-smart-solutions" target="_blank" class="social-circle-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.facebook.com/immensesmartsolutions/" target="_blank" class="social-circle-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.youtube.com/@immensesmartsolutions" target="_blank" class="social-circle-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/immense_smart_solutions/" target="_blank" class="social-circle-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6>PRODUCTS</h6>
+                    <ul class="footer-link-list">
+                        <li><a href="bulk-sms.html">SMS Services</a></li>
+                        <li><a href="whatsapp-api.html">WhatsApp API</a></li>
+                        <li><a href="rcs.html">RCS Messaging</a></li>
+                        <li><a href="voice.html">Voice Solutions</a></li>
+                        <li><a href="ivr-obd.html" class="text-warning fw-bold">IVR & OBD</a></li>
+                        <li><a href="smpp.html">SMPP & API</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6>SOLUTIONS</h6>
+                    <ul class="footer-link-list">
+                        <li><a href="../about.html">Marketing</a></li>
+                        <li><a href="../resources.html">Authentication</a></li>
+                        <li><a href="../contact.html">Customer Support</a></li>
+                        <li><a href="bulk-sms.html">Notifications</a></li>
+                        <li><a href="whatsapp-api.html">Automation</a></li>
+                        <li><a href="../about.html">Enterprise</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6>DEVELOPERS</h6>
+                    <ul class="footer-link-list">
+                        <li><a href="../developers.html">API Documentation</a></li>
+                        <li><a href="smpp.html">SMPP Guide</a></li>
+                        <li><a href="../developers.html">SDKs & Libraries</a></li>
+                        <li><a href="../developers.html">Postman Collection</a></li>
+                        <li><a href="../developers.html">Integration Guide</a></li>
+                        <li><a href="../developers.html">Status Page</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6>COMPANY</h6>
+                    <ul class="footer-link-list">
+                        <li><a href="../about.html">About Us</a></li>
+                        <li><a href="../careers.html">Careers <span class="badge bg-warning text-dark style-badge" style="font-size:0.7rem;">Hiring</span></a></li>
+                        <li><a href="../contact.html">Partners</a></li>
+                        <li><a href="../resources.html">News & Updates</a></li>
+                        <li><a href="../contact.html" class="text-warning fw-bold">Contact Us <i class="fas fa-arrow-right ms-1"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr style="border-color:rgba(255,255,255,.12);margin:2.5rem 0 1.5rem;">
+
+            <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 text-white-50" style="font-size:0.95rem;">
+                <div>&copy; 2026 Immense Air Pvt Ltd All Rights Reserved.</div>
+                <div>
+                    <a href="../privacy-policy.html" class="text-white-50 me-3 text-decoration-none">Privacy Policy</a>
+                    <a href="../terms.html" class="text-white-50 me-3 text-decoration-none">Terms & Conditions</a>
+                    <a href="../terms.html" class="text-white-50 text-decoration-none">Refund Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919768566466" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Global Data Privacy Opt-In Consent Banner -->
+    <div id="optInGlobalBanner" class="optin-consent-banner hidden">
+        <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+            <div class="d-flex align-items-center gap-3">
+                <i class="fas fa-user-shield text-warning fa-2x"></i>
+                <div>
+                    <div class="d-flex align-items-center gap-2 mb-1">
+                        <span class="fw-bold text-white fs-6">Data Privacy & Communication Opt-In</span>
+                        <span class="optin-badge"><i class="fas fa-check-circle me-1"></i> DPDP Act Compliant</span>
+                    </div>
+                    <p class="text-white-50 small mb-0">
+                        We value your data privacy. By using Immense Air, you consent to data processing for enterprise service delivery, SMS/WhatsApp updates, and analytics as outlined in our <a href="../privacy-policy.html" class="text-warning text-decoration-underline">Privacy Policy</a>.
+                    </p>
+                </div>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+                <button class="btn btn-warning btn-sm fw-bold px-3 rounded-pill text-white" onclick="acceptDataOptIn()">
+                    <i class="fas fa-check me-1"></i> Accept & Opt-In
+                </button>
+                <button class="btn btn-outline-light btn-sm px-3 rounded-pill" onclick="declineDataOptIn()">
+                    Necessary Only
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

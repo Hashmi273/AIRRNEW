@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Page Title -->
+    <title>Contact Us | Immense Air Pvt Ltd - Enterprise Communication Platform</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Contact Immense Air Pvt Ltd Office: B, Business Bay, Mindspace, Malad (W), Mumbai. Landline: 022 28461099, WhatsApp: +91 97685 66466 / +91 80070 18757, Email: support@immensesmartsolutions.com.">
+    <meta name="keywords" content="contact immense air, immense smart solutions contact, bulk sms enquiry, whatsapp api pricing, mindspace malad office">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#060D1E">
+    
+    <!-- Google Fonts - Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom Upgraded CSS System -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <style>
+        .contact-hero {
+            background: radial-gradient(circle at 75% 35%, #0F2347 0%, #060D1E 70%);
+            padding: 155px 0 85px;
+            color: #FFFFFF;
+        }
+
+        .contact-info-card {
+            background: #FFFFFF;
+            border-radius: 16px;
+            padding: 2.4rem 2rem;
+            border: 1px solid var(--border-light);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition-fast);
+            height: 100%;
+        }
+
+        .contact-info-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-hover);
+            border-color: rgba(255, 106, 0, 0.45);
+        }
+
+        .contact-icon-box {
+            width: 64px;
+            height: 64px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.7rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .contact-form-box {
+            background: #FFFFFF;
+            border-radius: 20px;
+            padding: 3rem 2.8rem;
+            border: 1px solid var(--border-light);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .map-frame-box {
+            background: var(--navy-card);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .form-control, .form-select {
+            font-size: 1.05rem !important;
+            padding: 0.85rem 1.2rem !important;
+            border-radius: 10px !important;
+        }
+
+        .form-label {
+            font-size: 1.02rem !important;
+            font-weight: 700 !important;
+            color: var(--navy-dark) !important;
+            margin-bottom: 0.4rem !important;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================
+         HEADER / NAVBAR
+         ============================================ -->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top navbar-custom" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand-custom" href="index.html">
+                    <img src="assets/images/logo/logo.jpg" alt="Immense Air Pvt Ltd Logo" class="navbar-brand-logo">
+                    <div>
+                        <div style="font-size: 1.35rem; font-weight: 800; line-height: 1; letter-spacing: -0.5px; color: #FFFFFF;">
+                            IMMENSE <span style="color: var(--orange-brand);">AIR</span>
+                        </div>
+                        <div style="font-size: 0.7rem; font-weight: 800; letter-spacing: 1.5px; color: rgba(255,255,255,0.75); text-transform: uppercase;">
+                            PVT LTD
+                        </div>
+                    </div>
+                </a>
+                
+                <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="index.html">Home</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link nav-link-custom dropdown-toggle" href="#" id="productsDropdown" data-bs-toggle="dropdown">Products</a>
+                            <ul class="dropdown-menu dropdown-menu-custom">
+                                <li><a class="dropdown-item dropdown-item-custom" href="products/bulk-sms.html"><i class="fas fa-sms"></i> SMS Services</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="products/whatsapp-api.html"><i class="fab fa-whatsapp text-success"></i> WhatsApp API</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="products/rcs.html"><i class="fas fa-comment-dots text-info"></i> RCS Messaging</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="products/voice.html"><i class="fas fa-phone-alt text-warning"></i> Voice Solutions</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="products/ivr-obd.html"><i class="fas fa-headset"></i> IVR / OBD Solutions</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="products/smpp.html"><i class="fas fa-code text-primary"></i> SMPP & API</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="index.html#how-it-works">How It Works</a></li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="developers.html">Developers</a></li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="careers.html">Careers</a></li>
+                        <li class="nav-item ms-lg-3"><a class="btn-nav-cta" href="contact.html">Contact Us <i class="fas fa-arrow-right ms-1"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ============================================
+             CONTACT HERO BANNER
+             ============================================ -->
+        <section class="contact-hero text-center">
+            <div class="container">
+                <span class="hero-subtitle-orange">GET IN TOUCH</span>
+                <h1 class="display-3 fw-extrabold text-white mb-3" style="letter-spacing: -0.5px;">Connect with Our CPaaS Experts</h1>
+                <p class="hero-para-mockup mx-auto max-w-600 mb-4" style="font-size: 1.25rem;">
+                    Have questions about Bulk SMS, WhatsApp Business API, RCS, Voice IVR or SMPP Gateway pricing? Our dedicated enterprise support team is available 24x7.
+                </p>
+                <div class="d-flex flex-wrap justify-content-center gap-4">
+                    <span class="hero-check-pill"><i class="fas fa-headset"></i> 24x7 Enterprise SLA Support</span>
+                    <span class="hero-check-pill"><i class="fas fa-user-shield"></i> Dedicated Account Manager</span>
+                    <span class="hero-check-pill"><i class="fas fa-bolt"></i> Instant API Provisioning</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             4 CONTACT INFORMATION CARDS
+             ============================================ -->
+        <section class="py-5 bg-light">
+            <div class="container py-4">
+                <div class="row g-4 mb-5">
+                    <!-- Card 1: Office Address -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="contact-info-card">
+                            <div class="contact-icon-box bg-orange-soft"><i class="fas fa-map-marker-alt"></i></div>
+                            <h4 class="fw-bold text-dark mb-3" style="font-size: 1.35rem;">Office Address</h4>
+                            <p class="text-muted mb-0" style="font-size: 1.02rem; line-height: 1.65;">
+                                B, Business Bay, Off Link Road, Behind Evershine Mall, Mindspace, Malad (W), Mumbai - 400064
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Landline -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="contact-info-card">
+                            <div class="contact-icon-box bg-blue-soft"><i class="fas fa-phone-alt"></i></div>
+                            <h4 class="fw-bold text-dark mb-3" style="font-size: 1.35rem;">Landline Phone</h4>
+                            <p class="text-muted mb-2" style="font-size: 1.02rem;">Direct Mumbai Office Line:</p>
+                            <a href="tel:02228461099" class="fw-bold text-primary text-decoration-none d-block" style="font-size: 1.25rem;">022 28461099</a>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Mobile & WhatsApp -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="contact-info-card">
+                            <div class="contact-icon-box bg-green-soft"><i class="fab fa-whatsapp"></i></div>
+                            <h4 class="fw-bold text-dark mb-3" style="font-size: 1.35rem;">Mobile & WhatsApp</h4>
+                            <p class="text-muted mb-2" style="font-size: 1.02rem;">Direct Enterprise Support:</p>
+                            <a href="https://wa.me/919768566466" target="_blank" class="fw-bold text-success text-decoration-none d-block mb-1" style="font-size: 1.12rem;">
+                                <i class="fab fa-whatsapp me-1"></i> +91 97685 66466
+                            </a>
+                            <a href="tel:918007018757" class="fw-bold text-dark text-decoration-none d-block" style="font-size: 1.05rem;">
+                                <i class="fas fa-mobile-alt me-1"></i> +91 80070 18757
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Support & Sales Emails -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="contact-info-card">
+                            <div class="contact-icon-box bg-purple-soft"><i class="fas fa-envelope"></i></div>
+                            <h4 class="fw-bold text-dark mb-3" style="font-size: 1.35rem;">Email Support</h4>
+                            <p class="text-muted mb-2" style="font-size: 1.02rem;">Technical & Sales Enquiries:</p>
+                            <a href="mailto:support@immensesmartsolutions.com" class="fw-semibold text-dark text-decoration-none d-block mb-1" style="font-size: 1.0rem;">
+                                support@immensesmartsolutions.com
+                            </a>
+                            <a href="mailto:sales@immensesmart.com" class="fw-semibold text-warning text-decoration-none d-block" style="font-size: 0.98rem;">
+                                sales@immensesmart.com / info@immenseair.in
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ============================================
+                     INTERACTIVE CONTACT & INQUIRY FORM + MAP
+                     ============================================ -->
+                <div class="row g-5 align-items-center">
+                    <!-- Left Form -->
+                    <div class="col-lg-7">
+                        <div class="contact-form-box">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <span class="badge px-3 py-2 rounded-pill" style="background: rgba(255,106,0,0.14); color: var(--orange-brand); font-size: 0.9rem;">
+                                    ENTERPRISE INQUIRY FORM
+                                </span>
+                            </div>
+                            <h2 class="fw-bold text-dark mb-2" style="font-size: 2.2rem;">Send Us a Direct Message</h2>
+                            <p class="text-muted mb-4" style="font-size: 1.05rem;">Fill out the form below and our communication specialist will connect with you within 30 minutes.</p>
+
+                            <form id="contactPageForm" onsubmit="handleContactSubmit(event)">
+                                <!-- Honeypot Bot Protection -->
+                                <input type="text" name="website" id="contactHoneypot" style="display:none;" tabindex="-1" autocomplete="off">
+
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label">Full Name *</label>
+                                        <input type="text" id="contactName" class="form-control bg-light border-0" placeholder="e.g. Rahul Sharma" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Company Name *</label>
+                                        <input type="text" id="contactCompany" class="form-control bg-light border-0" placeholder="e.g. Acme Enterprises">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Work Email *</label>
+                                        <input type="email" id="contactEmail" class="form-control bg-light border-0" placeholder="rahul@company.com" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Mobile Number (+91) *</label>
+                                        <input type="tel" id="contactPhone" class="form-control bg-light border-0" placeholder="9876543210" maxlength="10" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label">Product of Interest</label>
+                                        <select id="contactProduct" class="form-select bg-light border-0">
+                                            <option value="Bulk SMS Services">Bulk SMS Services</option>
+                                            <option value="WhatsApp Business API">WhatsApp Business API</option>
+                                            <option value="RCS Rich Messaging">RCS Rich Messaging</option>
+                                            <option value="Voice & OBD Solutions">Voice & OBD Solutions</option>
+                                            <option value="Smart IVR & Toll-Free">Smart IVR & Toll-Free</option>
+                                            <option value="High-Speed SMPP API">High-Speed SMPP API</option>
+                                            <option value="DLT Registration Assistance">DLT Registration Assistance</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label">Requirements / Message *</label>
+                                        <textarea id="contactMessage" class="form-control bg-light border-0" rows="4" placeholder="Tell us about your requirements..." required></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-check text-start p-3 rounded-3" style="background: rgba(255,106,0,0.06); border: 1px dashed rgba(255,106,0,0.3);">
+                                            <input class="form-check-input ms-0 me-2" type="checkbox" id="chkOptInConsent" style="cursor:pointer; border-color: var(--orange-brand);">
+                                            <label class="form-check-label optin-checkbox-label" for="chkOptInConsent">
+                                                <strong>Opt-In Consent:</strong> I agree to receive communications (SMS, WhatsApp API updates, Voice calls) from Immense Air Pvt Ltd and consent to the processing of my personal data as per TRAI DLT guidelines & <a href="privacy-policy.html" target="_blank" class="text-warning text-decoration-underline">Privacy Policy</a>.
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" id="btnContactSubmit" class="btn btn-warning btn-lg w-100 fw-bold rounded-3 shadow text-white py-3" style="font-size: 1.15rem;">
+                                            Submit Enterprise Inquiry <i class="fas fa-paper-plane ms-2"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <div id="contactSuccessMsg" class="mt-3 p-3.5 rounded-3 d-none fw-semibold" style="background: rgba(16,185,129,0.12); border: 1px solid #10B981; color: #065F46; font-size: 1.0rem;">
+                                <i class="fas fa-check-circle me-1"></i> <span id="contactSuccessText">Thank you! Your information has been submitted successfully. Our team will contact you shortly.</span>
+                            </div>
+                            <div id="contactErrorMsg" class="mt-3 p-3.5 rounded-3 d-none fw-semibold" style="background: rgba(239,68,68,0.12); border: 1px solid #EF4444; color: #991B1B; font-size: 1.0rem;">
+                                <i class="fas fa-exclamation-triangle me-1"></i> <span id="contactErrorText">Something went wrong while submitting your request. Please try again or contact us directly.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Location Card & Direct WhatsApp CTA -->
+                    <div class="col-lg-5">
+                        <div class="map-frame-box p-4 text-white text-center mb-4">
+                            <i class="fas fa-map-marked-alt text-warning fa-4x mb-3"></i>
+                            <h3 class="fw-bold text-white mb-2">Visit Our Mumbai Office</h3>
+                            <p class="text-white-50 mb-4" style="font-size: 1.05rem; line-height: 1.6;">
+                                Immense Air Pvt Ltd / Immense Air Pvt Ltd<br>
+                                B, Business Bay, Off Link Road, Behind Evershine Mall, Mindspace, Malad (W), Mumbai - 400064
+                            </p>
+                            <a href="https://maps.google.com/?q=Business+Bay+Mindspace+Malad+West+Mumbai" target="_blank" class="btn btn-outline-warning rounded-pill px-4 py-2 fw-bold">
+                                <i class="fas fa-directions me-1"></i> Get Directions on Google Maps
+                            </a>
+                        </div>
+
+                        <div class="p-4 rounded-4 text-center text-white" style="background: linear-gradient(135deg, #0F1C38 0%, #060D1E 100%); border: 1px solid rgba(37,211,102,0.35);">
+                            <i class="fab fa-whatsapp text-success fa-4x mb-2"></i>
+                            <h3 class="fw-bold text-white mb-2">Instant WhatsApp Chat</h3>
+                            <p class="text-white-50 mb-3" style="font-size: 1.02rem;">Need immediate assistance? Connect with our technical team live on WhatsApp.</p>
+                            <a href="https://wa.me/919768566466" target="_blank" class="btn btn-success rounded-pill px-4 py-2.5 fw-bold shadow" style="font-size: 1.08rem;">
+                                <i class="fab fa-whatsapp me-2"></i> Chat Live on WhatsApp (+91 97685 66466)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============================================
+         EXECUTIVE DARK FOOTER
+         ============================================ -->
+    <footer class="footer-dark-custom">
+        <div class="container">
+            <div class="row g-4 mb-4">
+                <!-- Company Info -->
+                <div class="col-lg-4 col-md-6">
+                    <a class="navbar-brand-custom mb-3" href="index.html">
+                        <img src="assets/images/logo/logo.jpg" alt="Immense Air Pvt Ltd Logo" class="navbar-brand-logo">
+                        <div>
+                            <div style="font-size: 1.35rem; font-weight: 800; line-height: 1; letter-spacing: -0.5px; color: #FFFFFF;">
+                                IMMENSE <span style="color: var(--orange-brand);">AIR</span>
+                            </div>
+                            <div style="font-size: 0.7rem; font-weight: 800; letter-spacing: 1.5px; color: rgba(255,255,255,0.75); text-transform: uppercase;">
+                                PVT LTD
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <p style="color:rgba(255,255,255,.75);font-size:1.0rem;line-height:1.65;max-width:360px;">
+                        Immense Air Pvt Ltd empowers businesses with intelligent communication solutions that drive engagement, automation & growth.
+                    </p>
+                    <div class="mt-3 d-flex gap-2">
+                        <a href="https://in.linkedin.com/company/immense-smart-solutions" target="_blank" class="social-circle-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.facebook.com/immensesmartsolutions/" target="_blank" class="social-circle-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.youtube.com/@immensesmartsolutions" target="_blank" class="social-circle-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/immense_smart_solutions/" target="_blank" class="social-circle-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Products Column -->
+                <div class="col-lg-2 col-md-6">
+                    <h6>PRODUCTS</h6>
+                    <ul class="footer-link-list">
+                        <li><a href="products/bulk-sms.html">SMS Services</a></li>
+                        <li><a href="products/whatsapp-api.html">WhatsApp API</a></li>
+                        <li><a href="products/rcs.html">RCS Messaging</a></li>
+                        <li><a href="products/voice.html">Voice Solutions</a></li>
+                        <li><a href="products/ivr-obd.html">IVR & OBD</a></li>
+                        <li><a href="products/smpp.html">SMPP & API</a></li>
+                    </ul>
+                </div>
+
+                <!-- Solutions Column -->
+                <div class="col-lg-2 col-md-6">
+                    <h6>SOLUTIONS</h6>
+                    <ul class="footer-link-list">
+                        <li><a href="about.html">Marketing</a></li>
+                        <li><a href="resources.html">Authentication</a></li>
+                        <li><a href="contact.html">Customer Support</a></li>
+                        <li><a href="products/bulk-sms.html">Notifications</a></li>
+                        <li><a href="products/whatsapp-api.html">Automation</a></li>
+                        <li><a href="about.html">Enterprise</a></li>
+                    </ul>
+                </div>
+
+                <!-- Developers Column -->
+                <div class="col-lg-2 col-md-6">
+                    <h6>DEVELOPERS</h6>
+                    <ul class="footer-link-list">
+                        <li><a href="developers.html">API Documentation</a></li>
+                        <li><a href="products/smpp.html">SMPP Guide</a></li>
+                        <li><a href="developers.html">SDKs & Libraries</a></li>
+                        <li><a href="developers.html">Postman Collection</a></li>
+                        <li><a href="developers.html">Integration Guide</a></li>
+                        <li><a href="developers.html">Status Page</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company Column -->
+                <div class="col-lg-2 col-md-6">
+                    <h6>COMPANY</h6>
+                    <ul class="footer-link-list">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="careers.html">Careers <span class="badge bg-warning text-dark style-badge" style="font-size:0.7rem;">Hiring</span></a></li>
+                        <li><a href="contact.html">Partners</a></li>
+                        <li><a href="resources.html">News & Updates</a></li>
+                        <li><a href="contact.html" class="text-warning fw-bold">Contact Us <i class="fas fa-arrow-right ms-1"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr style="border-color:rgba(255,255,255,.12);margin:2.5rem 0 1.5rem;">
+
+            <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 text-white-50" style="font-size:0.95rem;">
+                <div>&copy; 2026 Immense Air Pvt Ltd All Rights Reserved.</div>
+                <div>
+                    <a href="privacy-policy.html" class="text-white-50 me-3 text-decoration-none">Privacy Policy</a>
+                    <a href="terms.html" class="text-white-50 me-3 text-decoration-none">Terms & Conditions</a>
+                    <a href="terms.html" class="text-white-50 text-decoration-none">Refund Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919768566466" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Global Data Privacy & Communication Opt-In Consent Banner -->
+    <div id="optInGlobalBanner" class="optin-consent-banner hidden">
+        <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+            <div class="d-flex align-items-center gap-3">
+                <i class="fas fa-user-shield text-warning fa-2x"></i>
+                <div>
+                    <div class="d-flex align-items-center gap-2 mb-1">
+                        <span class="fw-bold text-white fs-6">Data Privacy & Communication Opt-In</span>
+                        <span class="optin-badge"><i class="fas fa-check-circle me-1"></i> DPDP Act Compliant</span>
+                    </div>
+                    <p class="text-white-50 small mb-0">
+                        We value your data privacy. By using Immense Air, you consent to data processing for enterprise service delivery, SMS/WhatsApp updates, and analytics as outlined in our <a href="privacy-policy.html" class="text-warning text-decoration-underline">Privacy Policy</a>.
+                    </p>
+                </div>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+                <button class="btn btn-warning btn-sm fw-bold px-3 rounded-pill text-white" onclick="acceptDataOptIn()">
+                    <i class="fas fa-check me-1"></i> Accept & Opt-In
+                </button>
+                <button class="btn btn-outline-light btn-sm px-3 rounded-pill" onclick="declineDataOptIn()">
+                    Necessary Only
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        async function handleContactSubmit(e) {
+            e.preventDefault();
+            const btn = document.getElementById('btnContactSubmit');
+            const successBox = document.getElementById('contactSuccessMsg');
+            const errorBox = document.getElementById('contactErrorMsg');
+
+            successBox.classList.add('d-none');
+            errorBox.classList.add('d-none');
+
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i> Submitting Inquiry...';
+
+            const payload = {
+                name: document.getElementById('contactName').value.trim(),
+                company: document.getElementById('contactCompany').value.trim(),
+                email: document.getElementById('contactEmail').value.trim(),
+                phone: document.getElementById('contactPhone').value.trim(),
+                product: document.getElementById('contactProduct').value,
+                message: document.getElementById('contactMessage').value.trim(),
+                optin: document.getElementById('chkOptInConsent').checked,
+                website: document.getElementById('contactHoneypot').value,
+                sourcePage: 'Contact Us Page'
+            };
+
+            try {
+                const res = await fetch('/api/contact/submit', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const data = await res.json();
+                btn.disabled = false;
+                btn.innerHTML = 'Submit Enterprise Inquiry <i class="fas fa-paper-plane ms-2"></i>';
+
+                if (res.ok && data.success) {
+                    document.getElementById('contactSuccessText').innerText = data.message;
+                    successBox.classList.remove('d-none');
+                    document.getElementById('contactPageForm').reset();
+                    successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                } else {
+                    document.getElementById('contactErrorText').innerText = data.error || 'Something went wrong while submitting your request. Please try again or contact us directly.';
+                    errorBox.classList.remove('d-none');
+                }
+            } catch (err) {
+                btn.disabled = false;
+                btn.innerHTML = 'Submit Enterprise Inquiry <i class="fas fa-paper-plane ms-2"></i>';
+                document.getElementById('contactErrorText').innerText = 'Something went wrong while submitting your request. Please try again or contact us directly.';
+                errorBox.classList.remove('d-none');
+            }
+        }
+    </script>
+</body>
+</html>

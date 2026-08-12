@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Page Title -->
+    <title>About Us | Immense Air Pvt Ltd</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Immense Air Pvt Ltd is a technology-driven communication solutions provider powering Bulk SMS, RCS Messaging, WhatsApp Business API, Voice, IVR, OBD, and SMPP connectivity for enterprises.">
+    <meta name="keywords" content="about immense air, immense smart solutions, enterprise cpaas, bulk sms provider india, rcs messaging platform, whatsapp api partner, smpp gateway">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#060D1E">
+    
+    <!-- Google Fonts - Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom Upgraded CSS System -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <style>
+        .about-hero {
+            background: radial-gradient(circle at 75% 35%, #0F254A 0%, #060D1E 70%);
+            padding: 160px 0 85px;
+            color: #FFFFFF;
+        }
+
+        .service-pill-line {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--orange-brand);
+            letter-spacing: 1px;
+        }
+
+        .tech-flow-box {
+            background: #060D1E;
+            border-radius: 24px;
+            padding: 3rem 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+        }
+
+        .tech-node-item {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 16px;
+            padding: 1.2rem 1.4rem;
+            color: #FFFFFF;
+            font-weight: 700;
+            font-size: 1.05rem;
+            transition: all 0.3s ease;
+        }
+
+        .tech-node-item:hover {
+            transform: translateY(-5px);
+            border-color: var(--orange-brand);
+            background: rgba(255, 106, 0, 0.12);
+        }
+
+        .signal-arrow-flow {
+            font-size: 1.4rem;
+            color: var(--orange-brand);
+            animation: travelSignal 1.5s infinite alternate;
+        }
+
+        @keyframes travelSignal {
+            from { transform: translateX(0); opacity: 0.5; }
+            to { transform: translateX(6px); opacity: 1; }
+        }
+
+        .industry-card-about {
+            background: #FFFFFF;
+            border-radius: 16px;
+            padding: 1.5rem 1rem;
+            border: 1px solid var(--border-light);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .industry-card-about:hover {
+            transform: translateY(-5px);
+            border-color: var(--orange-brand);
+            box-shadow: 0 15px 35px rgba(255, 106, 0, 0.12);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================
+         HEADER / NAVBAR
+         ============================================ -->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top navbar-custom" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand-custom" href="index.html">
+                    <img src="assets/images/logo/logo.jpg" alt="Immense Air Pvt Ltd Logo" class="navbar-brand-logo">
+                    <div>
+                        <div style="font-size: 1.35rem; font-weight: 800; line-height: 1; letter-spacing: -0.5px; color: #FFFFFF;">
+                            IMMENSE <span style="color: var(--orange-brand);">AIR</span>
+                        </div>
+                        <div style="font-size: 0.7rem; font-weight: 800; letter-spacing: 1.5px; color: rgba(255,255,255,0.75); text-transform: uppercase;">
+                            PVT LTD
+                        </div>
+                    </div>
+                </a>
+                
+                <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom active" href="about.html">About</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link nav-link-custom dropdown-toggle" href="#" id="productsDropdown" data-bs-toggle="dropdown">Products</a>
+                            <ul class="dropdown-menu dropdown-menu-custom">
+                                <li><a class="dropdown-item dropdown-item-custom" href="products/bulk-sms.html"><i class="fas fa-sms"></i> SMS Services</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="products/whatsapp-api.html"><i class="fab fa-whatsapp text-success"></i> WhatsApp API</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="products/rcs.html"><i class="fas fa-comment-dots text-info"></i> RCS Messaging</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="products/voice.html"><i class="fas fa-phone-alt text-warning"></i> Voice Solutions</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="products/ivr-obd.html"><i class="fas fa-headset text-primary"></i> IVR / OBD Solutions</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="products/smpp.html"><i class="fas fa-code text-primary"></i> SMPP & API</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="index.html#how-it-works">How It Works</a></li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="developers.html">Developers</a></li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="careers.html">Careers</a></li>
+                        <li class="nav-item ms-lg-3"><a class="btn-nav-cta" href="contact.html">Contact Us <i class="fas fa-arrow-right ms-1"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ============================================
+             HERO SECTION
+             ============================================ -->
+        <section class="about-hero text-center">
+            <div class="container">
+                <span class="hero-subtitle-orange"><i class="fas fa-building me-2"></i> IMMENSE AIR PVT. LTD.</span>
+                <h1 class="display-3 fw-extrabold text-white mb-3" style="letter-spacing: -0.5px;">
+                    Powering Smarter Business Communication
+                </h1>
+                <p class="hero-para-mockup mx-auto max-w-600 mb-4" style="font-size: 1.25rem;">
+                    Immense Air Pvt Ltd is a technology-driven communication solutions provider helping businesses connect, engage and communicate with their customers through reliable, scalable and intelligent communication infrastructure.
+                </p>
+                <div class="service-pill-line">
+                    <span>SMS</span> • <span>RCS</span> • <span>WhatsApp</span> • <span>Voice</span> • <span>IVR</span> • <span>OBD</span> • <span>SMPP</span> • <span>APIs</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             SECTION 1: OUR STORY
+             ============================================ -->
+        <section class="py-5 bg-white">
+            <div class="container py-4">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6 text-start">
+                        <span class="section-label">OUR STORY</span>
+                        <h2 class="section-title-dark mb-4">Connecting Businesses With Their Customers</h2>
+                        <p class="text-muted lead fs-6 mb-3">
+                            Immense Air was built with a simple vision — make business communication smarter, faster and easier to manage.
+                        </p>
+                        <p class="text-muted mb-3">
+                            We provide enterprise communication solutions that help businesses reach customers across multiple channels from a single technology ecosystem.
+                        </p>
+                        <p class="text-muted mb-0">
+                            From high-volume SMS and rich RCS messaging to WhatsApp Business API, Voice, IVR, OBD and SMPP connectivity, our solutions are designed for performance, reliability and scalability.
+                        </p>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="p-4 rounded-4 bg-dark text-white border border-secondary shadow-lg text-start">
+                            <h4 class="fw-bold text-warning mb-3"><i class="fas fa-rocket me-2"></i> Our Core Capabilities</h4>
+                            <div class="d-flex flex-column gap-3">
+                                <div class="p-3 bg-secondary bg-opacity-25 rounded-3 border border-secondary d-flex align-items-center gap-3">
+                                    <div class="solution-icon-box solution-icon-orange mb-0"><i class="fas fa-layer-group"></i></div>
+                                    <div>
+                                        <h6 class="fw-bold text-white mb-0">Multi-Channel Platform</h6>
+                                        <span class="text-white-50 small">SMS, RCS, WhatsApp, Voice, IVR & SMPP under one roof.</span>
+                                    </div>
+                                </div>
+                                <div class="p-3 bg-secondary bg-opacity-25 rounded-3 border border-secondary d-flex align-items-center gap-3">
+                                    <div class="solution-icon-box solution-icon-green mb-0"><i class="fas fa-bolt"></i></div>
+                                    <div>
+                                        <h6 class="fw-bold text-white mb-0">High-Throughput Delivery</h6>
+                                        <span class="text-white-50 small">Direct operator interconnects built for massive scale.</span>
+                                    </div>
+                                </div>
+                                <div class="p-3 bg-secondary bg-opacity-25 rounded-3 border border-secondary d-flex align-items-center gap-3">
+                                    <div class="solution-icon-box solution-icon-blue mb-0"><i class="fas fa-shield-alt"></i></div>
+                                    <div>
+                                        <h6 class="fw-bold text-white mb-0">Enterprise Security</h6>
+                                        <span class="text-white-50 small">Encrypted handshake protocols and DPDP compliant.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             SECTION 2: WHAT WE DO (6 PREMIUM CARDS)
+             ============================================ -->
+        <section class="solutions-section" id="what-we-do">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="section-label">WHAT WE DO</span>
+                    <h2 class="section-title-dark">Complete Communication Solutions Under One Roof</h2>
+                    <p class="text-muted max-w-600 mx-auto" style="font-size: 1.15rem;">Integrated messaging and voice channels built for business growth.</p>
+                </div>
+
+                <div class="row g-4">
+                    <!-- 1. Bulk SMS -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card-solution-mockup p-4 text-start h-100">
+                            <div class="solution-icon-box solution-icon-orange mb-3"><i class="fas fa-sms"></i></div>
+                            <h4 class="fw-bold text-dark mb-2">Bulk SMS</h4>
+                            <p class="text-muted small mb-3">Send promotional, transactional and OTP messages with reliable delivery and real-time reporting.</p>
+                            <a href="products/bulk-sms.html" class="fw-bold text-orange text-decoration-none small">Learn More <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- 2. RCS Messaging -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card-solution-mockup p-4 text-start h-100">
+                            <div class="solution-icon-box solution-icon-blue mb-3"><i class="fas fa-comment-dots"></i></div>
+                            <h4 class="fw-bold text-dark mb-2">RCS Messaging</h4>
+                            <p class="text-muted small mb-3">Create rich, interactive and branded customer experiences with next-generation messaging.</p>
+                            <a href="products/rcs.html" class="fw-bold text-primary text-decoration-none small">Learn More <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- 3. WhatsApp Business API -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card-solution-mockup p-4 text-start h-100">
+                            <div class="solution-icon-box solution-icon-green mb-3"><i class="fab fa-whatsapp"></i></div>
+                            <h4 class="fw-bold text-dark mb-2">WhatsApp Business API</h4>
+                            <p class="text-muted small mb-3">Automate customer conversations, notifications, support and business workflows through official WhatsApp APIs.</p>
+                            <a href="products/whatsapp-api.html" class="fw-bold text-success text-decoration-none small">Learn More <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- 4. Voice Solutions -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card-solution-mockup p-4 text-start h-100">
+                            <div class="solution-icon-box solution-icon-purple mb-3"><i class="fas fa-phone-alt"></i></div>
+                            <h4 class="fw-bold text-dark mb-2">Voice Solutions</h4>
+                            <p class="text-muted small mb-3">Connect with customers through IVR, outbound voice, missed calls and automated voice campaigns.</p>
+                            <a href="products/voice.html" class="fw-bold text-purple text-decoration-none small" style="color:#8B5CF6;">Learn More <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- 5. IVR & OBD -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card-solution-mockup p-4 text-start h-100">
+                            <div class="solution-icon-box solution-icon-orange mb-3"><i class="fas fa-headset"></i></div>
+                            <h4 class="fw-bold text-dark mb-2">IVR & OBD</h4>
+                            <p class="text-muted small mb-3">Build automated call flows and reach customers through scalable outbound voice communication.</p>
+                            <a href="products/ivr-obd.html" class="fw-bold text-orange text-decoration-none small">Learn More <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- 6. SMPP Connectivity -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card-solution-mockup p-4 text-start h-100">
+                            <div class="solution-icon-box solution-icon-blue mb-3"><i class="fas fa-code"></i></div>
+                            <h4 class="fw-bold text-dark mb-2">SMPP Connectivity</h4>
+                            <p class="text-muted small mb-3">Connect your applications and messaging infrastructure through reliable SMPP connectivity for high-volume traffic.</p>
+                            <a href="products/smpp.html" class="fw-bold text-primary text-decoration-none small">Learn More <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             SECTION 3: OUR MISSION (TWO-COLUMN LAYOUT)
+             ============================================ -->
+        <section class="py-5 bg-light">
+            <div class="container py-4">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6 text-start">
+                        <span class="section-label">OUR MISSION</span>
+                        <h2 class="section-title-dark mb-4">Making Business Communication Simple & Powerful</h2>
+                        <p class="text-muted lead fs-6 mb-3">
+                            Our mission is to help businesses communicate with their customers through technology that is reliable, scalable and easy to integrate.
+                        </p>
+                        <p class="text-muted mb-0">
+                            We focus on delivering communication infrastructure that supports automation, customer engagement and business growth.
+                        </p>
+                    </div>
+
+                    <!-- Right Column Animated Communication Graphic -->
+                    <div class="col-lg-6">
+                        <div class="p-4 rounded-4 bg-dark text-white text-center border border-secondary shadow-lg">
+                            <h5 class="fw-bold text-warning mb-4"><i class="fas fa-network-wired me-2"></i> Interconnected Communication Mesh</h5>
+                            <div class="row g-3">
+                                <div class="col-6">
+                                    <div class="p-3 bg-secondary bg-opacity-25 rounded-3 border border-secondary">
+                                        <i class="fas fa-robot text-info fa-2x mb-2"></i>
+                                        <h6 class="fw-bold text-white mb-0">Automation</h6>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="p-3 bg-secondary bg-opacity-25 rounded-3 border border-secondary">
+                                        <i class="fas fa-users text-success fa-2x mb-2"></i>
+                                        <h6 class="fw-bold text-white mb-0">Engagement</h6>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="p-3 bg-secondary bg-opacity-25 rounded-3 border border-secondary">
+                                        <i class="fas fa-chart-line text-warning fa-2x mb-2"></i>
+                                        <h6 class="fw-bold text-white mb-0">Scale</h6>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="p-3 bg-secondary bg-opacity-25 rounded-3 border border-secondary">
+                                        <i class="fas fa-shield-alt text-primary fa-2x mb-2"></i>
+                                        <h6 class="fw-bold text-white mb-0">Reliability</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             SECTION 4: WHY IMMENSE AIR (6 COMPACT FEATURE CARDS)
+             ============================================ -->
+        <section class="sectors-section">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="section-label">WHY IMMENSE AIR</span>
+                    <h2 class="section-title-dark">Built For Businesses That Communicate At Scale</h2>
+                    <p class="text-muted max-w-600 mx-auto" style="font-size: 1.15rem;">Key advantages of partnering with Immense Air Pvt Ltd</p>
+                </div>
+
+                <div class="row g-4">
+                    <!-- 1. High Delivery Performance -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="p-4 bg-white rounded-4 border shadow-sm text-start h-100">
+                            <div class="solution-icon-box solution-icon-orange mb-3"><i class="fas fa-tachometer-alt"></i></div>
+                            <h5 class="fw-bold text-dark mb-2">High Delivery Performance</h5>
+                            <p class="text-muted small mb-0">Optimized communication infrastructure designed for fast and reliable message delivery.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Secure & Reliable -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="p-4 bg-white rounded-4 border shadow-sm text-start h-100">
+                            <div class="solution-icon-box solution-icon-green mb-3"><i class="fas fa-shield-alt"></i></div>
+                            <h5 class="fw-bold text-dark mb-2">Secure & Reliable</h5>
+                            <p class="text-muted small mb-0">Enterprise-focused infrastructure with security and reliability at every layer.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Easy Integration -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="p-4 bg-white rounded-4 border shadow-sm text-start h-100">
+                            <div class="solution-icon-box solution-icon-blue mb-3"><i class="fas fa-plug"></i></div>
+                            <h5 class="fw-bold text-dark mb-2">Easy Integration</h5>
+                            <p class="text-muted small mb-0">Simple APIs, SMPP connectivity and integration support for faster deployment.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Real-Time Visibility -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="p-4 bg-white rounded-4 border shadow-sm text-start h-100">
+                            <div class="solution-icon-box solution-icon-purple mb-3"><i class="fas fa-chart-bar"></i></div>
+                            <h5 class="fw-bold text-dark mb-2">Real-Time Visibility</h5>
+                            <p class="text-muted small mb-0">Track communication activity, delivery status and campaign performance.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Dedicated Support -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="p-4 bg-white rounded-4 border shadow-sm text-start h-100">
+                            <div class="solution-icon-box solution-icon-orange mb-3"><i class="fas fa-headset"></i></div>
+                            <h5 class="fw-bold text-dark mb-2">Dedicated Support</h5>
+                            <p class="text-muted small mb-0">Technical assistance to help businesses manage and scale their communication requirements.</p>
+                        </div>
+                    </div>
+
+                    <!-- 6. Built To Scale -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="p-4 bg-white rounded-4 border shadow-sm text-start h-100">
+                            <div class="solution-icon-box solution-icon-green mb-3"><i class="fas fa-expand-arrows-alt"></i></div>
+                            <h5 class="fw-bold text-dark mb-2">Built To Scale</h5>
+                            <p class="text-muted small mb-0">Solutions designed to support growing communication volumes and evolving business needs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             SECTION 5: OUR TECHNOLOGY (ANIMATED HORIZONTAL FLOW)
+             ============================================ -->
+        <section class="py-5" style="background: #060D1E; color: #FFFFFF;">
+            <div class="container py-3 text-center">
+                <div class="mb-5">
+                    <span class="hero-subtitle-orange"><i class="fas fa-layer-group me-1"></i> OUR TECHNOLOGY</span>
+                    <h2 class="display-6 fw-extrabold text-white mb-2">One Platform. Multiple Communication Channels.</h2>
+                    <p class="text-white-50 max-w-600 mx-auto" style="font-size: 1.1rem;">
+                        Connect your business with customers across the channels they use every day.
+                    </p>
+                </div>
+
+                <!-- Animated Channel Pipeline -->
+                <div class="tech-flow-box mb-4">
+                    <div class="d-flex align-items-center justify-content-center gap-3 flex-wrap">
+                        <div class="tech-node-item"><i class="fas fa-sms text-warning me-2"></i> SMS</div>
+                        <i class="fas fa-chevron-right signal-arrow-flow"></i>
+                        
+                        <div class="tech-node-item"><i class="fas fa-comment-dots text-info me-2"></i> RCS</div>
+                        <i class="fas fa-chevron-right signal-arrow-flow"></i>
+                        
+                        <div class="tech-node-item"><i class="fab fa-whatsapp text-success me-2"></i> WhatsApp</div>
+                        <i class="fas fa-chevron-right signal-arrow-flow"></i>
+                        
+                        <div class="tech-node-item"><i class="fas fa-phone-alt text-warning me-2"></i> Voice</div>
+                        <i class="fas fa-chevron-right signal-arrow-flow"></i>
+                        
+                        <div class="tech-node-item"><i class="fas fa-headset text-primary me-2"></i> IVR / OBD</div>
+                        <i class="fas fa-chevron-right signal-arrow-flow"></i>
+                        
+                        <div class="tech-node-item"><i class="fas fa-network-wired text-info me-2"></i> SMPP</div>
+                        <i class="fas fa-chevron-right signal-arrow-flow"></i>
+                        
+                        <div class="tech-node-item"><i class="fas fa-code text-success me-2"></i> APIs</div>
+                    </div>
+                </div>
+
+                <p class="text-white-50 max-w-600 mx-auto small mb-0">
+                    Our technology ecosystem helps businesses manage communication, automation and customer engagement with greater efficiency.
+                </p>
+            </div>
+        </section>
+
+        <!-- ============================================
+             SECTION 6: INDUSTRIES WE SERVE (10 CLEAN CARDS)
+             ============================================ -->
+        <section class="sectors-section">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="section-label">INDUSTRIES WE SERVE</span>
+                    <h2 class="section-title-dark">Communication Solutions For Every Industry</h2>
+                    <p class="text-muted max-w-600 mx-auto" style="font-size: 1.15rem;">Custom communication workflows tailored for every business sector.</p>
+                </div>
+
+                <div class="row g-3">
+                    <div class="col-lg-2.4 col-md-4 col-6">
+                        <div class="industry-card-about text-center">
+                            <i class="fas fa-building fa-2x text-orange mb-2"></i>
+                            <h6 class="fw-bold text-dark mb-0">Real Estate</h6>
+                        </div>
+                    </div>
+                    <div class="col-lg-2.4 col-md-4 col-6">
+                        <div class="industry-card-about text-center">
+                            <i class="fas fa-credit-card fa-2x text-primary mb-2"></i>
+                            <h6 class="fw-bold text-dark mb-0">Fintech</h6>
+                        </div>
+                    </div>
+                    <div class="col-lg-2.4 col-md-4 col-6">
+                        <div class="industry-card-about text-center">
+                            <i class="fas fa-landmark fa-2x text-warning mb-2"></i>
+                            <h6 class="fw-bold text-dark mb-0">Banking</h6>
+                        </div>
+                    </div>
+                    <div class="col-lg-2.4 col-md-4 col-6">
+                        <div class="industry-card-about text-center">
+                            <i class="fas fa-heartbeat fa-2x text-danger mb-2"></i>
+                            <h6 class="fw-bold text-dark mb-0">Healthcare</h6>
+                        </div>
+                    </div>
+                    <div class="col-lg-2.4 col-md-4 col-6">
+                        <div class="industry-card-about text-center">
+                            <i class="fas fa-car fa-2x text-success mb-2"></i>
+                            <h6 class="fw-bold text-dark mb-0">Automobile</h6>
+                        </div>
+                    </div>
+                    <div class="col-lg-2.4 col-md-4 col-6">
+                        <div class="industry-card-about text-center">
+                            <i class="fas fa-shopping-cart fa-2x text-info mb-2"></i>
+                            <h6 class="fw-bold text-dark mb-0">E-Commerce</h6>
+                        </div>
+                    </div>
+                    <div class="col-lg-2.4 col-md-4 col-6">
+                        <div class="industry-card-about text-center">
+                            <i class="fas fa-shopping-bag fa-2x text-purple mb-2" style="color:#8B5CF6;"></i>
+                            <h6 class="fw-bold text-dark mb-0">Retail</h6>
+                        </div>
+                    </div>
+                    <div class="col-lg-2.4 col-md-4 col-6">
+                        <div class="industry-card-about text-center">
+                            <i class="fas fa-graduation-cap fa-2x text-warning mb-2"></i>
+                            <h6 class="fw-bold text-dark mb-0">Education</h6>
+                        </div>
+                    </div>
+                    <div class="col-lg-2.4 col-md-4 col-6">
+                        <div class="industry-card-about text-center">
+                            <i class="fas fa-truck fa-2x text-primary mb-2"></i>
+                            <h6 class="fw-bold text-dark mb-0">Logistics</h6>
+                        </div>
+                    </div>
+                    <div class="col-lg-2.4 col-md-4 col-6">
+                        <div class="industry-card-about text-center">
+                            <i class="fas fa-hotel fa-2x text-success mb-2"></i>
+                            <h6 class="fw-bold text-dark mb-0">Hospitality</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             SECTION 7: OUR APPROACH
+             ============================================ -->
+        <section class="how-it-works-section">
+            <div class="container">
+                <div class="p-5 rounded-4 bg-white border shadow-sm text-center">
+                    <span class="section-label">OUR APPROACH</span>
+                    <h2 class="section-title-dark mb-3">Technology That Works For Your Business</h2>
+                    <p class="text-muted lead fs-6 max-w-750 mx-auto mb-3">
+                        We combine communication technology, automation and technical expertise to create solutions that are practical, scalable and business-focused.
+                    </p>
+                    <p class="text-muted max-w-750 mx-auto mb-0" style="font-size: 1.05rem;">
+                        Whether you need to send high-volume messages, automate customer interactions or integrate communication directly into your application, Immense Air provides the infrastructure and support to make it happen.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             FINAL CTA
+             ============================================ -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="dark-cta-card text-center">
+                    <h2 class="display-5 fw-bold text-white mb-3">Ready To Communicate Smarter?</h2>
+                    <p class="text-white-50 lead mx-auto max-w-600 mb-4" style="font-size: 1.1rem;">
+                        Build better customer experiences with powerful communication solutions from Immense Air.
+                    </p>
+                    <div class="d-flex flex-wrap justify-content-center gap-3 mb-3">
+                        <a href="products/bulk-sms.html" class="btn-orange-filled">
+                            Explore Our Solutions <i class="fas fa-arrow-right ms-1"></i>
+                        </a>
+                        <a href="contact.html" class="btn-dark-outline">
+                            <i class="fas fa-envelope me-1"></i> Talk To Our Experts
+                        </a>
+                    </div>
+                    <div class="text-warning fw-bold font-monospace small" style="letter-spacing: 1px;">
+                        Smart Communication. Stronger Business.
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============================================
+         EXECUTIVE DARK FOOTER
+         ============================================ -->
+    <footer class="footer-dark-custom">
+        <div class="container">
+            <div class="row g-4 mb-4">
+                <div class="col-lg-4 col-md-6">
+                    <a class="navbar-brand-custom mb-3" href="index.html">
+                        <img src="assets/images/logo/logo.jpg" alt="Immense Air Pvt Ltd Logo" class="navbar-brand-logo">
+                        <div>
+                            <div style="font-size: 1.35rem; font-weight: 800; line-height: 1; letter-spacing: -0.5px; color: #FFFFFF;">
+                                IMMENSE <span style="color: var(--orange-brand);">AIR</span>
+                            </div>
+                            <div style="font-size: 0.7rem; font-weight: 800; letter-spacing: 1.5px; color: rgba(255,255,255,0.75); text-transform: uppercase;">
+                                PVT LTD
+                            </div>
+                        </div>
+                    </a>
+                    <p style="color:rgba(255,255,255,.75);font-size:1.0rem;line-height:1.65;max-width:360px;">
+                        Immense Air Pvt Ltd empowers businesses with intelligent communication solutions that drive engagement, automation & growth.
+                    </p>
+                    <div class="mt-3 d-flex gap-2">
+                        <a href="https://in.linkedin.com/company/immense-smart-solutions" target="_blank" class="social-circle-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.facebook.com/immensesmartsolutions/" target="_blank" class="social-circle-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.youtube.com/@immensesmartsolutions" target="_blank" class="social-circle-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/immense_smart_solutions/" target="_blank" class="social-circle-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6>PRODUCTS</h6>
+                    <ul class="footer-link-list">
+                        <li><a href="products/bulk-sms.html">SMS Services</a></li>
+                        <li><a href="products/whatsapp-api.html">WhatsApp API</a></li>
+                        <li><a href="products/rcs.html">RCS Messaging</a></li>
+                        <li><a href="products/voice.html">Voice Solutions</a></li>
+                        <li><a href="products/ivr-obd.html">IVR & OBD</a></li>
+                        <li><a href="products/smpp.html">SMPP & API</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6>SOLUTIONS</h6>
+                    <ul class="footer-link-list">
+                        <li><a href="about.html">Marketing</a></li>
+                        <li><a href="resources.html">Authentication</a></li>
+                        <li><a href="contact.html">Customer Support</a></li>
+                        <li><a href="products/bulk-sms.html">Notifications</a></li>
+                        <li><a href="products/whatsapp-api.html">Automation</a></li>
+                        <li><a href="about.html">Enterprise</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6>DEVELOPERS</h6>
+                    <ul class="footer-link-list">
+                        <li><a href="developers.html">API Documentation</a></li>
+                        <li><a href="products/smpp.html">SMPP Guide</a></li>
+                        <li><a href="developers.html">SDKs & Libraries</a></li>
+                        <li><a href="developers.html">Postman Collection</a></li>
+                        <li><a href="developers.html">Integration Guide</a></li>
+                        <li><a href="developers.html">Status Page</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6>COMPANY</h6>
+                    <ul class="footer-link-list">
+                        <li><a href="about.html" class="text-warning fw-bold">About Us</a></li>
+                        <li><a href="careers.html">Careers <span class="badge bg-warning text-dark style-badge" style="font-size:0.7rem;">Hiring</span></a></li>
+                        <li><a href="contact.html">Partners</a></li>
+                        <li><a href="resources.html">News & Updates</a></li>
+                        <li><a href="contact.html" class="text-warning fw-bold">Contact Us <i class="fas fa-arrow-right ms-1"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr style="border-color:rgba(255,255,255,.12);margin:2.5rem 0 1.5rem;">
+
+            <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 text-white-50" style="font-size:0.95rem;">
+                <div>&copy; 2026 Immense Air Pvt Ltd All Rights Reserved.</div>
+                <div>
+                    <a href="privacy-policy.html" class="text-white-50 me-3 text-decoration-none">Privacy Policy</a>
+                    <a href="terms.html" class="text-white-50 me-3 text-decoration-none">Terms & Conditions</a>
+                    <a href="terms.html" class="text-white-50 text-decoration-none">Refund Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919768566466" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Global Data Privacy Opt-In Consent Banner -->
+    <div id="optInGlobalBanner" class="optin-consent-banner hidden">
+        <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+            <div class="d-flex align-items-center gap-3">
+                <i class="fas fa-user-shield text-warning fa-2x"></i>
+                <div>
+                    <div class="d-flex align-items-center gap-2 mb-1">
+                        <span class="fw-bold text-white fs-6">Data Privacy & Communication Opt-In</span>
+                        <span class="optin-badge"><i class="fas fa-check-circle me-1"></i> DPDP Act Compliant</span>
+                    </div>
+                    <p class="text-white-50 small mb-0">
+                        We value your data privacy. By using Immense Air, you consent to data processing for enterprise service delivery, SMS/WhatsApp updates, and analytics as outlined in our <a href="privacy-policy.html" class="text-warning text-decoration-underline">Privacy Policy</a>.
+                    </p>
+                </div>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+                <button class="btn btn-warning btn-sm fw-bold px-3 rounded-pill text-white" onclick="acceptDataOptIn()">
+                    <i class="fas fa-check me-1"></i> Accept & Opt-In
+                </button>
+                <button class="btn btn-outline-light btn-sm px-3 rounded-pill" onclick="declineDataOptIn()">
+                    Necessary Only
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

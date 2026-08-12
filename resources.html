@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Page Title -->
+    <title>Enterprise Resources & Communication Guides | Immense Air</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Practical guides, technical resources and communication insights by Immense Air Pvt Ltd Learn about DLT registration, WhatsApp Business API, RCS messaging, and SMPP connectivity.">
+    <meta name="keywords" content="immense air resources, trai dlt guide, whatsapp api guide, rcs messaging guide, smpp integration guide, enterprise cpaas documentation">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#060D1E">
+    
+    <!-- Google Fonts - Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom Upgraded CSS System -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <style>
+        .resources-hero {
+            background: radial-gradient(circle at 75% 35%, #102347 0%, #060D1E 70%);
+            padding: 155px 0 80px;
+            color: #FFFFFF;
+        }
+
+        .filter-pill-nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .filter-pill-btn {
+            background: #FFFFFF;
+            color: var(--navy-dark);
+            border: 1px solid var(--border-light);
+            border-radius: 30px;
+            padding: 8px 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: all 0.25s ease;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .filter-pill-btn:hover, .filter-pill-btn.active {
+            background: var(--orange-brand);
+            color: #FFFFFF;
+            border-color: var(--orange-brand);
+            box-shadow: 0 6px 18px rgba(255, 106, 0, 0.25);
+        }
+
+        .resource-card {
+            background: #FFFFFF;
+            border-radius: 20px;
+            padding: 2rem;
+            border: 1px solid var(--border-light);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--orange-brand);
+            box-shadow: 0 20px 40px rgba(255, 106, 0, 0.12);
+        }
+
+        .faq-accordion-item {
+            background: #FFFFFF;
+            border-radius: 16px !important;
+            border: 1px solid var(--border-light) !important;
+            margin-bottom: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+        }
+
+        .faq-accordion-button {
+            background: #FFFFFF !important;
+            color: var(--navy-dark) !important;
+            font-weight: 700 !important;
+            font-size: 1.05rem !important;
+            padding: 1.25rem 1.5rem !important;
+            box-shadow: none !important;
+        }
+
+        .faq-accordion-button:not(.collapsed) {
+            color: var(--orange-brand) !important;
+        }
+
+        .faq-accordion-body {
+            padding: 0 1.5rem 1.25rem !important;
+            color: #64748B;
+            font-size: 0.98rem;
+            line-height: 1.65;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================
+         HEADER / NAVBAR
+         ============================================ -->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top navbar-custom" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand-custom" href="index.html">
+                    <img src="assets/images/logo/logo.jpg" alt="Immense Air Pvt Ltd Logo" class="navbar-brand-logo">
+                    <div>
+                        <div style="font-size: 1.35rem; font-weight: 800; line-height: 1; letter-spacing: -0.5px; color: #FFFFFF;">
+                            IMMENSE <span style="color: var(--orange-brand);">AIR</span>
+                        </div>
+                        <div style="font-size: 0.7rem; font-weight: 800; letter-spacing: 1.5px; color: rgba(255,255,255,0.75); text-transform: uppercase;">
+                            PVT LTD
+                        </div>
+                    </div>
+                </a>
+                
+                <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">About</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link nav-link-custom dropdown-toggle" href="#" id="productsDropdown" data-bs-toggle="dropdown">Products</a>
+                            <ul class="dropdown-menu dropdown-menu-custom">
+                                <li><a class="dropdown-item dropdown-item-custom" href="products/bulk-sms.html"><i class="fas fa-sms"></i> SMS Services</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="products/whatsapp-api.html"><i class="fab fa-whatsapp text-success"></i> WhatsApp API</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="products/rcs.html"><i class="fas fa-comment-dots text-info"></i> RCS Messaging</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="products/voice.html"><i class="fas fa-phone-alt text-warning"></i> Voice Solutions</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="products/ivr-obd.html"><i class="fas fa-headset text-primary"></i> IVR / OBD Solutions</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="products/smpp.html"><i class="fas fa-code text-primary"></i> SMPP & API</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="index.html#how-it-works">How It Works</a></li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="developers.html">Developers</a></li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom active" href="resources.html">Resources</a></li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="careers.html">Careers</a></li>
+                        <li class="nav-item ms-lg-3"><a class="btn-nav-cta" href="contact.html">Contact Us <i class="fas fa-arrow-right ms-1"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ============================================
+             HERO SECTION
+             ============================================ -->
+        <section class="resources-hero text-center">
+            <div class="container">
+                <span class="hero-subtitle-orange"><i class="fas fa-book-open me-2"></i> KNOWLEDGE BASE</span>
+                <h1 class="display-3 fw-extrabold text-white mb-3" style="letter-spacing: -0.5px;">
+                    Enterprise Resources & Communication Guides
+                </h1>
+                <p class="hero-para-mockup mx-auto max-w-600 mb-4" style="font-size: 1.2rem;">
+                    Practical guides, technical resources and communication insights to help businesses get more from SMS, RCS, WhatsApp, Voice and enterprise messaging.
+                </p>
+                
+                <div class="d-flex flex-wrap justify-content-center gap-3">
+                    <span class="hero-check-pill"><i class="fas fa-shield-alt text-warning"></i> DLT & SMS Compliance</span>
+                    <span class="hero-check-pill"><i class="fab fa-whatsapp text-success"></i> WhatsApp Business API</span>
+                    <span class="hero-check-pill"><i class="fas fa-comment-dots text-info"></i> RCS & Enterprise Messaging</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             RESOURCE CATEGORIES (FILTER TABS)
+             ============================================ -->
+        <section class="py-4 bg-light border-bottom">
+            <div class="container">
+                <div class="filter-pill-nav">
+                    <a href="#featured-resources" class="filter-pill-btn active">All Resources</a>
+                    <a href="#featured-resources" class="filter-pill-btn">SMS & DLT</a>
+                    <a href="#featured-resources" class="filter-pill-btn">WhatsApp</a>
+                    <a href="#featured-resources" class="filter-pill-btn">RCS Messaging</a>
+                    <a href="#featured-resources" class="filter-pill-btn">Voice & IVR</a>
+                    <a href="#featured-resources" class="filter-pill-btn">SMPP & APIs</a>
+                    <a href="#business-insights" class="filter-pill-btn">Business Guides</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             FEATURED RESOURCES (6 PREMIUM CARDS)
+             ============================================ -->
+        <section class="solutions-section" id="featured-resources">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="section-label">CURATED GUIDES</span>
+                    <h2 class="section-title-dark">Featured Resources</h2>
+                    <p class="text-muted max-w-600 mx-auto" style="font-size: 1.15rem;">Technical walkthroughs and compliance best practices for enterprise messaging.</p>
+                </div>
+
+                <div class="row g-4">
+                    <!-- 1. TRAI DLT Registration Guide -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="resource-card text-start">
+                            <div>
+                                <div class="solution-icon-box solution-icon-orange mb-3"><i class="fas fa-file-contract"></i></div>
+                                <h4 class="fw-bold text-dark mb-2" style="font-size: 1.25rem;">TRAI DLT Registration Guide</h4>
+                                <p class="text-muted small mb-4">Step-by-step guidance for entity registration, sender ID/header setup and SMS template registration.</p>
+                            </div>
+                            <div>
+                                <a href="contact.html" class="btn btn-outline-warning text-dark fw-bold w-100 rounded-pill">Read Guide <i class="fas fa-arrow-right ms-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. WhatsApp Business API Best Practices -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="resource-card text-start">
+                            <div>
+                                <div class="solution-icon-box solution-icon-green mb-3"><i class="fab fa-whatsapp"></i></div>
+                                <h4 class="fw-bold text-dark mb-2" style="font-size: 1.25rem;">WhatsApp Business API Best Practices</h4>
+                                <p class="text-muted small mb-4">Learn how to manage templates, customer conversations, messaging quality and business communication effectively.</p>
+                            </div>
+                            <div>
+                                <a href="products/whatsapp-api.html" class="btn btn-outline-success fw-bold w-100 rounded-pill">Read Guide <i class="fas fa-arrow-right ms-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. RCS Business Messaging Guide -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="resource-card text-start">
+                            <div>
+                                <div class="solution-icon-box solution-icon-blue mb-3"><i class="fas fa-comment-dots"></i></div>
+                                <h4 class="fw-bold text-dark mb-2" style="font-size: 1.25rem;">RCS Business Messaging Guide</h4>
+                                <p class="text-muted small mb-4">Understand RCS rich messaging, verified business profiles, interactive cards, buttons and smart SMS fallback.</p>
+                            </div>
+                            <div>
+                                <a href="products/rcs.html" class="btn btn-outline-primary fw-bold w-100 rounded-pill">Read Guide <i class="fas fa-arrow-right ms-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. Bulk SMS Best Practices -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="resource-card text-start">
+                            <div>
+                                <div class="solution-icon-box solution-icon-orange mb-3"><i class="fas fa-sms"></i></div>
+                                <h4 class="fw-bold text-dark mb-2" style="font-size: 1.25rem;">Bulk SMS Best Practices</h4>
+                                <p class="text-muted small mb-4">Learn how to plan promotional, transactional and OTP campaigns while maintaining reliable delivery and compliance.</p>
+                            </div>
+                            <div>
+                                <a href="products/bulk-sms.html" class="btn btn-outline-warning text-dark fw-bold w-100 rounded-pill">Read Guide <i class="fas fa-arrow-right ms-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. SMPP Connectivity Guide -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="resource-card text-start">
+                            <div>
+                                <div class="solution-icon-box solution-icon-purple mb-3"><i class="fas fa-network-wired"></i></div>
+                                <h4 class="fw-bold text-dark mb-2" style="font-size: 1.25rem;">SMPP Connectivity Guide</h4>
+                                <p class="text-muted small mb-4">Understand SMPP connectivity, binds, TPS, delivery reports, IP whitelisting and enterprise messaging integration.</p>
+                            </div>
+                            <div>
+                                <a href="products/smpp.html" class="btn btn-outline-secondary fw-bold w-100 rounded-pill">Read Guide <i class="fas fa-arrow-right ms-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6. IVR & OBD Communication Guide -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="resource-card text-start">
+                            <div>
+                                <div class="solution-icon-box solution-icon-green mb-3"><i class="fas fa-headset"></i></div>
+                                <h4 class="fw-bold text-dark mb-2" style="font-size: 1.25rem;">IVR & OBD Communication Guide</h4>
+                                <p class="text-muted small mb-4">Explore IVR, outbound voice, missed-call services and automated customer communication use cases.</p>
+                            </div>
+                            <div>
+                                <a href="products/ivr-obd.html" class="btn btn-outline-success fw-bold w-100 rounded-pill">Read Guide <i class="fas fa-arrow-right ms-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             DEVELOPER RESOURCES (DARK NAVY SECTION)
+             ============================================ -->
+        <section class="py-5" style="background: #060D1E; color: #FFFFFF;">
+            <div class="container py-3">
+                <div class="text-center mb-5">
+                    <span class="hero-subtitle-orange"><i class="fas fa-code me-1"></i> FOR DEVELOPERS</span>
+                    <h2 class="display-6 fw-extrabold text-white mb-2">Build Faster With Our Communication APIs</h2>
+                    <p class="text-white-50 max-w-600 mx-auto" style="font-size: 1.1rem;">
+                        Explore integration resources, API references and technical documentation for connecting your applications with enterprise communication services.
+                    </p>
+                </div>
+
+                <div class="row g-4 mb-5 text-start">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="p-4 bg-white bg-opacity-10 rounded-4 border border-secondary h-100">
+                            <i class="fas fa-file-code fa-2x text-warning mb-3"></i>
+                            <h5 class="fw-bold text-white mb-2">API Documentation</h5>
+                            <p class="text-white-50 small mb-0">Complete RESTful JSON endpoint specifications and postman collections.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="p-4 bg-white bg-opacity-10 rounded-4 border border-secondary h-100">
+                            <i class="fas fa-plug fa-2x text-info mb-3"></i>
+                            <h5 class="fw-bold text-white mb-2">Integration Guides</h5>
+                            <p class="text-white-50 small mb-0">Pre-built code snippets and connector guides for PHP, Node.js, Python, and Java.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="p-4 bg-white bg-opacity-10 rounded-4 border border-secondary h-100">
+                            <i class="fas fa-network-wired fa-2x text-success mb-3"></i>
+                            <h5 class="fw-bold text-white mb-2">SMPP Guide</h5>
+                            <p class="text-white-50 small mb-0">Technical parameters for transceiver, transmitter, and receiver TCP bind sessions.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="p-4 bg-white bg-opacity-10 rounded-4 border border-secondary h-100">
+                            <i class="fas fa-sync-alt fa-2x text-warning mb-3"></i>
+                            <h5 class="fw-bold text-white mb-2">Webhook & DLR Reports</h5>
+                            <p class="text-white-50 small mb-0">Real-time HTTP POST callback configurations for instant handset delivery receipts.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <a href="developers.html" class="btn-orange-filled">
+                        Explore Developer Resources <i class="fas fa-arrow-right ms-1"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             BUSINESS INSIGHTS (3 CLEAN CARDS)
+             ============================================ -->
+        <section class="sectors-section" id="business-insights">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="section-label">STRATEGY & INSIGHTS</span>
+                    <h2 class="section-title-dark">Communication Insights For Modern Businesses</h2>
+                    <p class="text-muted max-w-600 mx-auto" style="font-size: 1.15rem;">Strategic advice for scaling customer engagement.</p>
+                </div>
+
+                <div class="row g-4 text-start">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="p-4 bg-white rounded-4 border shadow-sm h-100">
+                            <div class="solution-icon-box solution-icon-orange mb-3"><i class="fas fa-heart"></i></div>
+                            <h5 class="fw-bold text-dark mb-2">Improve Customer Engagement</h5>
+                            <p class="text-muted small mb-0">How businesses can use SMS, RCS and WhatsApp to create better customer experiences and higher response rates.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="p-4 bg-white rounded-4 border shadow-sm h-100">
+                            <div class="solution-icon-box solution-icon-blue mb-3"><i class="fas fa-cogs"></i></div>
+                            <h5 class="fw-bold text-dark mb-2">Automate Customer Communication</h5>
+                            <p class="text-muted small mb-0">Use APIs, IVR and messaging automation to reduce manual communication overhead and speed up response times.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="p-4 bg-white rounded-4 border shadow-sm h-100">
+                            <div class="solution-icon-box solution-icon-green mb-3"><i class="fas fa-bullseye"></i></div>
+                            <h5 class="fw-bold text-dark mb-2">Build An Omnichannel Strategy</h5>
+                            <p class="text-muted small mb-0">Combine SMS, RCS, WhatsApp and Voice to reach customers across multiple channels with seamless fallback paths.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             FAQ SECTION (EXPANDABLE ACCORDION)
+             ============================================ -->
+        <section class="how-it-works-section">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="section-label">FREQUENTLY ASKED QUESTIONS</span>
+                    <h2 class="section-title-dark">Frequently Asked Questions</h2>
+                    <p class="text-muted max-w-600 mx-auto">Common questions regarding DLT registration, messaging protocols, and APIs.</p>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-9">
+                        <div class="accordion" id="faqAccordion">
+                            <!-- Q1 -->
+                            <div class="accordion-item faq-accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button faq-accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                        <i class="fas fa-question-circle text-orange me-2"></i> What is DLT registration?
+                                    </button>
+                                </h3>
+                                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body faq-accordion-body">
+                                        DLT (Distributed Ledger Technology) registration is a mandatory blockchain system mandated by TRAI in India to prevent spam. Every business sending commercial SMS must register their Entity, Sender IDs (Headers), and SMS Templates on telecom operator DLT portals.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Q2 -->
+                            <div class="accordion-item faq-accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button faq-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                        <i class="fas fa-question-circle text-orange me-2"></i> How does RCS messaging work?
+                                    </button>
+                                </h3>
+                                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body faq-accordion-body">
+                                        RCS (Rich Communication Services) upgrades standard SMS with rich media carousels, action buttons, verified brand profiles, and interactive replies directly inside the native Android Messages app.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Q3 -->
+                            <div class="accordion-item faq-accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button faq-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                        <i class="fas fa-question-circle text-orange me-2"></i> What is WhatsApp Business API?
+                                    </button>
+                                </h3>
+                                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body faq-accordion-body">
+                                        WhatsApp Business API allows medium-to-large enterprises to automate customer notifications, send OTPs, manage multi-agent support inboxes, and run broadcast campaigns through official Meta API endpoints.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Q4 -->
+                            <div class="accordion-item faq-accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button faq-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                        <i class="fas fa-question-circle text-orange me-2"></i> What is SMPP connectivity?
+                                    </button>
+                                </h3>
+                                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body faq-accordion-body">
+                                        SMPP (Short Message Peer-to-Peer) is an industry-standard TCP protocol designed for high-volume SMS dispatches. It provides persistent connection sessions with high TPS throughput for telecom aggregators.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Q5 -->
+                            <div class="accordion-item faq-accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button faq-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                        <i class="fas fa-question-circle text-orange me-2"></i> What is SMS fallback?
+                                    </button>
+                                </h3>
+                                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body faq-accordion-body">
+                                        SMS Fallback automatically dispatches a standard SMS message if an RCS or WhatsApp message fails to deliver to recipient devices due to offline data connectivity, ensuring 100% reach.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Q6 -->
+                            <div class="accordion-item faq-accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button faq-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                                        <i class="fas fa-question-circle text-orange me-2"></i> What are transactional and promotional SMS?
+                                    </button>
+                                </h3>
+                                <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body faq-accordion-body">
+                                        Transactional SMS are critical alerts, OTPs, and updates sent 24x7 to registered users. Promotional SMS are marketing offers and dispatches sent between TRAI-regulated hours (9 AM to 9 PM) to opted-in users.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             FINAL CTA
+             ============================================ -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="dark-cta-card text-center">
+                    <h2 class="display-5 fw-bold text-white mb-3">Need Help Choosing The Right Communication Solution?</h2>
+                    <p class="text-white-50 lead mx-auto max-w-600 mb-4" style="font-size: 1.1rem;">
+                        Our team can help you choose the right combination of SMS, RCS, WhatsApp, Voice, IVR and API solutions for your business.
+                    </p>
+                    <div class="d-flex flex-wrap justify-content-center gap-3">
+                        <a href="contact.html" class="btn-orange-filled">
+                            Talk To An Expert <i class="fas fa-arrow-right ms-1"></i>
+                        </a>
+                        <a href="products/bulk-sms.html" class="btn-dark-outline">
+                            <i class="fas fa-th me-1"></i> Explore Our Solutions
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============================================
+         EXECUTIVE DARK FOOTER
+         ============================================ -->
+    <footer class="footer-dark-custom">
+        <div class="container">
+            <div class="row g-4 mb-4">
+                <div class="col-lg-4 col-md-6">
+                    <a class="navbar-brand-custom mb-3" href="index.html">
+                        <img src="assets/images/logo/logo.jpg" alt="Immense Air Pvt Ltd Logo" class="navbar-brand-logo">
+                        <div>
+                            <div style="font-size: 1.35rem; font-weight: 800; line-height: 1; letter-spacing: -0.5px; color: #FFFFFF;">
+                                IMMENSE <span style="color: var(--orange-brand);">AIR</span>
+                            </div>
+                            <div style="font-size: 0.7rem; font-weight: 800; letter-spacing: 1.5px; color: rgba(255,255,255,0.75); text-transform: uppercase;">
+                                PVT LTD
+                            </div>
+                        </div>
+                    </a>
+                    <p style="color:rgba(255,255,255,.75);font-size:1.0rem;line-height:1.65;max-width:360px;">
+                        Immense Air Pvt Ltd empowers businesses with intelligent communication solutions that drive engagement, automation & growth.
+                    </p>
+                    <div class="mt-3 d-flex gap-2">
+                        <a href="https://in.linkedin.com/company/immense-smart-solutions" target="_blank" class="social-circle-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.facebook.com/immensesmartsolutions/" target="_blank" class="social-circle-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.youtube.com/@immensesmartsolutions" target="_blank" class="social-circle-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/immense_smart_solutions/" target="_blank" class="social-circle-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6>PRODUCTS</h6>
+                    <ul class="footer-link-list">
+                        <li><a href="products/bulk-sms.html">SMS Services</a></li>
+                        <li><a href="products/whatsapp-api.html">WhatsApp API</a></li>
+                        <li><a href="products/rcs.html">RCS Messaging</a></li>
+                        <li><a href="products/voice.html">Voice Solutions</a></li>
+                        <li><a href="products/ivr-obd.html">IVR & OBD</a></li>
+                        <li><a href="products/smpp.html">SMPP & API</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6>SOLUTIONS</h6>
+                    <ul class="footer-link-list">
+                        <li><a href="about.html">Marketing</a></li>
+                        <li><a href="resources.html" class="text-warning fw-bold">Authentication</a></li>
+                        <li><a href="contact.html">Customer Support</a></li>
+                        <li><a href="products/bulk-sms.html">Notifications</a></li>
+                        <li><a href="products/whatsapp-api.html">Automation</a></li>
+                        <li><a href="about.html">Enterprise</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6>DEVELOPERS</h6>
+                    <ul class="footer-link-list">
+                        <li><a href="developers.html">API Documentation</a></li>
+                        <li><a href="products/smpp.html">SMPP Guide</a></li>
+                        <li><a href="developers.html">SDKs & Libraries</a></li>
+                        <li><a href="developers.html">Postman Collection</a></li>
+                        <li><a href="developers.html">Integration Guide</a></li>
+                        <li><a href="developers.html">Status Page</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6>COMPANY</h6>
+                    <ul class="footer-link-list">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="careers.html">Careers <span class="badge bg-warning text-dark style-badge" style="font-size:0.7rem;">Hiring</span></a></li>
+                        <li><a href="contact.html">Partners</a></li>
+                        <li><a href="resources.html" class="text-warning fw-bold">News & Updates</a></li>
+                        <li><a href="contact.html" class="text-warning fw-bold">Contact Us <i class="fas fa-arrow-right ms-1"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr style="border-color:rgba(255,255,255,.12);margin:2.5rem 0 1.5rem;">
+
+            <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 text-white-50" style="font-size:0.95rem;">
+                <div>&copy; 2026 Immense Air Pvt Ltd All Rights Reserved.</div>
+                <div>
+                    <a href="privacy-policy.html" class="text-white-50 me-3 text-decoration-none">Privacy Policy</a>
+                    <a href="terms.html" class="text-white-50 me-3 text-decoration-none">Terms & Conditions</a>
+                    <a href="terms.html" class="text-white-50 text-decoration-none">Refund Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919768566466" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Global Data Privacy Opt-In Consent Banner -->
+    <div id="optInGlobalBanner" class="optin-consent-banner hidden">
+        <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+            <div class="d-flex align-items-center gap-3">
+                <i class="fas fa-user-shield text-warning fa-2x"></i>
+                <div>
+                    <div class="d-flex align-items-center gap-2 mb-1">
+                        <span class="fw-bold text-white fs-6">Data Privacy & Communication Opt-In</span>
+                        <span class="optin-badge"><i class="fas fa-check-circle me-1"></i> DPDP Act Compliant</span>
+                    </div>
+                    <p class="text-white-50 small mb-0">
+                        We value your data privacy. By using Immense Air, you consent to data processing for enterprise service delivery, SMS/WhatsApp updates, and analytics as outlined in our <a href="privacy-policy.html" class="text-warning text-decoration-underline">Privacy Policy</a>.
+                    </p>
+                </div>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+                <button class="btn btn-warning btn-sm fw-bold px-3 rounded-pill text-white" onclick="acceptDataOptIn()">
+                    <i class="fas fa-check me-1"></i> Accept & Opt-In
+                </button>
+                <button class="btn btn-outline-light btn-sm px-3 rounded-pill" onclick="declineDataOptIn()">
+                    Necessary Only
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

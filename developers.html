@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developers & SMS REST API Documentation - Immense Air</title>
+    <meta name="description" content="Immense Air SMS Sending API and Delivery Reporting (DLR) REST API Documentation with code examples in cURL, Node.js, Python, PHP, and Java.">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top navbar-custom" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand-custom" href="index.html">
+                    <img src="assets/images/logo/logo.jpg" alt="Immense Logo" class="navbar-brand-logo">
+                    IMMENSE <span>SMART SOLUTIONS</span>
+                </a>
+                <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><i class="fas fa-bars fa-lg"></i></button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">About</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link nav-link-custom dropdown-toggle" href="#" id="productsDropdown" data-bs-toggle="dropdown">Products</a>
+                            <ul class="dropdown-menu dropdown-menu-custom">
+                                <li><a class="dropdown-item dropdown-item-custom" href="products/bulk-sms.html"><i class="fas fa-sms"></i> Bulk SMS</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="products/whatsapp-api.html"><i class="fab fa-whatsapp"></i> WhatsApp API</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="products/rcs.html"><i class="fas fa-comment-dots"></i> RCS Messaging</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="products/voice.html"><i class="fas fa-phone-alt"></i> Voice Solutions</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="products/ivr-obd.html"><i class="fas fa-microphone-alt"></i> IVR / OBD</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="products/smpp.html"><i class="fas fa-code"></i> SMPP API</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom active" href="developers.html">Developers</a></li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="resources.html">Resources</a></li>
+                        <li class="nav-item ms-lg-2"><a class="btn-nav-cta" href="contact.html">Contact Us <i class="fas fa-arrow-right ms-1"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main style="padding-top: 130px;">
+        <section class="py-5 text-white text-center" style="background: radial-gradient(circle at 75% 30%, #112240 0%, #060D1E 70%);">
+            <div class="container py-4">
+                <span class="section-label">DEVELOPER DOCUMENTATION</span>
+                <h1 class="display-4 fw-bold text-white mb-3">SMS Sending & Reporting REST API</h1>
+                <p class="lead text-white-50 mx-auto" style="max-width: 620px;">High-throughput, sub-second latency REST API for Single SMS, Bulk SMS, and Real-time Delivery Reports (DLR).</p>
+            </div>
+        </section>
+
+        <section class="py-5">
+            <div class="container py-4">
+                <div class="row g-4">
+                    <!-- API Endpoint 1: Single SMS Send -->
+                    <div class="col-lg-6">
+                        <div class="card-custom p-4">
+                            <span class="badge bg-success mb-2">POST</span> 
+                            <code class="fs-6 text-primary">/api/v1/sms/send</code>
+                            <h4 class="fw-bold mt-2">1. Single SMS Dispatch API</h4>
+                            <p class="text-muted small">Send OTPs, transactional alerts, and notifications instantly via high-priority telecom routes.</p>
+                            
+                            <h6 class="fw-bold mt-3">Request Body (JSON):</h6>
+                            <pre class="bg-dark text-white p-3 rounded-3" style="font-size:0.82rem;">{
+  "sender_id": "IMMENS",
+  "to": "+919768566466",
+  "message": "Your security OTP code is 849201. Immense Air",
+  "pe_id": "1701158000000000000",
+  "template_id": "1707161000000000000"
+}</pre>
+                            
+                            <h6 class="fw-bold mt-3">Response Payload:</h6>
+                            <pre class="bg-dark text-success p-3 rounded-3" style="font-size:0.82rem;">{
+  "success": true,
+  "message_id": "MSG-SMS-507804",
+  "status": "SUBMITTED",
+  "destination": "+919768566466",
+  "units": 1,
+  "submitted_at": "2026-08-10T12:04:30.434Z"
+}</pre>
+                        </div>
+                    </div>
+
+                    <!-- API Endpoint 2: Delivery Reporting DLR Query -->
+                    <div class="col-lg-6">
+                        <div class="card-custom p-4">
+                            <span class="badge bg-primary mb-2">GET</span> 
+                            <code class="fs-6 text-primary">/api/v1/sms/report/:message_id</code>
+                            <h4 class="fw-bold mt-2">2. SMS Delivery Report (DLR) API</h4>
+                            <p class="text-muted small">Fetch live status, delivery timestamp, operator route, and latency for any dispatched SMS ID.</p>
+
+                            <h6 class="fw-bold mt-3">Example Request:</h6>
+                            <code class="d-block p-2 bg-light text-dark rounded-2 mb-3">GET http://localhost:8080/api/v1/sms/report/MSG-SMS-507804</code>
+
+                            <h6 class="fw-bold mt-3">Response Payload:</h6>
+                            <pre class="bg-dark text-info p-3 rounded-3" style="font-size:0.82rem;">{
+  "success": true,
+  "message_id": "MSG-SMS-507804",
+  "sender_id": "IMMENS",
+  "destination": "+919768566466",
+  "status": "DELIVERED",
+  "delivered_at": "2026-08-10T12:04:30.813Z",
+  "latency_ms": 377,
+  "operator": "Airtel / Jio Direct Route"
+}</pre>
+                        </div>
+                    </div>
+
+                    <!-- API Endpoint 3: Bulk SMS Send -->
+                    <div class="col-lg-6">
+                        <div class="card-custom p-4">
+                            <span class="badge bg-success mb-2">POST</span> 
+                            <code class="fs-6 text-primary">/api/v1/sms/send-bulk</code>
+                            <h4 class="fw-bold mt-2">3. Bulk SMS Campaign API</h4>
+                            <p class="text-muted small">Dispatch high-volume broadcast campaigns to thousands of numbers with a single HTTP POST request.</p>
+
+                            <h6 class="fw-bold mt-3">Request Body (JSON):</h6>
+                            <pre class="bg-dark text-white p-3 rounded-3" style="font-size:0.82rem;">{
+  "sender_id": "IMMENS",
+  "recipients": ["+919768566466", "+918007018757"],
+  "message": "Immense Air Special Offer: Get 20% bonus credits today!"
+}</pre>
+                        </div>
+                    </div>
+
+                    <!-- API Endpoint 4: Summary & Analytics -->
+                    <div class="col-lg-6">
+                        <div class="card-custom p-4">
+                            <span class="badge bg-info text-dark mb-2">GET</span> 
+                            <code class="fs-6 text-primary">/api/v1/sms/reports/summary</code>
+                            <h4 class="fw-bold mt-2">4. SMS Analytics & Summary API</h4>
+                            <p class="text-muted small">Fetch overall platform metrics, total delivered count, failure rate, and average latency.</p>
+
+                            <h6 class="fw-bold mt-3">Example Response:</h6>
+                            <pre class="bg-dark text-warning p-3 rounded-3" style="font-size:0.82rem;">{
+  "success": true,
+  "total_submitted": 15481,
+  "total_delivered": 15457,
+  "delivery_rate": "99.85%",
+  "avg_latency_ms": 380
+}</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-dark-custom text-center py-4">
+        <p class="mb-0 text-white-50">&copy; 2026 Immense Air Pvt Ltd. All Rights Reserved.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

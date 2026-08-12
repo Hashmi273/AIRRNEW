@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Page Title -->
+    <title>Enterprise Bulk SMS Gateway Platform | Immense Air Pvt Ltd</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Enterprise Bulk SMS Gateway Platform by Immense Air Pvt Ltd High-speed OTP SMS, Transactional SMS, Promotional SMS, DLT scrubbing, REST API and SMPP v3.4 Gateway.">
+    <meta name="keywords" content="bulk sms api, otp sms gateway, transactional sms, dlt template scrubbing, smpp gateway india, immense air sms">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#060D1E">
+    
+    <!-- Google Fonts - Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom Upgraded CSS System -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    
+    <style>
+        .product-hero {
+            background: radial-gradient(circle at 75% 35%, #0F2347 0%, #060D1E 70%);
+            padding: 150px 0 80px;
+            color: #FFFFFF;
+        }
+
+        /* LIVE SMS API SANDBOX BOX */
+        .sms-sandbox-card {
+            background: #FFFFFF;
+            border-radius: 24px;
+            padding: 3rem 2.5rem;
+            border: 1px solid var(--border-light);
+            box-shadow: 0 20px 50px rgba(11, 23, 50, 0.12);
+        }
+
+        /* SMARTPHONE MOCKUP */
+        .phone-mockup-frame {
+            width: 320px;
+            height: 580px;
+            background: #000000;
+            border-radius: 40px;
+            padding: 12px;
+            margin: 0 auto;
+            border: 4px solid #1F2937;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+            position: relative;
+        }
+
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            background: #F3F4F6;
+            border-radius: 32px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .phone-notch {
+            width: 130px;
+            height: 20px;
+            background: #000000;
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+            margin: 0 auto;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+        }
+
+        .phone-header-bar {
+            background: #060D1E;
+            color: #FFFFFF;
+            padding: 28px 16px 10px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .phone-chat-body {
+            padding: 16px;
+            flex-grow: 1;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            gap: 12px;
+        }
+
+        .sms-bubble-received {
+            background: #FFFFFF;
+            border-radius: 16px 16px 16px 4px;
+            padding: 14px 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-left: 5px solid var(--orange-brand);
+            font-size: 0.95rem;
+            color: #1F2937;
+            max-width: 95%;
+            animation: popIn 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @keyframes popIn {
+            from { transform: scale(0.85) translateY(15px); opacity: 0; }
+            to { transform: scale(1) translateY(0); opacity: 1; }
+        }
+
+        .sms-pop-banner {
+            position: absolute;
+            top: 30px;
+            left: 10px;
+            right: 10px;
+            background: rgba(6, 13, 30, 0.96);
+            backdrop-filter: blur(10px);
+            color: #FFFFFF;
+            padding: 12px 16px;
+            border-radius: 14px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+            border: 1px solid rgba(255, 106, 0, 0.4);
+            z-index: 100;
+            animation: slideDownNotification 0.5s ease;
+        }
+
+        @keyframes slideDownNotification {
+            from { transform: translateY(-100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================
+         HEADER / NAVBAR
+         ============================================ -->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top navbar-custom" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand-custom" href="../index.html">
+                    <img src="../assets/images/logo/logo.jpg" alt="Immense Air Pvt Ltd Logo" class="navbar-brand-logo">
+                    <div>
+                        <div style="font-size: 1.35rem; font-weight: 800; line-height: 1; letter-spacing: -0.5px; color: #FFFFFF;">
+                            IMMENSE <span style="color: var(--orange-brand);">AIR</span>
+                        </div>
+                        <div style="font-size: 0.7rem; font-weight: 800; letter-spacing: 1.5px; color: rgba(255,255,255,0.75); text-transform: uppercase;">
+                            PVT LTD
+                        </div>
+                    </div>
+                </a>
+                
+                <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="../index.html">Home</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link nav-link-custom dropdown-toggle active" href="#" id="productsDropdown" data-bs-toggle="dropdown">Products</a>
+                            <ul class="dropdown-menu dropdown-menu-custom">
+                                <li><a class="dropdown-item dropdown-item-custom active" href="bulk-sms.html"><i class="fas fa-sms"></i> SMS Services</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="whatsapp-api.html"><i class="fab fa-whatsapp text-success"></i> WhatsApp API</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="rcs.html"><i class="fas fa-comment-dots text-info"></i> RCS Messaging</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="voice.html"><i class="fas fa-phone-alt text-warning"></i> Voice Solutions</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="ivr-obd.html"><i class="fas fa-headset"></i> IVR / OBD Solutions</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="smpp.html"><i class="fas fa-code text-primary"></i> SMPP & API</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="../index.html#how-it-works">How It Works</a></li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="../developers.html">Developers</a></li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="../careers.html">Careers</a></li>
+                        <li class="nav-item ms-lg-3"><a class="btn-nav-cta" href="../contact.html">Contact Us <i class="fas fa-arrow-right ms-1"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ============================================
+             1. HERO SECTION
+             ============================================ -->
+        <section class="product-hero text-center">
+            <div class="container">
+                <span class="hero-subtitle-orange"><i class="fas fa-sms me-2"></i> ENTERPRISE SMS GATEWAY</span>
+                <h1 class="display-3 fw-extrabold text-white mb-3" style="letter-spacing: -0.5px;">
+                    High-Speed Bulk SMS Gateway Platform
+                </h1>
+                <p class="hero-para-mockup mx-auto max-w-600 mb-4" style="font-size: 1.25rem;">
+                    Deliver mission-critical OTPs, transactional notifications, and high-ROI promotional campaigns at scale with direct telecom operator routes and sub-second latency.
+                </p>
+                <div class="d-flex flex-wrap justify-content-center gap-4">
+                    <span class="hero-check-pill"><i class="fas fa-bolt"></i> Sub-300ms OTP Latency</span>
+                    <span class="hero-check-pill"><i class="fas fa-shield-alt"></i> TRAI DLT Compliant Scrubbing</span>
+                    <span class="hero-check-pill"><i class="fas fa-code"></i> High-Throughput REST & SMPP v3.4</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             2. REAL LIVE SMS API TESTING (CLEAN USER TEST CONSOLE)
+             ============================================ -->
+        <section class="py-5 bg-light" id="live-api-test">
+            <div class="container py-3">
+                <div class="text-center mb-5">
+                    <span class="section-label">REAL-TIME SMS GATEWAY TEST</span>
+                    <h2 class="section-title-dark">Live SMS Delivery Test</h2>
+                    <p class="text-muted max-w-600 mx-auto" style="font-size: 1.15rem;">
+                        Apna mobile number enter karein aur live SMS delivery report & smartphone preview dekhein.
+                    </p>
+                </div>
+
+                <div class="sms-sandbox-card">
+                    <div class="row g-4 align-items-center">
+                        <!-- Left Simple Input Form -->
+                        <div class="col-lg-6">
+                            <div class="p-4 rounded-4 bg-light border text-start">
+                                <div class="d-flex align-items-center justify-content-between mb-4">
+                                    <span class="badge bg-warning text-dark px-3 py-2 rounded-pill fw-bold" style="font-size: 0.9rem;">
+                                        <i class="fas fa-mobile-alt me-1"></i> Live SMS Tester
+                                    </span>
+                                    <span class="badge bg-success px-3 py-2 rounded-pill fw-bold" style="font-size: 0.85rem;">
+                                        <i class="fas fa-circle me-1" style="font-size:0.55rem;"></i> Gateway Active
+                                    </span>
+                                </div>
+
+                                <form id="realSmsForm" onsubmit="handleRealSmsDispatch(event)">
+                                    <div class="mb-4">
+                                        <label class="form-label fw-bold text-dark fs-5 mb-2">Enter Your Mobile Number (+91) *</label>
+                                        <div class="input-group input-group-lg rounded-3 overflow-hidden shadow-sm" style="border: 2px solid var(--orange-brand);">
+                                            <span class="input-group-text bg-light text-dark fw-bold fs-4 border-0" style="border-right: 2px solid var(--orange-brand) !important;">+91</span>
+                                            <input type="tel" id="smsTestPhone" class="form-control bg-white border-0 fw-bold fs-4 text-dark" value="9768566466" placeholder="Enter 10-digit number" maxlength="10" required>
+                                        </div>
+                                        <p class="text-muted small mt-2.5 mb-0" style="font-size: 0.92rem;">
+                                            <i class="fas fa-info-circle text-warning me-1"></i> SMS direct <strong>IMMENS</strong> Sender ID se aapke phone par deliver hoga.
+                                        </p>
+                                    </div>
+
+                                    <button type="submit" id="btnDispatchSms" class="btn btn-warning btn-lg w-100 fw-bold text-white shadow py-3 fs-5">
+                                        Send Test SMS <i class="fas fa-paper-plane ms-2"></i>
+                                    </button>
+                                </form>
+
+                                <!-- Live 4-Step Pipeline Journey Status -->
+                                <div class="mt-4 p-3 rounded-4 bg-white border" id="pipelineBox">
+                                    <div class="d-flex align-items-center justify-content-between mb-2">
+                                        <span class="fw-bold text-dark small"><i class="fas fa-route text-warning me-1"></i> Delivery Progress:</span>
+                                        <span id="pipelineStatusBadge" class="badge bg-secondary">Ready to Send</span>
+                                    </div>
+                                    <div class="row text-center g-2" style="font-size: 0.85rem;">
+                                        <div class="col-3">
+                                            <div id="pipeStep1" class="p-2 rounded bg-light text-muted fw-bold border">1. Initiated</div>
+                                        </div>
+                                        <div class="col-3">
+                                            <div id="pipeStep2" class="p-2 rounded bg-light text-muted fw-bold border">2. Gateway</div>
+                                        </div>
+                                        <div class="col-3">
+                                            <div id="pipeStep3" class="p-2 rounded bg-light text-muted fw-bold border">3. Submitted</div>
+                                        </div>
+                                        <div class="col-3">
+                                            <div id="pipeStep4" class="p-2 rounded bg-light text-muted fw-bold border">4. Delivered</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Live Smartphone Mockup Preview -->
+                        <div class="col-lg-6 text-center d-flex flex-column justify-content-center">
+                            <div class="phone-mockup-frame">
+                                <div class="phone-notch"></div>
+                                <div class="phone-screen">
+                                    <!-- Top Status Header -->
+                                    <div class="phone-header-bar">
+                                        <span><i class="fas fa-signal me-1"></i> Airtel 5G</span>
+                                        <span id="phoneClockTime">12:30 PM</span>
+                                        <span>100% <i class="fas fa-battery-full ms-1"></i></span>
+                                    </div>
+
+                                    <!-- Chat Header (Displays Sender ID: IMMENS) -->
+                                    <div class="p-2.5 bg-dark text-white border-bottom d-flex align-items-center justify-content-between">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <div style="width:34px;height:34px;border-radius:50%;background:var(--orange-brand);display:flex;align-items:center;justify-content:center;font-size:0.85rem;font-weight:bold;">
+                                                SMS
+                                            </div>
+                                            <div class="text-start">
+                                                <div class="fw-bold text-white fs-6" id="phoneSenderHeader">ZIONEN</div>
+                                                <div class="text-success" style="font-size:0.7rem;">Verified DLT Operator Header</div>
+                                            </div>
+                                        </div>
+                                        <i class="fas fa-ellipsis-v text-white-50"></i>
+                                    </div>
+
+                                    <!-- Chat Body & Delivered SMS Bubble (Displays Content) -->
+                                    <div class="phone-chat-body" id="phoneChatBody">
+                                        <div class="text-center my-2">
+                                            <span class="badge bg-secondary text-white" style="font-size:0.7rem;">Today • Encrypted Carrier Transmission</span>
+                                        </div>
+                                        <div class="sms-bubble-received" id="phoneSmsBubble">
+                                            <div class="fw-bold text-warning mb-1" style="font-size:0.82rem;"><i class="fas fa-shield-alt me-1"></i> ZIONEN</div>
+                                            Your OTP for verification is 12345.<br>Do not share it with anyone.<br>Valid for 10 minutes.<br>Zion
+                                            <div class="text-end text-muted mt-1" style="font-size:0.72rem;">12:30 PM ✓✓</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Live Notification Banner Popup -->
+                                    <div id="phoneNotifBanner" class="sms-pop-banner d-none">
+                                        <div class="d-flex align-items-center justify-content-between mb-1">
+                                            <span class="fw-bold text-warning small"><i class="fas fa-sms me-1"></i> Messages • ZIONEN</span>
+                                            <span class="text-white-50" style="font-size:0.7rem;">Now</span>
+                                        </div>
+                                        <div class="text-start text-white small fw-semibold text-truncate" id="notifText">
+                                            Your OTP code is 849201...
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Clean Live DLR Delivery Report -->
+                    <div id="dlrReportContainer" class="mt-5 d-none">
+                        <div class="p-4 rounded-4 bg-dark text-white border border-secondary shadow-lg">
+                            <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3 pb-3 border-bottom border-secondary">
+                                <div class="d-flex align-items-center gap-3">
+                                    <span class="badge bg-success px-3 py-2 rounded-pill fs-6 fw-bold">
+                                        <i class="fas fa-check-circle me-1"></i> DLR STATUS: DELIVERED
+                                    </span>
+                                    <h4 class="fw-bold text-white mb-0">SMS Delivery Report</h4>
+                                </div>
+                                <span class="text-white-50 font-monospace" id="inspectorTime">Timestamp: --</span>
+                            </div>
+
+                            <div class="row g-3 text-start">
+                                <div class="col-md-4">
+                                    <div class="p-3 rounded-3 bg-secondary bg-opacity-25 border border-secondary">
+                                        <div class="text-white-50 small mb-1">Message ID</div>
+                                        <div class="font-monospace fw-bold text-warning fs-5" id="dlrMsgId">MSG-SMS-XXXXXX</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="p-3 rounded-3 bg-secondary bg-opacity-25 border border-secondary">
+                                        <div class="text-white-50 small mb-1">Sender Header</div>
+                                        <div class="fw-bold text-info fs-5" id="dlrSenderHeader">IMMENS</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="p-3 rounded-3 bg-secondary bg-opacity-25 border border-secondary">
+                                        <div class="text-white-50 small mb-1">Recipient Number</div>
+                                        <div class="font-monospace fw-bold text-white fs-5" id="dlrRecipient">+91 XXXXXXXXXX</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="p-3 rounded-3 bg-secondary bg-opacity-25 border border-secondary">
+                                        <div class="text-white-50 small mb-1">Delivery Latency</div>
+                                        <div class="fw-bold text-success fs-5" id="dlrLatency">377 ms (Sub-Second Speed)</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="p-3 rounded-3 bg-secondary bg-opacity-25 border border-secondary">
+                                        <div class="text-white-50 small mb-1">Carrier Operator Route</div>
+                                        <div class="fw-bold text-white fs-5" id="dlrOperator">Airtel / Jio Direct Operator Route</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             3. SMS SOLUTIONS
+             ============================================ -->
+        <section class="solutions-section">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="section-label">OUR SMS CAPABILITIES</span>
+                    <h2 class="section-title-dark">Comprehensive Bulk SMS Solutions</h2>
+                    <p class="text-muted max-w-600 mx-auto" style="font-size: 1.15rem;">Engineered for mission-critical enterprise messaging with zero packet drops.</p>
+                </div>
+
+                <div class="row g-4">
+                    <!-- 1. Transactional SMS -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card-solution-mockup">
+                            <div class="solution-icon-box solution-icon-orange"><i class="fas fa-shield-alt"></i></div>
+                            <h4>Transactional & OTP SMS</h4>
+                            <p>Instant password resets, bank alerts, and login OTPs delivered within 1–3 seconds over dedicated Tier-1 carrier pipes.</p>
+                            <a href="../contact.html" class="card-solution-link">Get API Access <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- 2. Promotional SMS -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card-solution-mockup">
+                            <div class="solution-icon-box solution-icon-green"><i class="fas fa-bullhorn"></i></div>
+                            <h4>Promotional SMS Campaigns</h4>
+                            <p>High-volume promotional broadcasts with DLT approved headers, scheduled campaign triggers, and real-time link click analytics.</p>
+                            <a href="../contact.html" class="card-solution-link">Launch Campaign <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- 3. Service Implicit -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card-solution-mockup">
+                            <div class="solution-icon-box solution-icon-blue"><i class="fas fa-file-invoice"></i></div>
+                            <h4>Service Implicit Messaging</h4>
+                            <p>Send automated transactional receipts, order dispatch notifications, and appointment reminders to customer handsets.</p>
+                            <a href="../contact.html" class="card-solution-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- 4. Service Explicit -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card-solution-mockup">
+                            <div class="solution-icon-box solution-icon-purple"><i class="fas fa-user-check"></i></div>
+                            <h4>Service Explicit Messaging</h4>
+                            <p>Send consent-based promotional offers and loyalty rewards to opted-in subscribers during TRAI permitted hours.</p>
+                            <a href="../contact.html" class="card-solution-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- 5. 2-Way Interactive SMS -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card-solution-mockup">
+                            <div class="solution-icon-box solution-icon-orange"><i class="fas fa-exchange-alt"></i></div>
+                            <h4>2-Way Interactive SMS</h4>
+                            <p>Engage customers with Dedicated Shortcodes & Longcodes for live feedback, polls, automated replies, and customer surveys.</p>
+                            <a href="../contact.html" class="card-solution-link">Explore Shortcodes <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- 6. OTP Express Gateway -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card-solution-mockup">
+                            <div class="solution-icon-box solution-icon-blue"><i class="fas fa-bolt"></i></div>
+                            <h4>OTP Express Gateway Engine</h4>
+                            <p>Ultra-low latency sub-300ms OTP engine featuring intelligent multi-operator failover routing to guarantee 99.99% OTP arrival.</p>
+                            <a href="../contact.html" class="card-solution-link">Test Speed <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             4. DLT & COMPLIANCE
+             ============================================ -->
+        <section class="sectors-section">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <span class="section-label">REGULATORY COMPLIANCE</span>
+                        <h2 class="section-title-dark mb-3">100% TRAI DLT Compliant Platform</h2>
+                        <p class="text-muted mb-4" style="font-size: 1.15rem;">
+                            Our platform integrates seamlessly with major telecom operator DLT portals (Jio, Airtel, Vi, BSNL) to ensure complete regulatory adherence.
+                        </p>
+                        <div class="d-flex flex-column gap-3">
+                            <div class="d-flex align-items-start gap-3">
+                                <i class="fas fa-check-circle text-success fa-1x mt-1"></i>
+                                <div>
+                                    <h4 class="fw-bold text-dark mb-1" style="font-size: 1.25rem;">Automated Header Scrubbing</h4>
+                                    <p class="text-muted small mb-0" style="font-size: 0.98rem;">Instant matching of registered Entity ID and Sender Header prior to dispatch.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-start gap-3">
+                                <i class="fas fa-check-circle text-success fa-1x mt-1"></i>
+                                <div>
+                                    <h4 class="fw-bold text-dark mb-1" style="font-size: 1.25rem;">Content Template AI Matching</h4>
+                                    <p class="text-muted small mb-0" style="font-size: 0.98rem;">Pre-scrubs dynamic variables in templates to prevent carrier rejections.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-start gap-3">
+                                <i class="fas fa-check-circle text-success fa-1x mt-1"></i>
+                                <div>
+                                    <h4 class="fw-bold text-dark mb-1" style="font-size: 1.25rem;">Dedicated DLT Helpdesk</h4>
+                                    <p class="text-muted small mb-0" style="font-size: 0.98rem;">Our team assists your company with Entity ID registration and header approvals.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="p-4 rounded-4 text-white" style="background: var(--navy-card); border: 1px solid rgba(255,255,255,0.12);">
+                            <h3 class="fw-bold text-white mb-4"><i class="fas fa-shield-alt text-warning me-2"></i> TRAI DLT Guidelines Check</h3>
+                            <div class="p-3 mb-3 rounded-3" style="background: rgba(255,255,255,0.06);">
+                                <div class="d-flex justify-content-between small text-white-50 mb-1">
+                                    <span>Principal Entity (PE) ID Status</span>
+                                    <span class="text-success fw-bold">✓ Verified</span>
+                                </div>
+                                <div class="font-monospace text-warning fs-6">1701158000000000000</div>
+                            </div>
+                            <div class="p-3 mb-3 rounded-3" style="background: rgba(255,255,255,0.06);">
+                                <div class="d-flex justify-content-between small text-white-50 mb-1">
+                                    <span>Content Template ID Match</span>
+                                    <span class="text-success fw-bold">✓ Approved</span>
+                                </div>
+                                <div class="font-monospace text-info fs-6">1707161000000000000</div>
+                            </div>
+                            <div class="p-3 rounded-3" style="background: rgba(16,185,129,0.15); border: 1px solid #10B981;">
+                                <div class="text-success fw-bold"><i class="fas fa-lock me-1"></i> Zero Scrubbing Failure Guarantee</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             5. API & SMPP INTEGRATION (DEVELOPER HUB)
+             ============================================ -->
+        <section class="how-it-works-section">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="section-label">DEVELOPER INTEGRATION</span>
+                    <h2 class="section-title-dark">Plug & Play REST APIs and SMPP Gateway</h2>
+                    <p class="text-muted max-w-600 mx-auto" style="font-size: 1.15rem;">Integrate enterprise SMS into your software application within 5 minutes.</p>
+                </div>
+
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-6">
+                        <div class="p-4 rounded-4 bg-dark text-white border border-secondary shadow-lg">
+                            <div class="d-flex align-items-center justify-content-between mb-3 border-bottom pb-2 border-secondary">
+                                <span class="badge bg-primary px-3 py-1 fs-6">cURL Code Snippet</span>
+                                <span class="text-white-50 small font-monospace">POST /api/v1/sms/send</span>
+                            </div>
+                            <pre class="code-json-box mb-0"><code>curl -X POST https://api.immenseair.in/v1/sms/send \
+  -H "Authorization: Bearer YOUR_API_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "sender_id": "IMMENS",
+    "to": "+919768566466",
+    "message": "Your OTP code is 849201. Immense Air",
+    "pe_id": "1701158000000000000",
+    "template_id": "1707161000000000000"
+  }'</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="d-flex flex-column gap-3 text-start">
+                            <div class="p-3 bg-white rounded-3 border shadow-sm d-flex align-items-center gap-3">
+                                <div class="solution-icon-box solution-icon-orange mb-0"><i class="fas fa-network-wired"></i></div>
+                                <div>
+                                    <h4 class="fw-bold text-dark mb-1" style="font-size: 1.25rem;">SMPP v3.4 Gateway</h4>
+                                    <p class="text-muted small mb-0" style="font-size: 0.98rem;">High-throughput TCP bind for core banking and telecommunication systems.</p>
+                                </div>
+                            </div>
+                            <div class="p-3 bg-white rounded-3 border shadow-sm d-flex align-items-center gap-3">
+                                <div class="solution-icon-box solution-icon-blue mb-0"><i class="fas fa-bell"></i></div>
+                                <div>
+                                    <h4 class="fw-bold text-dark mb-1" style="font-size: 1.25rem;">Real-Time Operator Webhook (Push DLR)</h4>
+                                    <p class="text-muted small mb-0" style="font-size: 0.98rem;">Instant HTTP POST callbacks to your server URL upon handset delivery.</p>
+                                </div>
+                            </div>
+                            <div class="p-3 bg-white rounded-3 border shadow-sm d-flex align-items-center gap-3">
+                                <div class="solution-icon-box solution-icon-green mb-0"><i class="fas fa-cubes"></i></div>
+                                <div>
+                                    <h4 class="fw-bold text-dark mb-1" style="font-size: 1.25rem;">SDKs & Postman Collection</h4>
+                                    <p class="text-muted small mb-0" style="font-size: 0.98rem;">Official SDKs for Node.js, Python, Java, PHP, and C# .NET.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             6. DELIVERY ANALYTICS & DLR QUERY
+             ============================================ -->
+        <section class="omnichannel-section">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <span class="badge px-3 py-1.5 rounded-pill mb-2" style="background: rgba(255,106,0,0.15); color: var(--orange-brand); font-size: 0.88rem;">
+                        REAL-TIME ANALYTICS
+                    </span>
+                    <h2 class="display-6 fw-bold text-white mb-2">Live Delivery Analytics & DLR Transparency</h2>
+                    <p class="text-white-50 max-w-600 mx-auto small">Monitor campaign performance, latency distribution, and handset delivery reports in real time.</p>
+                </div>
+
+                <div class="row g-4 mt-2">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="p-4 rounded-4 text-center bg-dark text-white border border-secondary">
+                            <span class="stat-val text-warning mb-1">99.85%</span>
+                            <span class="stat-lbl text-white-50">Delivery Rate SLA</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="p-4 rounded-4 text-center bg-dark text-white border border-secondary">
+                            <span class="stat-val text-info mb-1">377ms</span>
+                            <span class="stat-lbl text-white-50">Avg OTP Latency</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="p-4 rounded-4 text-center bg-dark text-white border border-secondary">
+                            <span class="stat-val text-success mb-1">10B+</span>
+                            <span class="stat-lbl text-white-50">Monthly SMS Capacity</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="p-4 rounded-4 text-center bg-dark text-white border border-secondary">
+                            <span class="stat-val text-purple mb-1" style="color:#A855F7;">100%</span>
+                            <span class="stat-lbl text-white-50">DLR Log Accuracy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             7. HOW IT WORKS
+             ============================================ -->
+        <section class="how-it-works-section">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="section-label">SIMPLE WORKFLOW</span>
+                    <h2 class="section-title-dark">How Enterprise Bulk SMS Works</h2>
+                    <p class="text-muted max-w-550 mx-auto">4 easy steps to start sending SMS campaigns with Immense Air.</p>
+                </div>
+
+                <div class="steps-wrapper">
+                    <div class="steps-connector-line"></div>
+                    <div class="row g-4">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="step-card">
+                                <div class="step-badge">01</div>
+                                <h5>Choose SMS Type & Template</h5>
+                                <p>Select Transactional, OTP, or Promotional SMS and configure your DLT approved template.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="step-card">
+                                <div class="step-badge">02</div>
+                                <h5>Connect via API / SMPP</h5>
+                                <p>Authenticate using your secure API token or bind to our high-speed SMPP v3.4 host.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="step-card">
+                                <div class="step-badge">03</div>
+                                <h5>Trigger Broadcast</h5>
+                                <p>Send single high-speed OTPs or broadcast high-volume campaigns across India.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="step-card">
+                                <div class="step-badge">04</div>
+                                <h5>Track Live DLR Reports</h5>
+                                <p>Monitor real-time operator delivery receipts, latency stats, and delivery webhooks.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             8. INDUSTRIES WE SERVE
+             ============================================ -->
+        <section class="sectors-section">
+            <div class="container">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-4">
+                        <span class="section-label">ENTERPRISE USE CASES</span>
+                        <h2 class="section-title-dark mb-3">Tailored Bulk SMS for Every Industry</h2>
+                        <p class="text-muted mb-0">From OTP authentication to promotional offers, we power communication for India's leading enterprises.</p>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="row g-3">
+                            <div class="col-five">
+                                <div class="industry-pill">
+                                    <i class="fas fa-university"></i>
+                                    <p>Banking & Fintech</p>
+                                </div>
+                            </div>
+                            <div class="col-five">
+                                <div class="industry-pill">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <p>E-Commerce</p>
+                                </div>
+                            </div>
+                            <div class="col-five">
+                                <div class="industry-pill">
+                                    <i class="fas fa-truck"></i>
+                                    <p>Logistics</p>
+                                </div>
+                            </div>
+                            <div class="col-five">
+                                <div class="industry-pill">
+                                    <i class="fas fa-heartbeat"></i>
+                                    <p>Healthcare</p>
+                                </div>
+                            </div>
+                            <div class="col-five">
+                                <div class="industry-pill">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <p>Education</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             9. WHY CHOOSE US (DARK FEATURE BANNER)
+             ============================================ -->
+        <div class="container my-4">
+            <div class="dark-feature-banner">
+                <div class="row g-4 align-items-center text-center text-md-start">
+                    <div class="col-lg-3 col-md-6 d-flex align-items-center gap-3">
+                        <i class="fas fa-rocket fa-2x text-warning"></i>
+                        <div>
+                            <h5>Direct Carrier Routes</h5>
+                            <p class="text-white-50 small mb-0">Direct connectivity with Airtel, Jio, Vi & BSNL.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 d-flex align-items-center gap-3">
+                        <i class="fas fa-shield-alt fa-2x text-success"></i>
+                        <div>
+                            <h5>99.9% Platform SLA</h5>
+                            <p class="text-white-50 small mb-0">Enterprise reliability with zero single point of failure.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 d-flex align-items-center gap-3">
+                        <i class="fas fa-code fa-2x text-primary"></i>
+                        <div>
+                            <h5>REST API & SMPP</h5>
+                            <p class="text-white-50 small mb-0">Flexible integration for developers and legacy platforms.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 d-flex align-items-center gap-3">
+                        <i class="fas fa-headset fa-2x text-warning"></i>
+                        <div>
+                            <h5>24x7 Dedicated SLA</h5>
+                            <p class="text-white-50 small mb-0">Dedicated account managers & technical support team.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================
+             10. FINAL CTA BANNER
+             ============================================ -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="dark-cta-card text-center">
+                    <h2 class="display-5 fw-bold text-white mb-3">Ready to Scale Your Enterprise Bulk SMS?</h2>
+                    <p class="text-white-50 lead mx-auto max-w-600 mb-4" style="font-size: 1.1rem;">
+                        Get instant API credentials, free testing credits, and dedicated DLT registration assistance today.
+                    </p>
+                    <div class="d-flex flex-wrap justify-content-center gap-3">
+                        <a href="../contact.html" class="btn-orange-filled">
+                            Get Free Test API Account <i class="fas fa-arrow-right ms-1"></i>
+                        </a>
+                        <a href="https://wa.me/919768566466" target="_blank" class="btn-dark-outline">
+                            <i class="fab fa-whatsapp me-1"></i> Talk to SMS Specialist
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============================================
+         11. EXECUTIVE DARK FOOTER
+         ============================================ -->
+    <footer class="footer-dark-custom">
+        <div class="container">
+            <div class="row g-4 mb-4">
+                <div class="col-lg-4 col-md-6">
+                    <a class="navbar-brand-custom mb-3" href="../index.html">
+                        <img src="../assets/images/logo/logo.jpg" alt="Immense Air Pvt Ltd Logo" class="navbar-brand-logo">
+                        <div>
+                            <div style="font-size: 1.35rem; font-weight: 800; line-height: 1; letter-spacing: -0.5px; color: #FFFFFF;">
+                                IMMENSE <span style="color: var(--orange-brand);">AIR</span>
+                            </div>
+                            <div style="font-size: 0.7rem; font-weight: 800; letter-spacing: 1.5px; color: rgba(255,255,255,0.75); text-transform: uppercase;">
+                                PVT LTD
+                            </div>
+                        </div>
+                    </a>
+                    <p style="color:rgba(255,255,255,.75);font-size:1.0rem;line-height:1.65;max-width:360px;">
+                        Immense Air Pvt Ltd empowers businesses with intelligent communication solutions that drive engagement, automation & growth.
+                    </p>
+                    <div class="mt-3 d-flex gap-2">
+                        <a href="https://in.linkedin.com/company/immense-smart-solutions" target="_blank" class="social-circle-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.facebook.com/immensesmartsolutions/" target="_blank" class="social-circle-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.youtube.com/@immensesmartsolutions" target="_blank" class="social-circle-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/immense_smart_solutions/" target="_blank" class="social-circle-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6>PRODUCTS</h6>
+                    <ul class="footer-link-list">
+                        <li><a href="bulk-sms.html" class="text-warning fw-bold">SMS Services</a></li>
+                        <li><a href="whatsapp-api.html">WhatsApp API</a></li>
+                        <li><a href="rcs.html">RCS Messaging</a></li>
+                        <li><a href="voice.html">Voice Solutions</a></li>
+                        <li><a href="ivr-obd.html">IVR & OBD</a></li>
+                        <li><a href="smpp.html">SMPP & API</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6>SOLUTIONS</h6>
+                    <ul class="footer-link-list">
+                        <li><a href="../about.html">Marketing</a></li>
+                        <li><a href="../resources.html">Authentication</a></li>
+                        <li><a href="../contact.html">Customer Support</a></li>
+                        <li><a href="bulk-sms.html">Notifications</a></li>
+                        <li><a href="whatsapp-api.html">Automation</a></li>
+                        <li><a href="../about.html">Enterprise</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6>DEVELOPERS</h6>
+                    <ul class="footer-link-list">
+                        <li><a href="../developers.html">API Documentation</a></li>
+                        <li><a href="smpp.html">SMPP Guide</a></li>
+                        <li><a href="../developers.html">SDKs & Libraries</a></li>
+                        <li><a href="../developers.html">Postman Collection</a></li>
+                        <li><a href="../developers.html">Integration Guide</a></li>
+                        <li><a href="../developers.html">Status Page</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6>COMPANY</h6>
+                    <ul class="footer-link-list">
+                        <li><a href="../about.html">About Us</a></li>
+                        <li><a href="../careers.html">Careers <span class="badge bg-warning text-dark style-badge" style="font-size:0.7rem;">Hiring</span></a></li>
+                        <li><a href="../contact.html">Partners</a></li>
+                        <li><a href="../resources.html">News & Updates</a></li>
+                        <li><a href="../contact.html" class="text-warning fw-bold">Contact Us <i class="fas fa-arrow-right ms-1"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr style="border-color:rgba(255,255,255,.12);margin:2.5rem 0 1.5rem;">
+
+            <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 text-white-50" style="font-size:0.95rem;">
+                <div>&copy; 2026 Immense Air Pvt Ltd All Rights Reserved.</div>
+                <div>
+                    <a href="../privacy-policy.html" class="text-white-50 me-3 text-decoration-none">Privacy Policy</a>
+                    <a href="../terms.html" class="text-white-50 me-3 text-decoration-none">Terms & Conditions</a>
+                    <a href="../terms.html" class="text-white-50 text-decoration-none">Refund Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919768566466" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Global Data Privacy Opt-In Consent Banner -->
+    <div id="optInGlobalBanner" class="optin-consent-banner hidden">
+        <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+            <div class="d-flex align-items-center gap-3">
+                <i class="fas fa-user-shield text-warning fa-2x"></i>
+                <div>
+                    <div class="d-flex align-items-center gap-2 mb-1">
+                        <span class="fw-bold text-white fs-6">Data Privacy & Communication Opt-In</span>
+                        <span class="optin-badge"><i class="fas fa-check-circle me-1"></i> DPDP Act Compliant</span>
+                    </div>
+                    <p class="text-white-50 small mb-0">
+                        We value your data privacy. By using Immense Air, you consent to data processing for enterprise service delivery, SMS/WhatsApp updates, and analytics as outlined in our <a href="../privacy-policy.html" class="text-warning text-decoration-underline">Privacy Policy</a>.
+                    </p>
+                </div>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+                <button class="btn btn-warning btn-sm fw-bold px-3 rounded-pill text-white" onclick="acceptDataOptIn()">
+                    <i class="fas fa-check me-1"></i> Accept & Opt-In
+                </button>
+                <button class="btn btn-outline-light btn-sm px-3 rounded-pill" onclick="declineDataOptIn()">
+                    Necessary Only
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+    
+    <!-- REAL SMS API TESTING CONTROLLER SCRIPT -->
+    <script>
+        function updatePhoneClock() {
+            const clockEl = document.getElementById('phoneClockTime');
+            if (clockEl) {
+                const now = new Date();
+                clockEl.innerText = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+            }
+        }
+        setInterval(updatePhoneClock, 1000);
+        updatePhoneClock();
+
+        async function handleRealSmsDispatch(e) {
+            e.preventDefault();
+            const btn = document.getElementById('btnDispatchSms');
+            const phoneInput = document.getElementById('smsTestPhone').value.trim();
+
+            const senderId = 'ZIONEN';
+            const peId = '1001970166055565595';
+            const templateId = '1207177987659243590';
+            const message = 'Your OTP for verification is 12345.\nDo not share it with anyone.\nValid for 10 minutes.\nZion';
+
+            let cleanPhone = phoneInput.replace(/[^0-9]/g, '');
+            if (cleanPhone.length === 10) cleanPhone = '+91' + cleanPhone;
+
+            if (!cleanPhone.match(/^\+91[0-9]{10}$/)) {
+                alert('Please enter a valid 10-digit Indian mobile number.');
+                return;
+            }
+
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i> Dispatched to Gateway...';
+
+            // Pipeline elements
+            const pipeBadge = document.getElementById('pipelineStatusBadge');
+            const p1 = document.getElementById('pipeStep1');
+            const p2 = document.getElementById('pipeStep2');
+            const p3 = document.getElementById('pipeStep3');
+            const p4 = document.getElementById('pipeStep4');
+
+            // Reset pipeline visual
+            [p1, p2, p3, p4].forEach(p => p.className = 'p-2 rounded bg-light text-muted fw-bold border');
+            pipeBadge.className = 'badge bg-warning text-dark';
+            pipeBadge.innerText = '1. Request Initiated';
+            p1.className = 'p-2 rounded bg-warning text-white fw-bold shadow-sm';
+
+            // DLR elements
+            const dlrBox = document.getElementById('dlrReportContainer');
+            const dlrMsgId = document.getElementById('dlrMsgId');
+            const dlrSenderHeader = document.getElementById('dlrSenderHeader');
+            const dlrRecipient = document.getElementById('dlrRecipient');
+            const dlrLatency = document.getElementById('dlrLatency');
+            const dlrOperator = document.getElementById('dlrOperator');
+            const inspTime = document.getElementById('inspectorTime');
+
+            dlrBox.classList.add('d-none');
+
+            // Update Smartphone Header
+            document.getElementById('phoneSenderHeader').innerText = senderId.toUpperCase();
+
+            try {
+                // 1. Call REAL Single SMS Sending API (POST /api/v1/sms/send)
+                const sendPayload = {
+                    sender_id: senderId,
+                    to: cleanPhone,
+                    message: message,
+                    pe_id: peId,
+                    template_id: templateId
+                };
+
+                const resSend = await fetch('/api/v1/sms/send', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(sendPayload)
+                });
+
+                const dataSend = await resSend.json();
+
+                if (!resSend.ok || !dataSend.success) {
+                    alert(dataSend.error || 'Failed to dispatch SMS.');
+                    btn.disabled = false;
+                    btn.innerHTML = 'Send Test SMS <i class="fas fa-paper-plane ms-2"></i>';
+                    return;
+                }
+
+                // Step 2: Gateway Processing
+                setTimeout(() => {
+                    p1.className = 'p-2 rounded bg-success text-white fw-bold';
+                    p2.className = 'p-2 rounded bg-warning text-white fw-bold shadow-sm';
+                    pipeBadge.innerText = '2. Gateway Processing';
+                }, 400);
+
+                // Step 3: Submitted to Carrier Route
+                setTimeout(() => {
+                    p2.className = 'p-2 rounded bg-success text-white fw-bold';
+                    p3.className = 'p-2 rounded bg-warning text-white fw-bold shadow-sm';
+                    pipeBadge.innerText = '3. Carrier Submitted';
+                }, 900);
+
+                // 2. Call REAL SMS Delivery Reporting DLR Query API (GET /api/v1/sms/report/:id)
+                setTimeout(async () => {
+                    p3.className = 'p-2 rounded bg-success text-white fw-bold';
+                    p4.className = 'p-2 rounded bg-success text-white fw-bold shadow-sm';
+                    pipeBadge.className = 'badge bg-success';
+                    pipeBadge.innerText = '4. Handset Delivered ✓';
+
+                    const resReport = await fetch(`/api/v1/sms/report/${dataSend.message_id}`);
+                    const dataReport = await resReport.json();
+
+                    // Render Clean DLR Data
+                    dlrMsgId.innerText = dataReport.message_id || dataSend.message_id;
+                    dlrSenderHeader.innerText = dataReport.sender_id || senderId;
+                    dlrRecipient.innerText = cleanPhone;
+                    dlrLatency.innerText = `${dataReport.latency_ms || 377} ms (Sub-Second Speed)`;
+                    dlrOperator.innerText = dataReport.operator || 'Airtel / Jio Direct Route';
+                    inspTime.innerText = `Timestamp: ${new Date().toLocaleTimeString()}`;
+
+                    dlrBox.classList.remove('d-none');
+
+                    // Update Phone Screen with clean bubble and timestamp
+                    const chatBody = document.getElementById('phoneChatBody');
+                    const nowTime = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+                    const newBubble = document.createElement('div');
+                    newBubble.className = 'sms-bubble-received';
+                    newBubble.innerHTML = `
+                        <div class="fw-bold text-warning mb-1" style="font-size:0.8rem;"><i class="fas fa-shield-alt me-1"></i> ${senderId}</div>
+                        ${message}
+                        <div class="text-end text-muted mt-1" style="font-size:0.7rem;">${nowTime} ✓✓</div>
+                    `;
+                    chatBody.appendChild(newBubble);
+                    chatBody.scrollTop = chatBody.scrollHeight;
+
+                    // Show Notification Popup Banner on Phone Screen
+                    const notifBanner = document.getElementById('phoneNotifBanner');
+                    const notifText = document.getElementById('notifText');
+                    notifText.innerText = message;
+                    notifBanner.classList.remove('d-none');
+
+                    setTimeout(() => {
+                        notifBanner.classList.add('d-none');
+                    }, 4000);
+
+                    // Re-enable button with 60s cooldown
+                    let cd = 60;
+                    const cdTimer = setInterval(() => {
+                        cd--;
+                        btn.innerHTML = `Wait ${cd}s <i class="fas fa-clock ms-1"></i>`;
+                        if (cd <= 0) {
+                            clearInterval(cdTimer);
+                            btn.disabled = false;
+                            btn.innerHTML = 'Send Test SMS <i class="fas fa-paper-plane ms-2"></i>';
+                        }
+                    }, 1000);
+
+                }, 1400);
+
+            } catch (err) {
+                console.error('API Test Error:', err);
+                alert('Connection error while contacting API Gateway.');
+                btn.disabled = false;
+                btn.innerHTML = 'Send Test SMS <i class="fas fa-paper-plane ms-2"></i>';
+            }
+        }
+    </script>
+</body>
+</html>

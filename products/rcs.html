@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Page Title -->
+    <title>Enterprise RCS Business Messaging Platform | Immense Air Pvt Ltd</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Next-Gen RCS Business Messaging Platform by Immense Air Pvt Ltd Verified brand logo, rich media carousel cards, interactive call-to-action buttons, and smart SMS fallback path.">
+    <meta name="keywords" content="rcs business messaging, rcs api india, rich communication services, rcs carousel cards, google jibe rcs, sms fallback gateway, immense air rcs">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#060D1E">
+    
+    <!-- Google Fonts - Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom Upgraded CSS System -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    
+    <style>
+        .product-hero {
+            background: radial-gradient(circle at 75% 35%, #0A2540 0%, #060D1E 70%);
+            padding: 150px 0 80px;
+            color: #FFFFFF;
+        }
+
+        .rcs-green-accent {
+            color: #10B981;
+        }
+
+        .bg-rcs-gradient {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.12) 0%, rgba(59, 130, 246, 0.12) 100%);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+
+        /* LIVE RCS SANDBOX CARD */
+        .rcs-sandbox-card {
+            background: #FFFFFF;
+            border-radius: 24px;
+            padding: 3rem 2.5rem;
+            border: 1px solid var(--border-light);
+            box-shadow: 0 20px 50px rgba(11, 23, 50, 0.12);
+        }
+
+        /* SMARTPHONE MOCKUP FOR RCS */
+        .phone-mockup-frame {
+            width: 330px;
+            height: 610px;
+            background: #000000;
+            border-radius: 42px;
+            padding: 12px;
+            margin: 0 auto;
+            border: 4px solid #1F2937;
+            box-shadow: 0 25px 65px rgba(0, 0, 0, 0.45);
+            position: relative;
+        }
+
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            background: #F8FAFC;
+            border-radius: 34px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .phone-notch {
+            width: 130px;
+            height: 20px;
+            background: #000000;
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+            margin: 0 auto;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+        }
+
+        .phone-header-bar {
+            background: #060D1E;
+            color: #FFFFFF;
+            padding: 28px 16px 10px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .phone-chat-body {
+            padding: 14px;
+            flex-grow: 1;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            gap: 12px;
+        }
+
+        /* RCS RICH CARD CONTAINER */
+        .rcs-rich-card {
+            background: #FFFFFF;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+            border: 1px solid rgba(0,0,0,0.08);
+            text-align: left;
+            animation: popInRcs 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @keyframes popInRcs {
+            from { transform: scale(0.88) translateY(20px); opacity: 0; }
+            to { transform: scale(1) translateY(0); opacity: 1; }
+        }
+
+        .rcs-card-hero-img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            background: linear-gradient(135deg, #0A2540, #10B981);
+        }
+
+        .rcs-card-body {
+            padding: 12px 14px;
+        }
+
+        .rcs-card-title {
+            font-size: 0.95rem;
+            font-weight: 800;
+            color: #060D1E;
+            margin-bottom: 4px;
+        }
+
+        .rcs-card-desc {
+            font-size: 0.78rem;
+            color: #475569;
+            line-height: 1.35;
+            margin-bottom: 10px;
+        }
+
+        .rcs-action-btn {
+            display: block;
+            width: 100%;
+            padding: 8px 0;
+            margin-top: 6px;
+            background: #F1F5F9;
+            color: #0F172A;
+            border-radius: 10px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-align: center;
+            text-decoration: none;
+            border: 1px solid #E2E8F0;
+            transition: all 0.2s ease;
+        }
+
+        .rcs-action-btn:hover {
+            background: #0066FF;
+            color: #FFFFFF;
+        }
+
+        .rcs-action-btn-primary {
+            background: #0066FF;
+            color: #FFFFFF;
+            border: none;
+        }
+
+        .rcs-action-btn-primary:hover {
+            background: #004ECB;
+            color: #FFFFFF;
+        }
+
+        /* FALLBACK DIAGRAM BOX */
+        .fallback-diagram-box {
+            background: #060D1E;
+            border-radius: 24px;
+            padding: 3.5rem 2.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+        }
+
+        .fallback-step-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 1.8rem 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+
+        .fallback-step-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--orange-brand);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .fallback-arrow-flow {
+            font-size: 1.8rem;
+            color: var(--orange-brand);
+            animation: pulseArrow 1.5s infinite alternate;
+        }
+
+        @keyframes pulseArrow {
+            from { transform: translateX(0); opacity: 0.6; }
+            to { transform: translateX(8px); opacity: 1; }
+        }
+
+        /* CAROUSEL CARD PREVIEW */
+        .rcs-carousel-wrapper {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding-bottom: 8px;
+            scroll-snap-type: x mandatory;
+        }
+
+        .rcs-carousel-item {
+            min-width: 220px;
+            scroll-snap-align: start;
+            background: #FFFFFF;
+            border-radius: 14px;
+            overflow: hidden;
+            border: 1px solid #E2E8F0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================
+         HEADER / NAVBAR
+         ============================================ -->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top navbar-custom" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand-custom" href="../index.html">
+                    <img src="../assets/images/logo/logo.jpg" alt="Immense Air Pvt Ltd Logo" class="navbar-brand-logo">
+                    <div>
+                        <div style="font-size: 1.35rem; font-weight: 800; line-height: 1; letter-spacing: -0.5px; color: #FFFFFF;">
+                            IMMENSE <span style="color: var(--orange-brand);">AIR</span>
+                        </div>
+                        <div style="font-size: 0.7rem; font-weight: 800; letter-spacing: 1.5px; color: rgba(255,255,255,0.75); text-transform: uppercase;">
+                            PVT LTD
+                        </div>
+                    </div>
+                </a>
+                
+                <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="../index.html">Home</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link nav-link-custom dropdown-toggle active" href="#" id="productsDropdown" data-bs-toggle="dropdown">Products</a>
+                            <ul class="dropdown-menu dropdown-menu-custom">
+                                <li><a class="dropdown-item dropdown-item-custom" href="bulk-sms.html"><i class="fas fa-sms"></i> SMS Services</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="whatsapp-api.html"><i class="fab fa-whatsapp text-success"></i> WhatsApp API</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom active" href="rcs.html"><i class="fas fa-comment-dots text-info"></i> RCS Messaging</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="voice.html"><i class="fas fa-phone-alt text-warning"></i> Voice Solutions</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="ivr-obd.html"><i class="fas fa-headset"></i> IVR / OBD Solutions</a></li>
+                                <li><a class="dropdown-item dropdown-item-custom" href="smpp.html"><i class="fas fa-code text-primary"></i> SMPP & API</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="../index.html#how-it-works">How It Works</a></li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="../developers.html">Developers</a></li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="../careers.html">Careers</a></li>
+                        <li class="nav-item ms-lg-3"><a class="btn-nav-cta" href="../contact.html">Contact Us <i class="fas fa-arrow-right ms-1"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ============================================
+             1. HERO SECTION
+             ============================================ -->
+        <section class="product-hero text-center">
+            <div class="container">
+                <span class="hero-subtitle-orange"><i class="fas fa-comment-dots me-2"></i> NEXT-GEN RCS BUSINESS MESSAGING</span>
+                <h1 class="display-3 fw-extrabold text-white mb-3" style="letter-spacing: -0.5px;">
+                    Interactive RCS Business Messaging
+                </h1>
+                <p class="hero-para-mockup mx-auto max-w-600 mb-4" style="font-size: 1.25rem;">
+                    Transform traditional SMS into rich, app-like experiences with verified brand badges, high-res carousel cards, interactive call-to-action buttons, and real-time read receipts.
+                </p>
+                <div class="d-flex flex-wrap justify-content-center gap-4">
+                    <span class="hero-check-pill"><i class="fas fa-check-circle rcs-green-accent"></i> Verified Sender Badge</span>
+                    <span class="hero-check-pill"><i class="fas fa-bolt text-warning"></i> Sub-Second Delivery SLA</span>
+                    <span class="hero-check-pill"><i class="fas fa-sync-alt text-primary"></i> Automatic SMS Fallback Path</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             2. REAL LIVE RCS API TESTING (INTERACTIVE CONSOLE & MOCKUP)
+             ============================================ -->
+        <section class="py-5 bg-light" id="live-rcs-api-test">
+            <div class="container py-3">
+                <div class="text-center mb-5">
+                    <span class="section-label">REAL-TIME RCS GATEWAY TEST</span>
+                    <h2 class="section-title-dark">Live RCS API Testing Console</h2>
+                    <p class="text-muted max-w-600 mx-auto" style="font-size: 1.15rem;">
+                        Test real-time RCS Business Messaging delivery on your mobile handset using our live API gateway suite.
+                    </p>
+                </div>
+
+                <div class="rcs-sandbox-card">
+                    <div class="row g-4 align-items-center">
+                        <!-- Left Controls -->
+                        <div class="col-lg-6">
+                            <div class="p-4 rounded-4 bg-light border text-start">
+                                <div class="d-flex align-items-center justify-content-between mb-4">
+                                    <span class="badge bg-success text-white px-3 py-2 rounded-pill fw-bold" style="font-size: 0.9rem;">
+                                        <i class="fas fa-satellite-dish me-1"></i> Real RCS API Gateway
+                                    </span>
+                                    <span class="badge bg-primary px-3 py-2 rounded-pill fw-bold" style="font-size: 0.85rem;">
+                                        <i class="fas fa-circle me-1" style="font-size:0.55rem;"></i> Active Route
+                                    </span>
+                                </div>
+
+                                <form id="realRcsForm" onsubmit="handleRealRcsDispatch(event)">
+                                    <div class="mb-4">
+                                        <label class="form-label fw-bold text-dark fs-5 mb-2">Recipient Mobile Number (+91) *</label>
+                                        <div class="input-group input-group-lg rounded-3 overflow-hidden shadow-sm" style="border: 2px solid #0066FF;">
+                                            <span class="input-group-text bg-light text-dark fw-bold fs-4 border-0" style="border-right: 2px solid #0066FF !important;">+91</span>
+                                            <input type="tel" id="rcsPhoneInput" class="form-control bg-white border-0 fw-bold fs-4 text-dark" value="8858674641" placeholder="Enter 10-digit mobile number" maxlength="10" required>
+                                        </div>
+                                        <p class="text-muted small mt-2 mb-0" style="font-size: 0.9rem;">
+                                            <i class="fas fa-info-circle text-success me-1"></i> Live RCS campaign <strong>IMMENSE AIR PVT LTD</strong> Sender ID se aapke phone par deliver hoga.
+                                        </p>
+                                    </div>
+
+                                    <div class="form-check form-switch mb-4 p-3 rounded-3 bg-white border">
+                                        <input class="form-check-input ms-0 me-2" type="checkbox" id="rcsEnableFallback" checked style="width: 2.4em; height: 1.3em;">
+                                        <label class="form-check-input-label fw-bold text-dark mb-0 ms-2" for="rcsEnableFallback">
+                                            <i class="fas fa-shield-alt text-warning me-1"></i> Enable Smart SMS Fallback Path
+                                        </label>
+                                        <div class="text-muted small mt-1 ms-2" style="font-size: 0.82rem;">Automatically delivers via High-Speed SMS if handset RCS is unreachable.</div>
+                                    </div>
+
+                                    <button type="submit" id="btnDispatchRcs" class="btn btn-success btn-lg w-100 fw-bold text-white shadow py-3 fs-5">
+                                        Send Test RCS Campaign <i class="fas fa-paper-plane ms-2"></i>
+                                    </button>
+                                </form>
+
+                                <!-- Visual Delivery Pipeline -->
+                                <div class="mt-4 p-3 rounded-4 bg-white border" id="rcsPipelineBox">
+                                    <div class="d-flex align-items-center justify-content-between mb-2">
+                                        <span class="fw-bold text-dark small"><i class="fas fa-route text-success me-1"></i> Visual Delivery Flow:</span>
+                                        <span id="rcsPipelineBadge" class="badge bg-secondary">Ready to Send</span>
+                                    </div>
+                                    <div class="row text-center g-2" style="font-size: 0.82rem;">
+                                        <div class="col-3">
+                                            <div id="rcsStep1" class="p-2 rounded bg-light text-muted fw-bold border">1. Initiated</div>
+                                        </div>
+                                        <div class="col-3">
+                                            <div id="rcsStep2" class="p-2 rounded bg-light text-muted fw-bold border">2. Gateway</div>
+                                        </div>
+                                        <div class="col-3">
+                                            <div id="rcsStep3" class="p-2 rounded bg-light text-muted fw-bold border">3. RCS Cloud</div>
+                                        </div>
+                                        <div class="col-3">
+                                            <div id="rcsStep4" class="p-2 rounded bg-light text-muted fw-bold border">4. Delivered ✓</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Smartphone Mockup Preview (White Theme & Real RCS Banner) -->
+                        <div class="col-lg-6 text-center d-flex flex-column justify-content-center">
+                            <div class="phone-mockup-frame">
+                                <div class="phone-notch"></div>
+                                <div class="phone-screen bg-white">
+                                    <!-- Phone Header Bar -->
+                                    <div class="phone-header-bar bg-dark">
+                                        <span><i class="fas fa-signal me-1"></i> Jio 5G</span>
+                                        <span id="phoneClockTime">12:30 PM</span>
+                                        <span>98% <i class="fas fa-battery-full ms-1"></i></span>
+                                    </div>
+
+                                    <!-- Verified Brand Top Header (White Theme) -->
+                                    <div class="p-2.5 bg-white text-dark border-bottom d-flex align-items-center justify-content-between shadow-sm">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <img src="../assets/images/logo/logo.jpg" style="width:36px;height:36px;border-radius:50%;object-fit:cover;border:1px solid #E2E8F0;" alt="Immense Air Pvt Ltd Logo">
+                                            <div class="text-start">
+                                                <div class="fw-bold text-dark fs-6 d-flex align-items-center gap-1" style="font-size:0.88rem;">
+                                                    IMMENSE AIR PVT LTD <i class="fas fa-check-circle text-primary" style="font-size:0.85rem;" title="Verified Sender Badge"></i>
+                                                </div>
+                                                <div class="text-muted" style="font-size:0.65rem;line-height:1.2;">
+                                                    Smart Communication Platform with SMS, RCS, IVR...
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <i class="fas fa-ellipsis-v text-muted"></i>
+                                    </div>
+
+                                    <!-- Chat Body & White Theme Rich Card -->
+                                    <div class="phone-chat-body bg-light" id="rcsChatBody" style="background:#F8FAFC !important;">
+                                        <div class="text-center my-1">
+                                            <span class="badge bg-secondary text-white" style="font-size:0.65rem;">Tuesday • 11:15 AM</span>
+                                            <div class="text-muted small mt-1" style="font-size:0.65rem;">This is an RCS for Business chat.</div>
+                                        </div>
+                                        
+                                        <!-- RCS Rich Card Component (Exact User Template Image & Content) -->
+                                        <div class="rcs-rich-card shadow-sm border bg-white rounded-4 overflow-hidden" id="rcsRichCardBubble">
+                                            <img src="../assets/images/rcs-banner.png" style="width:100%;height:auto;display:block;border-bottom:1px solid #E2E8F0;" alt="RCS Karna hai? Website Nahi Hai?">
+                                            
+                                            <div class="rcs-card-body p-3 text-start">
+                                                <div class="fw-extrabold text-dark mb-1.5" style="font-size:0.88rem;letter-spacing:-0.2px;">
+                                                    🚀 No Website? No Problem!
+                                                </div>
+                                                <div class="text-dark mb-2" style="font-size:0.75rem;line-height:1.5;">
+                                                    Start your <strong>RCS</strong> Campaign with own <strong>Name</strong> without website.<br>
+                                                    ✅ <strong>RCS Setup & Approval Support</strong><br>
+                                                    ⚡ <strong>Fast Activation</strong><br>
+                                                    🛠️ <strong>24×7 Support</strong><br>
+                                                    🧑‍💻 <strong>Dedicated Account manager</strong><br>
+                                                    🤝 <strong>100% Refund</strong> if you're not satisfied with our service quality.
+                                                </div>
+                                                
+                                                <a href="tel:9768566466" class="rcs-action-btn border text-dark fw-bold mb-1.5 py-2">
+                                                    <i class="fas fa-phone-alt me-2 text-danger"></i> Call Now
+                                                </a>
+                                                <a href="https://wa.me/919768566466" target="_blank" class="rcs-action-btn border text-dark fw-bold py-2">
+                                                    <i class="fas fa-comment-dots me-2 text-success"></i> Chat Now
+                                                </a>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="text-end text-muted small me-1" style="font-size:0.7rem;" id="rcsReadReceipt">
+                                            11:15 AM • Delivered <i class="fas fa-check-double text-primary"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Clean Real API Status Report Box -->
+                    <div id="rcsReportContainer" class="mt-5 d-none">
+                        <div class="p-4 rounded-4 bg-dark text-white border border-secondary shadow-lg">
+                            <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3 pb-3 border-bottom border-secondary">
+                                <div class="d-flex align-items-center gap-3">
+                                    <span class="badge bg-success px-3 py-2 rounded-pill fs-6 fw-bold">
+                                        <i class="fas fa-check-circle me-1"></i> RCS CAMPAIGN DISPATCHED
+                                    </span>
+                                    <h4 class="fw-bold text-white mb-0">RCS Gateway Campaign Report</h4>
+                                </div>
+                                <span class="text-white-50 font-monospace" id="rcsTimestamp">Timestamp: --</span>
+                            </div>
+
+                            <div class="row g-3 text-start">
+                                <div class="col-md-3">
+                                    <div class="p-3 rounded-3 bg-secondary bg-opacity-25 border border-secondary">
+                                        <div class="text-white-50 small mb-1">Campaign ID</div>
+                                        <div class="font-monospace fw-bold text-warning fs-5" id="rcsCampaignId">24370</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="p-3 rounded-3 bg-secondary bg-opacity-25 border border-secondary">
+                                        <div class="text-white-50 small mb-1">Template ID</div>
+                                        <div class="font-monospace fw-bold text-info fs-5" id="rcsTemplateVal">6i5b1siz15j</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="p-3 rounded-3 bg-secondary bg-opacity-25 border border-secondary">
+                                        <div class="text-white-50 small mb-1">Recipient Number</div>
+                                        <div class="font-monospace fw-bold text-white fs-5" id="rcsRecipientVal">+91 8858674641</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="p-3 rounded-3 bg-secondary bg-opacity-25 border border-secondary">
+                                        <div class="text-white-50 small mb-1">SMS Fallback Status</div>
+                                        <div class="fw-bold text-success fs-5" id="rcsFallbackStatus">Configured</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             3. MAIN USP: SMART SMS FALLBACK
+             ============================================ -->
+        <section class="py-5" style="background: #060D1E; color: #FFFFFF;">
+            <div class="container py-3">
+                <div class="text-center mb-5">
+                    <span class="hero-subtitle-orange"><i class="fas fa-sync-alt me-1"></i> GUARANTEED REACH</span>
+                    <h2 class="display-5 fw-extrabold text-white mb-3">RCS First. SMS Fallback. Maximum Reach.</h2>
+                    <p class="text-white-50 max-w-600 mx-auto" style="font-size: 1.15rem;">
+                        Deliver rich interactive RCS experiences to supported handsets, with an automatic configured fallback delivery path over high-speed SMS for total audience coverage.
+                    </p>
+                </div>
+
+                <div class="fallback-diagram-box text-center">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="fallback-step-card">
+                                <div class="solution-icon-box solution-icon-green mx-auto mb-3"><i class="fas fa-comment-dots"></i></div>
+                                <h4 class="fw-bold text-white mb-2">1. RCS Broadcast</h4>
+                                <p class="text-white-50 small mb-0">Rich media, verified brand header, and interactive CTA buttons sent to target recipient list.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-1 d-none d-lg-block">
+                            <i class="fas fa-arrow-right fallback-arrow-flow"></i>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="fallback-step-card" style="border-color: rgba(255, 106, 0, 0.4);">
+                                <div class="solution-icon-box solution-icon-orange mx-auto mb-3"><i class="fas fa-search-location"></i></div>
+                                <h4 class="fw-bold text-white mb-2">2. Handset Capability Check</h4>
+                                <p class="text-white-50 small mb-0">RCS Cloud automatically evaluates real-time device capability and network data connection.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-1 d-none d-lg-block">
+                            <i class="fas fa-arrow-right fallback-arrow-flow"></i>
+                        </div>
+
+                        <div class="col-lg-3 col-md-12">
+                            <div class="fallback-step-card" style="border-color: rgba(59, 130, 246, 0.4);">
+                                <div class="solution-icon-box solution-icon-blue mx-auto mb-3"><i class="fas fa-sms"></i></div>
+                                <h4 class="fw-bold text-white mb-2">3. SMS Fallback Path</h4>
+                                <p class="text-white-50 small mb-0">If RCS is unavailable, campaign converts instantly to a configured DLT SMS fallback path.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             4. RCS FEATURES (6 COMPREHENSIVE CARDS)
+             ============================================ -->
+        <section class="solutions-section">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="section-label">RCS CAPABILITIES</span>
+                    <h2 class="section-title-dark">Enterprise RCS Features</h2>
+                    <p class="text-muted max-w-600 mx-auto" style="font-size: 1.15rem;">Engage customers with modern app-like messaging directly inside their native SMS inbox.</p>
+                </div>
+
+                <div class="row g-4">
+                    <!-- 1. Rich Media -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card-solution-mockup">
+                            <div class="solution-icon-box solution-icon-green"><i class="fas fa-photo-video"></i></div>
+                            <h4>Rich Media Content</h4>
+                            <p>Send high-resolution images, HD video clips, GIFs, and downloadable PDF documents without length limitations.</p>
+                            <a href="../contact.html" class="card-solution-link">Explore Media <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- 2. Interactive Buttons -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card-solution-mockup">
+                            <div class="solution-icon-box solution-icon-orange"><i class="fas fa-hand-pointer"></i></div>
+                            <h4>Interactive Action Chips</h4>
+                            <p>Drive instant actions with one-tap Suggested Actions: Open URL, Dial Phone, Trigger Map Directions, or Calendar Add.</p>
+                            <a href="../contact.html" class="card-solution-link">View Actions <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- 3. Verified Identity -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card-solution-mockup">
+                            <div class="solution-icon-box solution-icon-blue"><i class="fas fa-shield-check"></i></div>
+                            <h4>Verified Brand Identity</h4>
+                            <p>Build instant brand trust with a Google Verified tick mark, brand logo avatar, custom color themes, and verified company details.</p>
+                            <a href="../contact.html" class="card-solution-link">Get Verified <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- 4. Rich Cards & Carousels -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card-solution-mockup">
+                            <div class="solution-icon-box solution-icon-purple"><i class="fas fa-layer-group"></i></div>
+                            <h4>Rich Cards & Carousels</h4>
+                            <p>Showcase multi-product catalogs using swipable horizontal carousel cards with individual titles, descriptions, and action buttons.</p>
+                            <a href="../contact.html" class="card-solution-link">View Carousels <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- 5. Delivery & Read Reports -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card-solution-mockup">
+                            <div class="solution-icon-box solution-icon-orange"><i class="fas fa-chart-line"></i></div>
+                            <h4>Delivery & Read Reports</h4>
+                            <p>Track real-time message delivery, read receipts, button click-through rates (CTR), and conversion metrics in live dashboards.</p>
+                            <a href="../contact.html" class="card-solution-link">View Reports <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- 6. Automated Chatbots -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card-solution-mockup">
+                            <div class="solution-icon-box solution-icon-green"><i class="fas fa-robot"></i></div>
+                            <h4>Conversational AI Chatbots</h4>
+                            <p>Automate customer support, booking inquiries, order tracking, and lead generation with intelligent 2-way conversational bots.</p>
+                            <a href="../contact.html" class="card-solution-link">Build Bot <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             5. RCS MESSAGE TYPES
+             ============================================ -->
+        <section class="sectors-section">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="section-label">MESSAGE FORMATS</span>
+                    <h2 class="section-title-dark">Versatile RCS Message Formats</h2>
+                    <p class="text-muted max-w-600 mx-auto" style="font-size: 1.15rem;">Choose the ideal message format for your promotional or transactional campaign.</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="p-4 bg-white rounded-4 border shadow-sm text-center h-100">
+                            <div class="solution-icon-box solution-icon-orange mx-auto mb-3"><i class="fas fa-id-card"></i></div>
+                            <h5 class="fw-bold text-dark mb-2">Single Rich Card</h5>
+                            <p class="text-muted small mb-0">High-impact single card with banner image, product highlights, and 2 action buttons.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="p-4 bg-white rounded-4 border shadow-sm text-center h-100">
+                            <div class="solution-icon-box solution-icon-green mx-auto mb-3"><i class="fas fa-images"></i></div>
+                            <h5 class="fw-bold text-dark mb-2">Carousel Slider</h5>
+                            <p class="text-muted small mb-0">Horizontal swipable list of up to 10 product cards for e-commerce catalog showcases.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="p-4 bg-white rounded-4 border shadow-sm text-center h-100">
+                            <div class="solution-icon-box solution-icon-blue mx-auto mb-3"><i class="fas fa-reply-all"></i></div>
+                            <h5 class="fw-bold text-dark mb-2">Suggested Replies</h5>
+                            <p class="text-muted small mb-0">Quick-reply text chips for instant customer feedback, survey responses, and bot prompts.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="p-4 bg-white rounded-4 border shadow-sm text-center h-100">
+                            <div class="solution-icon-box solution-icon-purple mx-auto mb-3"><i class="fas fa-ticket-alt"></i></div>
+                            <h5 class="fw-bold text-dark mb-2">Branded Notification</h5>
+                            <p class="text-muted small mb-0">Verified transactional updates for flight boarding passes, hotel bookings, and OTP alerts.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             6. API INTEGRATION ARCHITECTURE (DEVELOPER HUB)
+             ============================================ -->
+        <section class="how-it-works-section">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="section-label">API INTEGRATION ARCHITECTURE</span>
+                    <h2 class="section-title-dark">Enterprise REST API & Webhook Suite</h2>
+                    <p class="text-muted max-w-600 mx-auto" style="font-size: 1.15rem;">Connect your CRM, ERP, or web application to the Immense Air RCS Gateway.</p>
+                </div>
+
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-6">
+                        <div class="p-4 rounded-4 bg-dark text-white border border-secondary shadow-lg">
+                            <div class="d-flex align-items-center justify-content-between mb-3 border-bottom pb-2 border-secondary">
+                                <span class="badge bg-success px-3 py-1 fs-6">RCS CreateCampaign API</span>
+                                <span class="text-white-50 small font-monospace">POST /api/RCSApi/CreateCampaign</span>
+                            </div>
+                            <pre class="code-json-box mb-0"><code>curl -X POST "https://cpassweb.in/api/RCSApi/CreateCampaign?apiKey=532716B1A..." \
+  -H "Content-Type: application/json" \
+  -d '{
+    "TemplateId": "6i5b1siz15j",
+    "CampaignName": "WEBSITE",
+    "MobileNumbers": [
+        "8858674641"
+    ],
+    "EnableFallback": false
+  }'</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="d-flex flex-column gap-3 text-start">
+                            <div class="p-3 bg-white rounded-3 border shadow-sm d-flex align-items-center gap-3">
+                                <div class="solution-icon-box solution-icon-orange mb-0"><i class="fas fa-code"></i></div>
+                                <div>
+                                    <h4 class="fw-bold text-dark mb-1" style="font-size: 1.2rem;">RESTful Campaign API</h4>
+                                    <p class="text-muted small mb-0" style="font-size: 0.95rem;">Trigger single or bulk RCS broadcasts with dynamic personalization tags.</p>
+                                </div>
+                            </div>
+                            <div class="p-3 bg-white rounded-3 border shadow-sm d-flex align-items-center gap-3">
+                                <div class="solution-icon-box solution-icon-green mb-0"><i class="fas fa-sync-alt"></i></div>
+                                <div>
+                                    <h4 class="fw-bold text-dark mb-1" style="font-size: 1.2rem;">Configured SMS Fallback Engine</h4>
+                                    <p class="text-muted small mb-0" style="font-size: 0.95rem;">Automatic fallback to DLT SMS route if recipient handset lacks active RCS connectivity.</p>
+                                </div>
+                            </div>
+                            <div class="p-3 bg-white rounded-3 border shadow-sm d-flex align-items-center gap-3">
+                                <div class="solution-icon-box solution-icon-blue mb-0"><i class="fas fa-bell"></i></div>
+                                <div>
+                                    <h4 class="fw-bold text-dark mb-1" style="font-size: 1.2rem;">Real-Time Read Webhooks</h4>
+                                    <p class="text-muted small mb-0" style="font-size: 0.95rem;">Receive instant HTTP POST callbacks for message delivery, read status, and button clicks.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             7. USE CASES ACROSS INDUSTRIES
+             ============================================ -->
+        <section class="sectors-section">
+            <div class="container">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-4">
+                        <span class="section-label">INDUSTRY USE CASES</span>
+                        <h2 class="section-title-dark mb-3">Enterprise RCS Use Cases</h2>
+                        <p class="text-muted mb-0">From abandoned cart recovery to interactive banking services, RCS drives 4x higher customer engagement.</p>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="row g-3">
+                            <div class="col-five">
+                                <div class="industry-pill">
+                                    <i class="fas fa-shopping-bag"></i>
+                                    <p>E-Commerce</p>
+                                </div>
+                            </div>
+                            <div class="col-five">
+                                <div class="industry-pill">
+                                    <i class="fas fa-landmark"></i>
+                                    <p>Fintech & Banking</p>
+                                </div>
+                            </div>
+                            <div class="col-five">
+                                <div class="industry-pill">
+                                    <i class="fas fa-plane-departure"></i>
+                                    <p>Travel & Booking</p>
+                                </div>
+                            </div>
+                            <div class="col-five">
+                                <div class="industry-pill">
+                                    <i class="fas fa-car"></i>
+                                    <p>Automotive</p>
+                                </div>
+                            </div>
+                            <div class="col-five">
+                                <div class="industry-pill">
+                                    <i class="fas fa-utensils"></i>
+                                    <p>Food & Delivery</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             8. ANALYTICS & STATS BANNER
+             ============================================ -->
+        <section class="omnichannel-section">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <span class="badge px-3 py-1.5 rounded-pill mb-2" style="background: rgba(16,185,129,0.2); color: #10B981; font-size: 0.88rem;">
+                        PERFORMANCE BENCHMARKS
+                    </span>
+                    <h2 class="display-6 fw-bold text-white mb-2">Proven RCS Performance Analytics</h2>
+                    <p class="text-white-50 max-w-600 mx-auto small">Compare RCS engagement metrics against traditional SMS channels.</p>
+                </div>
+
+                <div class="row g-4 mt-2">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="p-4 rounded-4 text-center bg-dark text-white border border-secondary">
+                            <span class="stat-val rcs-green-accent mb-1">78.4%</span>
+                            <span class="stat-lbl text-white-50">Average Open Rate</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="p-4 rounded-4 text-center bg-dark text-white border border-secondary">
+                            <span class="stat-val text-warning mb-1">34.2%</span>
+                            <span class="stat-lbl text-white-50">Button Click-Through Rate</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="p-4 rounded-4 text-center bg-dark text-white border border-secondary">
+                            <span class="stat-val text-info mb-1">4.5x</span>
+                            <span class="stat-lbl text-white-50">ROI vs Standard SMS</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="p-4 rounded-4 text-center bg-dark text-white border border-secondary">
+                            <span class="stat-val text-white mb-1">100%</span>
+                            <span class="stat-lbl text-white-50">SMS Fallback Reach</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             9. WHY CHOOSE US
+             ============================================ -->
+        <div class="container my-4">
+            <div class="dark-feature-banner">
+                <div class="row g-4 align-items-center text-center text-md-start">
+                    <div class="col-lg-3 col-md-6 d-flex align-items-center gap-3">
+                        <i class="fas fa-check-circle fa-2x rcs-green-accent"></i>
+                        <div>
+                            <h5>Google Jibe Interconnect</h5>
+                            <p class="text-white-50 small mb-0">Direct partnership with Google RCS Cloud infrastructure.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 d-flex align-items-center gap-3">
+                        <i class="fas fa-bolt fa-2x text-warning"></i>
+                        <div>
+                            <h5>Sub-Second Speed</h5>
+                            <p class="text-white-50 small mb-0">Ultra-fast campaign trigger with zero queuing bottlenecks.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 d-flex align-items-center gap-3">
+                        <i class="fas fa-sync-alt fa-2x text-primary"></i>
+                        <div>
+                            <h5>Smart SMS Fallback</h5>
+                            <p class="text-white-50 small mb-0">Automatic failover delivery route for maximum reach.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 d-flex align-items-center gap-3">
+                        <i class="fas fa-headset fa-2x text-warning"></i>
+                        <div>
+                            <h5>24x7 Dedicated SLA</h5>
+                            <p class="text-white-50 small mb-0">Dedicated account manager & technical onboarding team.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================
+             10. FINAL CTA
+             ============================================ -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="dark-cta-card text-center">
+                    <h2 class="display-5 fw-bold text-white mb-3">Ready to Upgrade Your Customer Messaging to RCS?</h2>
+                    <p class="text-white-50 lead mx-auto max-w-600 mb-4" style="font-size: 1.1rem;">
+                        Get verified Google brand credentials, testing credits, and full API integration support today.
+                    </p>
+                    <div class="d-flex flex-wrap justify-content-center gap-3">
+                        <a href="../contact.html" class="btn-orange-filled">
+                            Get Free Test API Account <i class="fas fa-arrow-right ms-1"></i>
+                        </a>
+                        <a href="https://wa.me/919768566466" target="_blank" class="btn-dark-outline">
+                            <i class="fab fa-whatsapp me-1"></i> Talk to RCS Specialist
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============================================
+         11. EXECUTIVE DARK FOOTER
+         ============================================ -->
+    <footer class="footer-dark-custom">
+        <div class="container">
+            <div class="row g-4 mb-4">
+                <div class="col-lg-4 col-md-6">
+                    <a class="navbar-brand-custom mb-3" href="../index.html">
+                        <img src="../assets/images/logo/logo.jpg" alt="Immense Air Pvt Ltd Logo" class="navbar-brand-logo">
+                        <div>
+                            <div style="font-size: 1.35rem; font-weight: 800; line-height: 1; letter-spacing: -0.5px; color: #FFFFFF;">
+                                IMMENSE <span style="color: var(--orange-brand);">AIR</span>
+                            </div>
+                            <div style="font-size: 0.7rem; font-weight: 800; letter-spacing: 1.5px; color: rgba(255,255,255,0.75); text-transform: uppercase;">
+                                PVT LTD
+                            </div>
+                        </div>
+                    </a>
+                    <p style="color:rgba(255,255,255,.75);font-size:1.0rem;line-height:1.65;max-width:360px;">
+                        Immense Air Pvt Ltd empowers businesses with intelligent communication solutions that drive engagement, automation & growth.
+                    </p>
+                    <div class="mt-3 d-flex gap-2">
+                        <a href="https://in.linkedin.com/company/immense-smart-solutions" target="_blank" class="social-circle-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.facebook.com/immensesmartsolutions/" target="_blank" class="social-circle-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.youtube.com/@immensesmartsolutions" target="_blank" class="social-circle-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/immense_smart_solutions/" target="_blank" class="social-circle-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6>PRODUCTS</h6>
+                    <ul class="footer-link-list">
+                        <li><a href="bulk-sms.html">SMS Services</a></li>
+                        <li><a href="whatsapp-api.html">WhatsApp API</a></li>
+                        <li><a href="rcs.html" class="text-warning fw-bold">RCS Messaging</a></li>
+                        <li><a href="voice.html">Voice Solutions</a></li>
+                        <li><a href="ivr-obd.html">IVR & OBD</a></li>
+                        <li><a href="smpp.html">SMPP & API</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6>SOLUTIONS</h6>
+                    <ul class="footer-link-list">
+                        <li><a href="../about.html">Marketing</a></li>
+                        <li><a href="../resources.html">Authentication</a></li>
+                        <li><a href="../contact.html">Customer Support</a></li>
+                        <li><a href="bulk-sms.html">Notifications</a></li>
+                        <li><a href="whatsapp-api.html">Automation</a></li>
+                        <li><a href="../about.html">Enterprise</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6>DEVELOPERS</h6>
+                    <ul class="footer-link-list">
+                        <li><a href="../developers.html">API Documentation</a></li>
+                        <li><a href="smpp.html">SMPP Guide</a></li>
+                        <li><a href="../developers.html">SDKs & Libraries</a></li>
+                        <li><a href="../developers.html">Postman Collection</a></li>
+                        <li><a href="../developers.html">Integration Guide</a></li>
+                        <li><a href="../developers.html">Status Page</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6>COMPANY</h6>
+                    <ul class="footer-link-list">
+                        <li><a href="../about.html">About Us</a></li>
+                        <li><a href="../careers.html">Careers <span class="badge bg-warning text-dark style-badge" style="font-size:0.7rem;">Hiring</span></a></li>
+                        <li><a href="../contact.html">Partners</a></li>
+                        <li><a href="../resources.html">News & Updates</a></li>
+                        <li><a href="../contact.html" class="text-warning fw-bold">Contact Us <i class="fas fa-arrow-right ms-1"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr style="border-color:rgba(255,255,255,.12);margin:2.5rem 0 1.5rem;">
+
+            <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 text-white-50" style="font-size:0.95rem;">
+                <div>&copy; 2026 Immense Air Pvt Ltd All Rights Reserved.</div>
+                <div>
+                    <a href="../privacy-policy.html" class="text-white-50 me-3 text-decoration-none">Privacy Policy</a>
+                    <a href="../terms.html" class="text-white-50 me-3 text-decoration-none">Terms & Conditions</a>
+                    <a href="../terms.html" class="text-white-50 text-decoration-none">Refund Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919768566466" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Global Data Privacy Opt-In Consent Banner -->
+    <div id="optInGlobalBanner" class="optin-consent-banner hidden">
+        <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+            <div class="d-flex align-items-center gap-3">
+                <i class="fas fa-user-shield text-warning fa-2x"></i>
+                <div>
+                    <div class="d-flex align-items-center gap-2 mb-1">
+                        <span class="fw-bold text-white fs-6">Data Privacy & Communication Opt-In</span>
+                        <span class="optin-badge"><i class="fas fa-check-circle me-1"></i> DPDP Act Compliant</span>
+                    </div>
+                    <p class="text-white-50 small mb-0">
+                        We value your data privacy. By using Immense Air, you consent to data processing for enterprise service delivery, SMS/WhatsApp updates, and analytics as outlined in our <a href="../privacy-policy.html" class="text-warning text-decoration-underline">Privacy Policy</a>.
+                    </p>
+                </div>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+                <button class="btn btn-warning btn-sm fw-bold px-3 rounded-pill text-white" onclick="acceptDataOptIn()">
+                    <i class="fas fa-check me-1"></i> Accept & Opt-In
+                </button>
+                <button class="btn btn-outline-light btn-sm px-3 rounded-pill" onclick="declineDataOptIn()">
+                    Necessary Only
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+    
+    <!-- REAL RCS API TESTING CONTROLLER SCRIPT -->
+    <script>
+        function updatePhoneClock() {
+            const clockEl = document.getElementById('phoneClockTime');
+            if (clockEl) {
+                const now = new Date();
+                clockEl.innerText = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+            }
+        }
+        setInterval(updatePhoneClock, 1000);
+        updatePhoneClock();
+
+        async function handleRealRcsDispatch(e) {
+            e.preventDefault();
+            const btn = document.getElementById('btnDispatchRcs');
+            const phoneInput = document.getElementById('rcsPhoneInput').value.trim();
+            const templateId = '6i5b1siz15j';
+            const campaignName = 'WEBSITE';
+            const enableFallback = document.getElementById('rcsEnableFallback').checked;
+
+            let cleanPhone = phoneInput.replace(/[^0-9]/g, '');
+            if (cleanPhone.length === 10) cleanPhone = '+91' + cleanPhone;
+
+            if (!cleanPhone.match(/^\+91[0-9]{10}$/)) {
+                alert('Please enter a valid 10-digit Indian mobile number.');
+                return;
+            }
+
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i> Dispatched to RCS Cloud...';
+
+            // Pipeline Elements
+            const pBadge = document.getElementById('rcsPipelineBadge');
+            const s1 = document.getElementById('rcsStep1');
+            const s2 = document.getElementById('rcsStep2');
+            const s3 = document.getElementById('rcsStep3');
+            const s4 = document.getElementById('rcsStep4');
+
+            [s1, s2, s3, s4].forEach(el => el.className = 'p-2 rounded bg-light text-muted fw-bold border');
+            pBadge.className = 'badge bg-warning text-dark';
+            pBadge.innerText = '1. Request Initiated';
+            s1.className = 'p-2 rounded bg-warning text-white fw-bold shadow-sm';
+
+            // Report Elements
+            const rcsReportContainer = document.getElementById('rcsReportContainer');
+            const rcsCampaignId = document.getElementById('rcsCampaignId');
+            const rcsTemplateVal = document.getElementById('rcsTemplateVal');
+            const rcsRecipientVal = document.getElementById('rcsRecipientVal');
+            const rcsFallbackStatus = document.getElementById('rcsFallbackStatus');
+            const rcsTimestamp = document.getElementById('rcsTimestamp');
+
+            rcsReportContainer.classList.add('d-none');
+
+            try {
+                // Call REAL RCS API backend endpoint (POST /api/v1/rcs/send)
+                const payload = {
+                    to: cleanPhone,
+                    template_id: templateId,
+                    campaign_name: campaignName,
+                    enable_fallback: enableFallback
+                };
+
+                const response = await fetch('/api/v1/rcs/send', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const data = await response.json();
+
+                if (!response.ok || !data.success) {
+                    alert(data.error || 'RCS Campaign Dispatch failed.');
+                    btn.disabled = false;
+                    btn.innerHTML = 'Send Test RCS Campaign <i class="fas fa-paper-plane ms-2"></i>';
+                    return;
+                }
+
+                // Step 2: RCS Gateway
+                setTimeout(() => {
+                    s1.className = 'p-2 rounded bg-success text-white fw-bold';
+                    s2.className = 'p-2 rounded bg-warning text-white fw-bold shadow-sm';
+                    pBadge.innerText = '2. RCS Gateway';
+                }, 400);
+
+                // Step 3: RCS Cloud Interconnect
+                setTimeout(() => {
+                    s2.className = 'p-2 rounded bg-success text-white fw-bold';
+                    s3.className = 'p-2 rounded bg-warning text-white fw-bold shadow-sm';
+                    pBadge.innerText = '3. RCS Cloud Interconnect';
+                }, 900);
+
+                // Step 4: Handset Delivered
+                setTimeout(() => {
+                    s3.className = 'p-2 rounded bg-success text-white fw-bold';
+                    s4.className = 'p-2 rounded bg-success text-white fw-bold shadow-sm';
+                    pBadge.className = 'badge bg-success';
+                    pBadge.innerText = '4. Campaign Delivered ✓';
+
+                    // Update DLR Report Card
+                    rcsCampaignId.innerText = data.campaign_id || '24370';
+                    rcsTemplateVal.innerText = data.template_id || templateId;
+                    rcsRecipientVal.innerText = cleanPhone;
+                    rcsFallbackStatus.innerText = enableFallback ? 'Enabled & Configured' : 'Disabled';
+                    rcsTimestamp.innerText = `Timestamp: ${new Date().toLocaleTimeString()}`;
+
+                    rcsReportContainer.classList.remove('d-none');
+
+                    // Update Read Receipt Time in Phone Mockup
+                    const readReceipt = document.getElementById('rcsReadReceipt');
+                    const nowTime = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+                    readReceipt.innerHTML = `${nowTime} • Read <i class="fas fa-eye text-success me-1"></i> (Delivered ✓✓)`;
+
+                    // Mandatory 60-Second Cooldown Timer
+                    let cd = 60;
+                    const cdTimer = setInterval(() => {
+                        cd--;
+                        btn.innerHTML = `Wait ${cd}s <i class="fas fa-clock ms-1"></i>`;
+                        if (cd <= 0) {
+                            clearInterval(cdTimer);
+                            btn.disabled = false;
+                            btn.innerHTML = 'Send Test RCS Campaign <i class="fas fa-paper-plane ms-2"></i>';
+                        }
+                    }, 1000);
+
+                }, 1400);
+
+            } catch (err) {
+                console.error('RCS API Error:', err);
+                alert('Connection error while contacting RCS Gateway.');
+                btn.disabled = false;
+                btn.innerHTML = 'Send Test RCS Campaign <i class="fas fa-paper-plane ms-2"></i>';
+            }
+        }
+    </script>
+</body>
+</html>
