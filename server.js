@@ -535,12 +535,15 @@ app.post('/api/v1/sms/send', async (req, res) => {
     });
   }
 
-  const senderId = 'ZIONEN';
-  const entityId = '1001970166055565595';
-  const templateId = '1207177987659243590';
+  const senderId = process.env.SMS_SENDER_ID || 'ZIONEN';
+  const entityId = process.env.SMS_ENTITY_ID || '1001970166055565595';
+  const templateId = process.env.SMS_TEMPLATE_ID || '1207177987659243590';
+  const userId = process.env.SMS_USER_ID || 'Immense_Rcs';
+  const password = process.env.SMS_PASSWORD || 'Immense_Rcs';
   const msgText = 'Your OTP for verification is 12345.\nDo not share it with anyone.\nValid for 10 minutes.\nZion';
 
-  const gatewayUrl = `http://cpassweb.in/api/SmsApi/SendSingleApi?UserID=Immense_Rcs&Password=Immense_Rcs&SenderID=${senderId}&Phno=${rawPhone}&Msg=${encodeURIComponent(msgText)}&EntityID=${entityId}&TemplateID=${templateId}`;
+  const smsBaseUrl = process.env.SMS_GATEWAY_URL || 'http://cpassweb.in/api/SmsApi/SendSingleApi';
+  const gatewayUrl = `${smsBaseUrl}?UserID=${encodeURIComponent(userId)}&Password=${encodeURIComponent(password)}&SenderID=${encodeURIComponent(senderId)}&Phno=${rawPhone}&Msg=${encodeURIComponent(msgText)}&EntityID=${encodeURIComponent(entityId)}&TemplateID=${encodeURIComponent(templateId)}`;
 
   const startTime = Date.now();
 
@@ -566,7 +569,7 @@ app.post('/api/v1/sms/send', async (req, res) => {
       submitted_at: new Date().toISOString(),
       delivered_at: new Date(Date.now() + latencyMs).toISOString(),
       latency_ms: latencyMs,
-      operator: 'Airtel / Jio Direct Route (Entity: 1001970166055565595)',
+      operator: 'Airtel / Jio Direct Route (Entity: ' + entityId + ')',
       raw_response: result
     };
 
@@ -626,12 +629,13 @@ app.post('/api/v1/rcs/send', async (req, res) => {
     });
   }
 
-  const apiKey = '532716B1A87549E4B3919C44F09FA9E2913';
-  const templateId = template_id || '6i5b1siz15j';
+  const apiKey = process.env.RCS_API_KEY || '532716B1A87549E4B3919C44F09FA9E2913';
+  const templateId = template_id || process.env.RCS_TEMPLATE_ID || '6i5b1siz15j';
   const campaignName = campaign_name || 'WEBSITE';
   const fallback = enable_fallback === true || enable_fallback === 'true';
 
-  const rcsGatewayUrl = `https://cpassweb.in/api/RCSApi/CreateCampaign?apiKey=${apiKey}`;
+  const rcsBaseUrl = process.env.RCS_GATEWAY_URL || 'https://cpassweb.in/api/RCSApi/CreateCampaign';
+  const rcsGatewayUrl = `${rcsBaseUrl}?apiKey=${apiKey}`;
 
   const payload = {
     TemplateId: templateId,
@@ -711,13 +715,14 @@ app.post('/api/v1/whatsapp/send', async (req, res) => {
   }
 
   const formattedTo = rawPhone.startsWith('+') ? rawPhone : '+' + rawPhone;
-  const apiKey = '474af3dc-d905-42a6-8015-abe589e5ac52';
-  const sender = sender_number || '+918828669961';
-  const templateId = template_id || 'rcstemp_qx87btsseg42qe6j';
+  const apiKey = process.env.WHATSAPP_API_KEY || '474af3dc-d905-42a6-8015-abe589e5ac52';
+  const sender = sender_number || process.env.WHATSAPP_SENDER_NUMBER || '+918828669961';
+  const templateId = template_id || process.env.WHATSAPP_TEMPLATE_ID || 'rcstemp_qx87btsseg42qe6j';
   const customerName = customer_name || 'John';
   const media = media_url || 'https://d23oslvtgtcoll.cloudfront.net/6a2259a20997286666b81889-6291063691.jpeg';
 
-  const wtpGatewayUrl = `https://wtpapi.sms4power.com/api/v1/whatsapp/single?api_key=${apiKey}`;
+  const wtpBaseUrl = process.env.WHATSAPP_GATEWAY_URL || 'https://wtpapi.sms4power.com/api/v1/whatsapp/single';
+  const wtpGatewayUrl = `${wtpBaseUrl}?api_key=${apiKey}`;
 
   const payload = {
     message_type: 'media',
